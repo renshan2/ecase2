@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{f1a953a7-b95b-4805-8faa-38e3352a6b9d}"
+       Name="GroupMember"
+       DisplayName="Group Member"
+       Type="User"
+       EnforceUniqueValues="TRUE"
+       Required="FALSE"
+       Group="eCases Site Columns">
+  </Field>
+</Elements>

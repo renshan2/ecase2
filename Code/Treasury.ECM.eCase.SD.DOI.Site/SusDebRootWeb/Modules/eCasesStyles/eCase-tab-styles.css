@@ -1,0 +1,65 @@
+#tabs-wrapper {
+    width: 98%;
+}
+.ui-widget-header, .ui-widget-content 
+{
+	border: none;
+	background-color: transparent;
+	background-image: none;
+}
+.ui-tabs .ui-tabs-panel {
+	background: #fff;
+	border: 1px #79b7e7 solid;
+    padding: 1em 1em 1em 1em;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { 
+	border: 1px solid #c5dbec; 
+	background: #dfeffc url('Images/ui-bg_glass_85_dfeffc_1x400.png') 50% 50% repeat-x;  
+	color: #0A5DA1; 
+}
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { 
+	color: #0A5DA1; 
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus,
+.ui-state-default:hover { 
+	border: 1px solid #79b7e7;
+	background: #d0e5f5 url('Images/ui-bg_glass_75_d0e5f5_1x400.png') 50% 50% repeat-x;
+	color: #1d5987; 
+}
+.ui-state-hover a, .ui-state-hover a:hover, .ui-state-default a:hover { 
+	color: #1d5987; 
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { 
+	background: #ffffff url('Images/ui-bg_glass_65_ffffff_1x400.png') 50% 50% repeat-x;
+	border: 1px solid #79b7e7; 
+	color: #212121; 
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { 
+	color: #212121; 
+}
+
+#subtabs div.ui-tabs-panel {
+	border: none;
+    padding: 1em 0em 1em 0em;
+}
+#subtabs .ui-widget-header .ui-state-default, #subtabs .ui-widget-header .ui-state-active {
+	border: none;
+	background-color: transparent;
+	background-image: none;
+}
+#subtabs .ui-tabs-nav li a {
+    padding: 0.5em 1em 0.5em 0.5em;
+}
+#subtabs .ui-state-default a, #subtabs .ui-state-default a:link, #subtabs .ui-state-default a:visited {
+	color: #0072BC;
+}
+#subtabs .ui-state-default a:hover {
+	text-decoration: underline;
+}
+#subtabs .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+	color: #222 !important;
+}
+#subtabs .ui-state-active a:hover {
+	text-decoration: none;
+}
+#tabs-1 table { border: none; } 

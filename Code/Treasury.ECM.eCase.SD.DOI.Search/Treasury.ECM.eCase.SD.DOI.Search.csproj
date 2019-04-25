@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{245CBFF8-1BCD-4471-9868-AD6A162461D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Treasury.ECM.eCase.SusDeb.DOI.Search</RootNamespace>
+    <AssemblyName>Treasury.ECM.eCase.SusDeb.DOI.Search</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <AssemblyDeploymentTarget>GlobalAssemblyCache</AssemblyDeploymentTarget>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Server, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.Office.Server.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="microsoft.sharepoint.portal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\microsoft.sharepoint.portal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Publishing, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Search.Extended.Administration, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.Search.Extended.Administration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Search.Extended.Administration.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.Search.Extended.Administration.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Search.Extended.Administration.ResourceStorage, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.Search.Extended.Administration.ResourceStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Security, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Taxonomy, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="eCaseCoreResultsWebPart\eCaseCoreResultsDataSource.cs" />
+    <Compile Include="eCaseCoreResultsWebPart\eCaseCoreResultsDataSourceView.cs" />
+    <Compile Include="eCaseCoreResultsWebPart\QueryKind.cs" />
+    <Compile Include="eCaseCoreResultsWebPart\FAST\DynamicReflectionHelperForObject.cs" />
+    <Compile Include="eCaseCoreResultsWebPart\eCaseCoreResults.cs" />
+    <Compile Include="eCaseCoreResultsWebPart\FAST\FASTManagedPropertyReader.cs" />
+    <Compile Include="eCaseCoreResultsWebPart\FAST\FASTScopeReader.cs" />
+    <Compile Include="eCaseFastSearchSiteDef\SiteLists\Tabs\eCaseConstants.cs" />
+    <Compile Include="eCaseCoreResultsWebPart\KqlParser\FqlHelper.cs" />
+    <Compile Include="eCaseCoreResultsWebPart\KqlParser\SynonymHandling.cs" />
+    <Compile Include="eCaseCoreResultsWebPart\KqlParser\Token.cs" />
+    <Compile Include="eCaseCoreResultsWebPart\KqlParser\TokenBuilder.cs" />
+    <Compile Include="eCaseCoreResultsWebPart\KqlParser\TokenType.cs" />
+    <Compile Include="eCaseCoreResultsWebPart\KqlParser\TokenParser.cs" />
+    <Compile Include="Layouts\eCaseSearch\SaveSearchResultSets.aspx.cs">
+      <DependentUpon>SaveSearchResultSets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\eCaseSearch\SaveSearchResultSets.aspx.designer.cs">
+      <DependentUpon>SaveSearchResultSets.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\eCaseSearch\SaveSearchResults.aspx.cs">
+      <DependentUpon>SaveSearchResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\eCaseSearch\SaveSearchResults.aspx.designer.cs">
+      <DependentUpon>SaveSearchResults.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\eCaseSearch\JudgeIssueSearch.aspx.cs">
+      <DependentUpon>JudgeIssueSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\eCaseSearch\JudgeIssueSearch.aspx.designer.cs">
+      <DependentUpon>JudgeIssueSearch.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\eCaseSearch\SaveSearchQuery.aspx.cs">
+      <DependentUpon>SaveSearchQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\eCaseSearch\SaveSearchQuery.aspx.designer.cs">
+      <DependentUpon>SaveSearchQuery.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\eCaseSearch\SearchBatchCopying.aspx.cs">
+      <DependentUpon>SearchBatchCopying.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\eCaseSearch\SearchBatchCopying.aspx.designer.cs">
+      <DependentUpon>SearchBatchCopying.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\eCaseSearch\SearchBatchMetadata.aspx.cs">
+      <DependentUpon>SearchBatchMetadata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\eCaseSearch\SearchBatchMetadata.aspx.designer.cs">
+      <DependentUpon>SearchBatchMetadata.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\eCaseSearch\SearchBatchMoving.aspx.cs">
+      <DependentUpon>SearchBatchMoving.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\eCaseSearch\SearchBatchMoving.aspx.designer.cs">
+      <DependentUpon>SearchBatchMoving.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eCaseFastSearchSiteDef\Modules\eCaseSearchMasterPages\eCase_minimal.master.cs">
+      <DependentUpon>eCase_minimal.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="eCaseFastSearchSiteDef\Modules\eCaseSearchMasterPages\eCase_minimal.master.designer.cs">
+      <DependentUpon>eCase_minimal.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="eCaseCoreResultsWebPart\FAST\FASTSynonymReader.cs" />
+    <Compile Include="SaveSearchCriteriaWebPart\SaveSearchCriteriaWebPart.ascx.cs">
+      <DependentUpon>SaveSearchCriteriaWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SaveSearchCriteriaWebPart\SaveSearchCriteriaWebPart.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaveSearchCriteriaWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SaveSearchResultsWebPart\SaveSearchResultsWebPart.ascx.cs">
+      <DependentUpon>SaveSearchResultsWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SaveSearchResultsWebPart\SaveSearchResultsWebPart.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaveSearchResultsWebPart.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="eCaseFastSearchSiteDef\CustomActions\SearchSaveResultsButton\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bd5f06bc-1c2e-4030-9f33-ff34af904810}</SharePointProjectItemId>
+    </None>
+    <None Include="eCaseFastSearchSiteDef\CustomActions\SearchMetadataButton\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6a3bff54-1bb8-4ec5-a86b-4481cda2c8d9}</SharePointProjectItemId>
+    </None>
+    <None Include="eCaseFastSearchSiteDef\DelegateControls\eCaseSmallSearchCtrl\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c589fa7d-7e0e-4351-8a71-fd4190353276}</SharePointProjectItemId>
+    </None>
+    <None Include="eCaseFastSearchSiteDef\CustomActions\SearchMoveButton\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{270940ca-5a1f-4251-b93e-29e5f746e9d4}</SharePointProjectItemId>
+    </None>
+    <None Include="eCaseFastSearchSiteDef\Modules\eCaseCoreResultsXslt\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0a7f8e71-c067-48bf-9875-99e24a77d4b0}</SharePointProjectItemId>
+    </None>
+    <None Include="eCaseFastSearchSiteDef\CustomActions\SearchCopyButton\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{36593dbe-9be5-4638-a4ef-bfe903406d3a}</SharePointProjectItemId>
+    </None>
+    <None Include="eCaseFastSearchSiteDef\Modules\eCaseSearchMasterPages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{60cf24b2-bdfa-4031-b19f-2476000ee023}</SharePointProjectItemId>
+    </None>
+    <None Include="eCaseFastSearchSiteDef\SiteLists\Tabs\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c44aed0d-f19e-42cf-a35b-c725ba14b563}</SharePointProjectItemId>
+    </None>
+    <None Include="eCaseFastSearchSiteDef\Modules\eCaseSrchCtrPages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5c2ec207-5b74-4f65-bbbb-2773f62c8ff2}</SharePointProjectItemId>
+    </None>
+    <None Include="eCaseFastSearchSiteDef\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{63038f23-736f-49bb-ba92-215ef4272a64}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\SearchCenterSite\SearchCenterSite.feature">
+      <FeatureId>{d5d0ea93-293d-4dd6-862e-11b69fd4e6bf}</FeatureId>
+    </None>
+    <None Include="eCaseCoreResultsWebPart\eCaseCoreResults.webpart">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="eCaseCoreResultsWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{98ed4e8b-e922-427d-b21a-d4724ce9af12}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\SearchCenterWeb\SearchCenterWeb.feature">
+      <FeatureId>{c03dd5a2-23fd-45d0-a514-f9c28c8ccb5f}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b80ed6fd-6515-4cf4-8081-4de907d86a3b}</SharePointProjectItemId>
+    </None>
+    <None Include="eCaseFastSearchSiteDef\Modules\eCaseSearchMasterPages\eCase_minimal.master" />
+    <None Include="Package\Package.package">
+      <PackageId>{2df136e1-6490-4351-bce5-b455fcfca72f}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SaveSearchCriteriaWebPart\SaveSearchCriteriaWebPart.webpart" />
+    <None Include="SaveSearchCriteriaWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bbf2118e-84c7-4f3d-88aa-28ee2b9119e2}</SharePointProjectItemId>
+    </None>
+    <None Include="SaveSearchResultsWebPart\SaveSearchResultsWebPart.webpart" />
+    <None Include="SaveSearchResultsWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d3494332-50af-4ead-a801-c296068a58e4}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="eCaseFastSearchSiteDef\CustomActions\SearchSaveResultsButton\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="eCaseFastSearchSiteDef\CustomActions\SearchCopyButton\Elements.xml" />
+    <Content Include="eCaseFastSearchSiteDef\CustomActions\SearchMetadataButton\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="eCaseFastSearchSiteDef\DelegateControls\eCaseSmallSearchCtrl\Elements.xml" />
+    <Content Include="eCaseFastSearchSiteDef\CustomActions\SearchMoveButton\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="eCaseFastSearchSiteDef\Modules\eCaseCoreResultsXslt\ecrAssignedTo.xslt" />
+    <Content Include="eCaseFastSearchSiteDef\Modules\eCaseCoreResultsXslt\ecrDocDate.xslt" />
+    <Content Include="eCaseFastSearchSiteDef\Modules\eCaseCoreResultsXslt\ecrDefault.xslt" />
+    <Content Include="eCaseFastSearchSiteDef\Modules\eCaseCoreResultsXslt\ecrDocOrig.xslt" />
+    <Content Include="eCaseFastSearchSiteDef\Modules\eCaseCoreResultsXslt\ecrRawXml.xslt" />
+    <Content Include="eCaseFastSearchSiteDef\Modules\eCaseCoreResultsXslt\ecrRelLglIssue.xslt" />
+    <Content Include="eCaseFastSearchSiteDef\Modules\eCaseCoreResultsXslt\Elements.xml" />
+    <Content Include="eCaseFastSearchSiteDef\Modules\eCaseSearchMasterPages\Elements.xml" />
+    <Content Include="eCaseFastSearchSiteDef\SiteLists\Tabs\allitems.aspx" />
+    <Content Include="eCaseFastSearchSiteDef\SiteLists\Tabs\Elements.xml" />
+    <Content Include="eCaseFastSearchSiteDef\SiteLists\Tabs\Schema.xml" />
+    <Content Include="eCaseFastSearchSiteDef\Modules\eCaseSrchCtrPages\advanced.aspx" />
+    <Content Include="eCaseFastSearchSiteDef\Modules\eCaseSrchCtrPages\default.aspx" />
+    <Content Include="eCaseFastSearchSiteDef\Modules\eCaseSrchCtrPages\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="eCaseFastSearchSiteDef\Modules\eCaseSrchCtrPages\people.aspx" />
+    <Content Include="eCaseFastSearchSiteDef\Modules\eCaseSrchCtrPages\peopleresults.aspx" />
+    <Content Include="eCaseFastSearchSiteDef\Modules\eCaseSrchCtrPages\results.aspx" />
+    <Content Include="eCaseFastSearchSiteDef\onet.xml" />
+    <Content Include="eCaseFastSearchSiteDef\webtemp_SusDebFastSearchSiteDef.xml" />
+    <Content Include="Features\SearchCenterSite\SearchCenterSite.Template.xml">
+      <DependentUpon>SearchCenterSite.feature</DependentUpon>
+    </Content>
+    <Content Include="eCaseCoreResultsWebPart\Elements.xml" />
+    <Content Include="Features\SearchCenterWeb\SearchCenterWeb.Template.xml">
+      <DependentUpon>SearchCenterWeb.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\eCaseSearch\SaveSearchResultSets.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\eCaseSearch\SaveSearchResults.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\eCaseSearch\form_icon_16.gif" />
+    <Content Include="Layouts\eCaseSearch\form_icon_32.gif" />
+    <Content Include="Layouts\eCaseSearch\jquery-1.8.2.js" />
+    <Content Include="Layouts\eCaseSearch\JudgeIssueSearch.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\eCaseSearch\move_docs_16.png" />
+    <Content Include="Layouts\eCaseSearch\move_docs_32.png" />
+    <Content Include="Layouts\eCaseSearch\SaveSearchQuery.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\eCaseSearch\SearchBatchCopying.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\eCaseSearch\SearchBatchMetadata.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\eCaseSearch\SearchBatchMoving.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="SaveSearchCriteriaWebPart\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SaveSearchCriteriaWebPart\SaveSearchCriteriaWebPart.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>SaveSearchCriteriaWebPart.ascx.g.cs</LastGenOutput>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="SaveSearchResultsWebPart\Elements.xml" />
+    <Content Include="SaveSearchResultsWebPart\SaveSearchResultsWebPart.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>SaveSearchResultsWebPart.ascx.g.cs</LastGenOutput>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Treasury.ECM.eCase.SD.DOI.Common\Treasury.ECM.eCase.SD.DOI.Common.csproj">
+      <Project>{93DCF326-16A4-4CA6-92A6-C8D653421840}</Project>
+      <Name>Treasury.ECM.eCase.SD.DOI.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Treasury.ECM.eCase.SD.DOI.Extensions\Treasury.ECM.eCase.SD.DOI.Extensions.csproj">
+      <Project>{F1FBC340-0B01-4072-A2ED-16384D16ADDC}</Project>
+      <Name>Treasury.ECM.eCase.SD.DOI.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Treasury.ECM.eCase.SD.DOI.Logging\Treasury.ECM.eCase.SD.DOI.Logging.csproj">
+      <Project>{C9BF7D2E-AE6F-4AB1-85D8-64FD658C600B}</Project>
+      <Name>Treasury.ECM.eCase.SD.DOI.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="false" />
+  <PropertyGroup>
+    <TokenReplacementFileExtensions>master;ascx;aspx;webpart;xml</TokenReplacementFileExtensions>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEventDependsOn>CreatePackage</PostBuildEventDependsOn>
+  </PropertyGroup>
+</Project>

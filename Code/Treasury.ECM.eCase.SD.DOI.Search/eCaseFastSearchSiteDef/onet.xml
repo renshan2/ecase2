@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Title="SusDebFastSearchSiteDef" Revision="2" ListDir="" xmlns:ows="Microsoft SharePoint" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <NavBars>
+    <NavBar Name="SharePoint Top Navbar" ID="1002"/>
+  </NavBars>
+  <ListTemplates>
+  </ListTemplates>
+  <DocumentTemplates>
+    <DocumentTemplate Path="STS" Name="" DisplayName="$Resources:core,doctemp_None;" Type="100" Default="FALSE" Description="$Resources:core,doctemp_None_Desc;" />
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Word97;" Type="101" Description="$Resources:core,doctemp_Word97_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\word\wdtmpl.doc" TargetName="Forms/template.doc" Default="TRUE"/>
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Excel97;" Type="103" Description="$Resources:core,doctemp_Excel97_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\xl\xltmpl.xls" TargetName="Forms/template.xls" Default="TRUE"/>
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Powerpoint97;" Type="104" Description="$Resources:core,doctemp_Powerpoint97_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\ppt\pptmpl.pot" TargetName="Forms/template.pot" Default="TRUE"/>
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Word;" Type="121" Default="TRUE" Description="$Resources:core,doctemp_Word_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\word\wdtmpl.dotx" TargetName="Forms/template.dotx" Default="TRUE"/>
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Excel;" Type="122" Description="$Resources:core,doctemp_Excel_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\xl\xltmpl.xlsx" TargetName="Forms/template.xlsx" Default="TRUE"/>
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Powerpoint;" Type="123" Description="$Resources:core,doctemp_Powerpoint_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\ppt\pptmpl.pptx" TargetName="Forms/template.pptx" Default="TRUE"/>
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_OneNote;" Type="111" Description="$Resources:core,doctemp_OneNote_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\onenote\template.onepkg" TargetName="Forms/template.onepkg" Default="TRUE"/>
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_FP;" Type="102" Description="$Resources:core,doctemp_FP_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\fp\fptmpl.htm" TargetName="Forms/template.htm" Default="TRUE"/>
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_BasicPage;" Type="105" Description="$Resources:core,doctemp_BasicPage_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\blankpgs\_basicpage.htm" TargetName="Forms/_basicpage.htm" Default="TRUE"/>
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_WebPartPage;" Type="106" Description="$Resources:core,doctemp_WebPartPage_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\smartpgs\_webpartpage.htm" TargetName="Forms/_webpartpage.htm" Default="TRUE"/>
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate XMLForm="TRUE" Path="STS" DisplayName="$Resources:core,doctemp_BlankForm;" Type="1000" Default="TRUE" Description="$Resources:core,doctemp_BlankForm_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\xmlforms\blank\template.xml" TargetName="Forms/template.xml" Default="TRUE" />
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+  </DocumentTemplates>
+  <Configurations>
+    <Configuration ID="-1" Name="NewWeb" />
+    <Configuration ID="0" Name="Default">
+      <ExecuteUrl Url="_layouts/[%=System.Threading.Thread.CurrentThread.CurrentUICulture.LCID%]/settings.aspx" />
+      <SiteFeatures>
+        <!-- SharePoint Server Enterprise Site Collection features -->
+        <Feature ID="8581A8A7-CF16-4770-AC54-260265DDB0B2" />
+        <!-- Publishing Feature -->
+        <Feature ID="F6924D36-2FA8-4f0b-B16D-06B7250180FA" />
+        <!-- Base site feature -->
+        <Feature ID="B21B090C-C796-4b0f-AC0F-7EF1659C20AE"/>
+        <!-- Site Collection Level Search Center Url Feature -->
+        <Feature ID="7AC8CC56-D28E-41f5-AD04-D95109EB987A" >
+          <Properties xmlns="http://schemas.microsoft.com/sharepoint/">
+            <Property Key="SearchCenterUrl" Value="~SiteCollection/" />
+            <Property Key="DocLib" Value="$Resources:osrvcore,List_Pages_UrlName;" />
+          </Properties>
+        </Feature>
+      </SiteFeatures>
+      <WebFeatures>
+        <!-- Publishing -->
+        <Feature ID="22A9EF51-737B-4ff2-9346-694633FE4416">
+          <Properties xmlns="http://schemas.microsoft.com/sharepoint/">
+            <Property Key="WelcomePageUrl" Value="$Resources:osrvcore,List_Pages_UrlName;/default.aspx" />
+            <Property Key="AvailablePageLayouts" Value="~SiteCollection/_catalogs/masterpage/searchmain.aspx:~SiteCollection/_catalogs/masterpage/SearchResults.aspx:~SiteCollection/_catalogs/masterpage/PeopleSearchResults.aspx:~SiteCollection/_catalogs/masterpage/AdvancedSearchLayout.aspx"/>
+            <Property Key="SimplePublishing" Value="true" />
+            <Property Key="ChromeMasterUrl" Value="~SiteCollection/_catalogs/masterpage/minimal.master" />
+            <Property Key="DefaultPageLayout" Value="~SiteCollection/_catalogs/masterpage/searchresults.aspx" />
+          </Properties>
+        </Feature>
+        <!-- Team Collaboration Lists -->
+        <Feature ID="00BFEA71-4EA5-48D4-A4AD-7EA5C011ABE5" />
+        <!-- Search Center URL -->
+        <Feature ID="7ACFCB9D-8E8F-4979-AF7E-8AED7E95245E"/>
+        <!-- Portal Navigation Properties -->
+        <Feature ID="541F5F57-C847-4e16-B59A-B31E90E6F9EA">
+          <!-- Per-Web Portal Navigation Properties-->
+          <Properties xmlns="http://schemas.microsoft.com/sharepoint/">
+            <Property Key="InheritGlobalNavigation" Value="true"/>
+            <Property Key="IncludeSubSites" Value="true"/>
+            <Property Key="IncludePages" Value="false"/>
+          </Properties>
+        </Feature>
+        <!-- Treasury.ECM.eCase FAST Search Center Web Components -->
+        <Feature ID="ab48517d-74a5-431a-b871-e51ec0b398cf"/>
+      </WebFeatures>
+    </Configuration>
+  </Configurations>
+  <Modules/>
+</Project>

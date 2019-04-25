@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+  Id="BatchMoveCustomRibbonButton"
+  RegistrationId="0x0101003079571AD5D4460EB5CA06D46026B835"
+  RegistrationType="ContentType"
+  Location="CommandUI.Ribbon"
+  Sequence="1"
+  Title="Batch Move Documents">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Documents.Copies.Controls._children">
+          <Button
+          Id="Ribbon.Documents.New.BatchMoveButton"
+          Alt="Batch Move"
+          Sequence="1"
+          Command="Batch_Move_Button"
+          Image16by16="../Style%20Library/images/move_docs_16.png"
+          Image32by32="../Style%20Library/images/move_docs_32.png"
+          LabelText="Batch Move"
+          TemplateAlias="o1" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+          Command="Batch_Move_Button"
+          EnabledScript="javascript:SP.ListOperation.Selection.getSelectedItems().length > 0;"
+          CommandAction="javascript:
+            function batchMoveCallback(dialogResult, returnValue)
+            {
+              if(dialogResult === SP.UI.DialogResult.OK)
+              {
+                SP.UI.Notify.addNotification('Files moved!');
+              }
+              else if(dialogResult === SP.UI.DialogResult.cancel)
+              {
+                SP.UI.Notify.addNotification('User action cancelled!');
+              }
+              SP.UI.ModalDialog.RefreshPage(SP.UI.DialogResult.OK);
+            }
+            
+            var ctx = SP.ClientContext.get_current();
+            var items = SP.ListOperation.Selection.getSelectedItems(ctx);
+            var myItems = '';
+            var d;
+            
+            for (d in items)
+            {
+              myItems += '|' + items[d].id;
+            }
+          
+            var options = {
+              url: '{SiteUrl}/_layouts/eCaseWeb/BatchMoving.aspx?items=' + myItems + '&amp;source=' + SP.ListOperation.Selection.getSelectedList() + '&amp;sourceurl=\'{SiteUrl}\'',
+              width: 900,
+              height: 700,
+              title: 'eCase - Document Batch Moving',
+              showClose: true,
+              allowMaximize: false,
+              dialogReturnValueCallback: batchMoveCallback };
+              
+            SP.UI.ModalDialog.showModalDialog(options);" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+
+
+</Elements>
+
+

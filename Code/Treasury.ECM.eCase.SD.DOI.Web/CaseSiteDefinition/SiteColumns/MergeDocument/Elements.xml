@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{a8e21586-6c9a-412d-b2b0-78aa9b6fe015}"
+       Name="Merge Document"
+       DisplayName="Merge Document"
+       Type="Boolean"
+       Required="FALSE"
+       Group="Custom Site Columns">
+    <Default>0</Default>
+  </Field>
+</Elements>

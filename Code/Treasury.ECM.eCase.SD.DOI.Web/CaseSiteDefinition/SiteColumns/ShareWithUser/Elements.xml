@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+  <Field Name="ShareWithUser"
+         ID="{d248b5ff-594e-4cc9-bb9b-a70407807aed}"
+         DisplayName="Share With User"
+         Type="User"
+         Group="eCases Site Columns">
+  </Field>
+</Elements>

@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B53ABF07-7F30-40C6-8329-66D098B28D86}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Treasury.ECM.eCase.SusDeb.DOI.Site</RootNamespace>
+    <AssemblyName>Treasury.ECM.eCase.SusDeb.DOI.Site</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
+    <AssemblyDeploymentTarget>GlobalAssemblyCache</AssemblyDeploymentTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.DocumentManagement, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.Office.Server.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.sharepoint.portal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\microsoft.sharepoint.portal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Taxonomy, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SusDebRootWeb\EventReceivers\eCaseListER\eCaseListER.cs" />
+    <Compile Include="SusDebRootWeb\EventReceivers\SavedQueriesListER\SavedQueriesListER.cs" />
+    <Compile Include="SusDebRootWeb\Modules\eCasesPages\ManagerDashboard.aspx.cs">
+      <DependentUpon>ManagerDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SusDebRootWeb\Modules\eCasesPages\ManagerDashboard2.aspx.cs">
+      <DependentUpon>ManagerDashboard2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SusDebRootWeb\SPWebProvProv\eCaseSiteProvisioningProvider.cs" />
+    <Compile Include="Features\RootWebComponents\RootWebComponents.EventReceiver.cs">
+      <DependentUpon>RootWebComponents.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\SiteComponents\SiteComponents.EventReceiver.cs">
+      <DependentUpon>SiteComponents.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SusDebRootWeb\SiteLists\eCasesList\CaseNewForm.aspx.cs">
+      <DependentUpon>CaseNewForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SusDebRootWeb\SiteLists\eCasesList\CaseNewForm.aspx.designer.cs">
+      <DependentUpon>CaseNewForm.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebParts\EmptyWebPart\EmptyWebPart.cs" />
+    <Compile Include="WebParts\MgrDashboardDueDates\MgrDashboardDueDates.ascx.cs">
+      <DependentUpon>MgrDashboardDueDates.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\MgrDashboardDueDates\MgrDashboardDueDates.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MgrDashboardDueDates.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\UserSavedSearchesWebPart\UserSavedSearchesWebPart.ascx.cs">
+      <DependentUpon>UserSavedSearchesWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\UserSavedSearchesWebPart\UserSavedSearchesWebPart.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserSavedSearchesWebPart.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SusDebRootWeb\EventReceivers\eCaseListER\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3ce0daa0-1a3d-441a-b8d9-87706d003778}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\EventReceivers\SavedQueriesListER\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{71fa2779-c48c-4932-8a45-91d793894b6c}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\Modules\eCasesFonts\fontawesome-webfont.eot" />
+    <None Include="SusDebRootWeb\Modules\eCasesFonts\fontawesome-webfont.ttf" />
+    <None Include="SusDebRootWeb\Modules\eCasesFonts\fontawesome-webfont.woff" />
+    <None Include="SusDebRootWeb\Modules\eCasesFonts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{56e11233-e230-4f62-95fa-7d64283483c9}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\Modules\eCasesImages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{86b8b410-c934-4411-b3a0-51df3bfcf711}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\Modules\eCasesMasterPages\eCase_main.master" />
+    <None Include="SusDebRootWeb\Modules\eCasesMasterPages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0b281ebb-8656-4e73-9ec7-1cf3f91a5516}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\Modules\eCasesPages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{50194974-e75e-4ab7-8266-90f74eab91c2}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\Modules\eCasesScripts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2578ff8f-35c7-4476-8dde-343d84592505}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\Modules\eCasesStyles\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9f146d98-5815-4d9f-b043-48cc6ea4e601}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c710a021-cffc-42a9-bde9-925e799136bf}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\SiteColumns\Judge\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0f0be473-debc-4232-99f4-4ba8ed870ba1}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\SiteColumns\LawIssueList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c596cb9c-4f16-4b81-bbff-35dc79d147c2}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\SiteLists\BureauAutonumberList\BureauAutonumberListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e0941478-a2ca-400d-b1d3-c6b22709ac4c}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\SiteLists\BureauAutonumberList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{29716a6e-4d7d-4269-b1d3-0f5896f1839c}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\SiteLists\eCasesList\eCasesListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{492c3ad6-93a4-4436-93d9-36ceed2a6ca7}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\SiteLists\eCaseStatusesList\eCaseStatusesListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c3d0f441-0ac5-441e-9380-68e12b8199ac}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\SiteLists\eCaseStatusesList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c7d4c5e4-b7e1-4173-bca6-a109b4e20d26}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\SiteLists\eCasesList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{446f37c1-078a-47fb-b9e9-7d21191a4e78}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\SiteLists\SavedQueriesList\SavedQueriesListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{581f89c9-abed-475b-9643-5aeade8b2cdc}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\SiteLists\SavedQueriesList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{34ed3ff7-5dc1-40d7-aa22-4eae1935a295}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\SiteLists\SusDebAutonumberList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{545df2f3-3a63-4686-8bc1-51c51bcf1fe5}</SharePointProjectItemId>
+    </None>
+    <None Include="SusDebRootWeb\SiteLists\SusDebAutonumberList\SusDebAutonumberListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1700f1ff-25a8-46b1-827b-5eecc3c18364}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Site.WebParts\Site.WebParts.feature">
+      <FeatureId>{45cc078d-269b-4ccf-9762-7c2d60070eb2}</FeatureId>
+    </None>
+    <None Include="Features\RootWebComponents\RootWebComponents.feature">
+      <FeatureId>{000dbb93-ad36-45b4-81dd-746ea061c90e}</FeatureId>
+    </None>
+    <None Include="Features\SiteComponents\SiteComponents.feature">
+      <FeatureId>{038a9ada-ce81-49e9-91d2-a42460569303}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{37ffc62d-f74e-4618-89a4-41562786ddcd}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="WebParts\EmptyWebPart\EmptyWebPart.webpart" />
+    <None Include="WebParts\EmptyWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{978f3f9e-9bad-4cb7-b7fb-65931c685d20}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\MgrDashboardDueDates\MgrDashboardDueDates.webpart" />
+    <None Include="WebParts\MgrDashboardDueDates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{539ba614-8670-4b36-9676-b30001d0e370}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\UserSavedSearchesWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ca3092b7-7ad5-469a-8238-58bfea1bb1ff}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\UserSavedSearchesWebPart\UserSavedSearchesWebPart.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SusDebRootWeb\EventReceivers\eCaseListER\Elements.xml" />
+    <Content Include="SusDebRootWeb\EventReceivers\SavedQueriesListER\Elements.xml" />
+    <Content Include="SusDebRootWeb\Modules\eCasesFonts\Elements.xml" />
+    <Content Include="SusDebRootWeb\Modules\eCasesFonts\fontawesome-webfont.svg" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\add-button-bg-long.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\add-button-bg-short.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\batch_tag_16.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\batch_tag_32.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\button-bg-long.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\button-bg-short.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\ecase-logo.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\Elements.xml" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\export_to_csv_16.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\export_to_csv_32.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\gradient-light-blue-100.gif" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\gradient-light-green-100.gif" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\gradient-light-green-50.gif" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\icon-bg.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\move_docs_16.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\move_docs_32.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\note-bg.jpg" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\note-bg.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\rounded-tab-left.gif" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\rounded-tab-right.gif" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\search-button-bg-long.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\step.gif" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\tag_icon.jpg" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\title-banner.gif" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\top-nav-bg.gif" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\ui-icons_222222_256x240.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\ui-icons_2e83ff_256x240.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\ui-icons_454545_256x240.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\ui-icons_888888_256x240.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\user.gif" />
+    <Content Include="SusDebRootWeb\Modules\eCasesImages\watermark-bottom-left.png" />
+    <Content Include="SusDebRootWeb\Modules\eCasesMasterPages\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SusDebRootWeb\Modules\eCasesPages\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SusDebRootWeb\Modules\eCasesPages\default.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="SusDebRootWeb\Modules\eCasesPages\ManagerDashboard.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="SusDebRootWeb\Modules\eCasesPages\ManagerDashboard2.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="SusDebRootWeb\Modules\eCasesScripts\dashboardcontent.js" />
+    <Content Include="SusDebRootWeb\Modules\eCasesScripts\dashboardcontent2.js" />
+    <Content Include="SusDebRootWeb\Modules\eCasesScripts\eCaseRootWebHomePageScripts.js" />
+    <Content Include="SusDebRootWeb\Modules\eCasesScripts\eCaseWebHomePageScripts.js" />
+    <Content Include="SusDebRootWeb\Modules\eCasesScripts\Elements.xml" />
+    <Content Include="SusDebRootWeb\Modules\eCasesScripts\fullcalendar.min.js" />
+    <Content Include="SusDebRootWeb\Modules\eCasesScripts\highcharts.js" />
+    <Content Include="SusDebRootWeb\Modules\eCasesScripts\jquery-1.8.2.js" />
+    <Content Include="SusDebRootWeb\Modules\eCasesScripts\jquery-ui.js" />
+    <Content Include="SusDebRootWeb\Modules\eCasesScripts\jquery.cookie.js" />
+    <Content Include="SusDebRootWeb\Modules\eCasesScripts\jquery.dotdotdot.min.js" />
+    <Content Include="SusDebRootWeb\Modules\eCasesScripts\jquery.SPServices-0.7.2.min.js" />
+    <Content Include="SusDebRootWeb\Modules\eCasesStyles\aggregate-calendar-styles.xsl" />
+    <Content Include="SusDebRootWeb\Modules\eCasesStyles\case-details-styles.xsl" />
+    <Content Include="SusDebRootWeb\Modules\eCasesStyles\eCase-styles.css" />
+    <Content Include="SusDebRootWeb\Modules\eCasesStyles\eCase-tab-styles.css" />
+    <Content Include="SusDebRootWeb\Modules\eCasesStyles\Elements.xml" />
+    <Content Include="SusDebRootWeb\Modules\eCasesStyles\font-awesome-ie7.css" />
+    <Content Include="SusDebRootWeb\Modules\eCasesStyles\font-awesome.css" />
+    <Content Include="SusDebRootWeb\Modules\eCasesStyles\fullcalendar.css" />
+    <Content Include="SusDebRootWeb\Modules\eCasesStyles\fullcalendar.print.css" />
+    <Content Include="SusDebRootWeb\Modules\eCasesStyles\jquery-ui.css" />
+    <Content Include="SusDebRootWeb\Modules\eCasesStyles\notes-list-styles.xsl">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SusDebRootWeb\Modules\eCasesStyles\owners-list-styles.xsl" />
+    <Content Include="SusDebRootWeb\Modules\eCasesStyles\participants-list-styles.xsl" />
+    <Content Include="SusDebRootWeb\Modules\eCasesStyles\reviewers-list-styles.xsl" />
+    <Content Include="SusDebRootWeb\Modules\eCasesStyles\witnesses-list-styles.xsl" />
+    <Content Include="SusDebRootWeb\onet.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SusDebRootWeb\SiteColumns\Judge\Elements.xml" />
+    <Content Include="SusDebRootWeb\SiteColumns\LawIssueList\Elements.xml" />
+    <Content Include="SusDebRootWeb\SiteLists\BureauAutonumberList\BureauAutonumberListInstance\Elements.xml" />
+    <Content Include="SusDebRootWeb\SiteLists\BureauAutonumberList\Elements.xml" />
+    <Content Include="SusDebRootWeb\SiteLists\BureauAutonumberList\Schema.xml" />
+    <Content Include="SusDebRootWeb\SiteLists\eCasesList\eCasesListInstance\Elements.xml" />
+    <Content Include="SusDebRootWeb\SiteLists\eCaseStatusesList\eCaseStatusesListInstance\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SusDebRootWeb\SiteLists\eCaseStatusesList\Elements.xml" />
+    <Content Include="SusDebRootWeb\SiteLists\eCaseStatusesList\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SusDebRootWeb\SiteLists\SavedQueriesList\Elements.xml" />
+    <Content Include="SusDebRootWeb\SiteLists\SavedQueriesList\SavedQueriesListInstance\Elements.xml" />
+    <Content Include="SusDebRootWeb\SiteLists\SavedQueriesList\Schema.xml" />
+    <Content Include="SusDebRootWeb\SiteLists\SusDebAutonumberList\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SusDebRootWeb\SiteLists\SusDebAutonumberList\Schema.xml" />
+    <Content Include="SusDebRootWeb\SiteLists\SusDebAutonumberList\SusDebAutonumberListInstance\Elements.xml" />
+    <Content Include="SusDebRootWeb\webtemp_SusDebRootSiteDefinition.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SusDebRootWeb\SiteLists\eCasesList\Elements.xml" />
+    <Content Include="SusDebRootWeb\SiteLists\eCasesList\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Features\Site.WebParts\Site.WebParts.Template.xml">
+      <DependentUpon>Site.WebParts.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\RootWebComponents\RootWebComponents.Template.xml">
+      <DependentUpon>RootWebComponents.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\SiteComponents\SiteComponents.Template.xml">
+      <DependentUpon>SiteComponents.feature</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SusDebRootWeb\SiteLists\eCasesList\CaseNewForm.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\EmptyWebPart\Elements.xml" />
+    <Content Include="WebParts\MgrDashboardDueDates\Elements.xml" />
+    <Content Include="WebParts\MgrDashboardDueDates\MgrDashboardDueDates.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>MgrDashboardDueDates.ascx.g.cs</LastGenOutput>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\UserSavedSearchesWebPart\Elements.xml" />
+    <Content Include="WebParts\UserSavedSearchesWebPart\UserSavedSearchesWebPart.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>UserSavedSearchesWebPart.ascx.g.cs</LastGenOutput>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Treasury.ECM.eCase.SD.DOI.Common\Treasury.ECM.eCase.SD.DOI.Common.csproj">
+      <Project>{93DCF326-16A4-4CA6-92A6-C8D653421840}</Project>
+      <Name>Treasury.ECM.eCase.SD.DOI.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Treasury.ECM.eCase.SD.DOI.Extensions\Treasury.ECM.eCase.SD.DOI.Extensions.csproj">
+      <Project>{F1FBC340-0B01-4072-A2ED-16384D16ADDC}</Project>
+      <Name>Treasury.ECM.eCase.SD.DOI.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Treasury.ECM.eCase.SD.DOI.Logging\Treasury.ECM.eCase.SD.DOI.Logging.csproj">
+      <Project>{C9BF7D2E-AE6F-4AB1-85D8-64FD658C600B}</Project>
+      <Name>Treasury.ECM.eCase.SD.DOI.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Treasury.ECM.eCase.SD.DOI.Search\Treasury.ECM.eCase.SD.DOI.Search.csproj">
+      <Project>{245CBFF8-1BCD-4471-9868-AD6A162461D2}</Project>
+      <Name>Treasury.ECM.eCase.SD.DOI.Search</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup>
+    <PostBuildEventDependsOn>CreatePackage</PostBuildEventDependsOn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

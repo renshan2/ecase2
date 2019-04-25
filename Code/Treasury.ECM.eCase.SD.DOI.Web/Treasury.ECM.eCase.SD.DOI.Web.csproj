@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4EB34F18-57FC-497E-9954-D6C7BF99B0B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Treasury.ECM.eCase.SusDeb.DOI.Web</RootNamespace>
+    <AssemblyName>Treasury.ECM.eCase.SusDeb.DOI.Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
+    <AssemblyDeploymentTarget>GlobalAssemblyCache</AssemblyDeploymentTarget>
+    <IncludeAssemblyInPackage>True</IncludeAssemblyInPackage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.DocumentManagement, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Taxonomy, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CaseSiteDefinition\EventReceivers\ActivitiesTasksER\ActivitiesTasksER.cs" />
+    <Compile Include="CaseSiteDefinition\EventReceivers\CaseDocsER\CaseDocsER.cs" />
+    <Compile Include="CaseSiteDefinition\EventReceivers\CaseRelatedDatesER\CaseRelatedDatesER.cs" />
+    <Compile Include="CaseSiteDefinition\EventReceivers\FinishedWorkProduceER\FinishedWorkProduceER.cs" />
+    <Compile Include="CaseSiteDefinition\EventReceivers\GroupProxyER\GroupProxyER.cs" />
+    <Compile Include="CaseSiteDefinition\EventReceivers\RelatedDocsER\RelatedDocsER.cs" />
+    <Compile Include="CaseSiteDefinition\EventReceivers\SetItemIdHandler.cs" />
+    <Compile Include="CaseSiteDefinition\EventReceivers\ShareWithExternalUsersER\ShareWithExternalUsersER.cs" />
+    <Compile Include="Layouts\eCaseWeb\AuditReport.aspx.cs">
+      <DependentUpon>AuditReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\eCaseWeb\AuditReport.aspx.designer.cs">
+      <DependentUpon>AuditReport.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaseSiteDefinition\Modules\eCasePages\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Features\CaseWebComponents\CaseWebComponents.EventReceiver.cs">
+      <DependentUpon>CaseWebComponents.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\eCaseWeb\BatchCopyMove.aspx.cs">
+      <DependentUpon>BatchCopyMove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\eCaseWeb\BatchCopyMove.aspx.designer.cs">
+      <DependentUpon>BatchCopyMove.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\eCaseWeb\BatchTagging.aspx.cs">
+      <DependentUpon>BatchTagging.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\eCaseWeb\BatchTagging.aspx.designer.cs">
+      <DependentUpon>BatchTagging.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\eCaseWeb\BatchMoving.aspx.cs">
+      <DependentUpon>BatchMoving.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\eCaseWeb\BatchMoving.aspx.designer.cs">
+      <DependentUpon>BatchMoving.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\eCaseWeb\BatchCopying.aspx.cs">
+      <DependentUpon>BatchCopying.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\eCaseWeb\BatchCopying.aspx.designer.cs">
+      <DependentUpon>BatchCopying.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaseSiteDefinition\SiteLists\Other\TaskAndActivities\TaskActivitiesNewForm.aspx.cs">
+      <DependentUpon>TaskActivitiesNewForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CaseSiteDefinition\SiteLists\Other\TaskAndActivities\TaskActivitiesNewForm.aspx.designer.cs">
+      <DependentUpon>TaskActivitiesNewForm.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\eCaseWeb\DocumentIdApply.aspx.cs">
+      <DependentUpon>DocumentIdApply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\eCaseWeb\DocumentIdApply.aspx.designer.cs">
+      <DependentUpon>DocumentIdApply.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\eCaseWeb\ExportToCSV.aspx.cs">
+      <DependentUpon>ExportToCSV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\eCaseWeb\ExportToCSV.aspx.designer.cs">
+      <DependentUpon>ExportToCSV.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebParts\EmptyWebPart\EmptyWebPart.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CaseSiteDefinition\ContentTypes\CaseDocument\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5ba0ae1c-eba5-4fe0-af33-c1045e3cb1a9}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\ContentTypes\CaseNote\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6070e45f-200c-4951-8356-2fcd43e52e34}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\ContentTypes\eCaseDocSet\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{166c420a-6682-4679-866d-c1d4e611d057}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\ContentTypes\FinishedWorkProduct\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{17892a8c-4c3b-4d93-850d-4def52f86f80}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\ContentTypes\LegalIssue\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fdd2e543-8999-4515-838e-708538c78870}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\ContentTypes\RelatedDocument\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d14f0064-460b-4bbd-a50f-920c2dfce3a2}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\ContentTypes\ShareWithExternalUser\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1b1c8872-99b7-47bc-ab02-3b4c0be4aacc}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\CustomActions\AuditReportAccessAction\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4525787e-6c10-4ee1-acb8-b1404b752c1f}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\CustomActions\BatchCopyButton\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e4597a15-b1b2-45c3-9c70-ff67fb7ae01e}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\CustomActions\CaseDocsMoveButton\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9adbb87f-86fa-4402-8009-12be6a3407fa}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\CustomActions\CaseDocsTagButton\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fc8005f9-6a1f-4f0d-b5a8-cdde5e1f26e3}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\CustomActions\DocumentIdApplyButton\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ae4c6373-ffc8-4156-bb7c-05b4407b79be}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\CustomActions\ExportToCSV\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f18aef88-e4be-486a-8647-c51c8dbad2a7}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\CustomActions\FinishedWorkProductMoveButton\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d5e42f40-4fc0-4dd6-8aff-eef6903715c3}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\CustomActions\FinishedWorkProductTagButton\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4a228ef4-0043-4dd6-99ae-1825bb66555b}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\CustomActions\RelatedDocsMoveButton\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d5fb9558-674a-4d98-95c2-a623d43edf5b}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\CustomActions\RelatedDocsTagButton\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dbcf1c42-8445-4f4d-844b-f658190a325c}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\EventReceivers\ActivitiesTasksER\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{520037a8-9b65-4bd1-ad3c-4f60647fe050}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\EventReceivers\CaseDocsER\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2863216e-10a6-4465-ac38-071553c1b5e5}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\EventReceivers\CaseRelatedDatesER\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c4812d60-437e-4b66-9925-af39e23e70a9}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\EventReceivers\FinishedWorkProduceER\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3f1b3aa3-a797-44af-8644-26f7247da124}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\EventReceivers\GroupProxyER\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b096e655-2300-41c3-8cd9-4d801721380c}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\EventReceivers\RelatedDocsER\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3e851621-9860-474f-b7a0-1f96373b423f}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\EventReceivers\ShareWithExternalUsersER\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c7f84c1f-ccfd-4a10-9b9e-f4c84d600dc9}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\Modules\eCasePages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{630618d1-1727-4e2f-a8d9-8f2e7511ccf7}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c919e6ad-6e2a-429d-8114-33d26e9945d7}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteColumns\BatesRange\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{965396ac-26c4-43dd-9c11-8433c3ee12d1}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteColumns\CaseDocId\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d81fde76-bc68-45c6-a6cc-25b235251d42}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteColumns\Codes\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5104a66c-8904-4321-9b9f-f41a1ffd882c}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteColumns\DocumentDate\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3c1796a0-b15c-4f17-9112-aaf644b1ac11}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteColumns\DocumentType\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{86e45233-df18-443d-b8f5-6e5ea43eeb3c}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteColumns\ExhibitNumber\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b6b70215-a6a7-4498-99d3-b1bec4a890f3}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteColumns\GroupMember\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{81d455ea-4a64-4514-b085-fa561f7c0c25}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteColumns\MergeDocumentOrder\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{402b72ed-e68f-4dbb-a702-ea072fd18f78}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteColumns\MergeDocument\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5ecc9b82-acf8-4c6c-a0fa-1c12b0188259}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteColumns\Originator\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a698db19-7a6a-4b2e-a4e8-10cb053e5e22}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteColumns\Recipients\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2b0a3e1c-a5fa-4ca1-a1a3-5fc103d68acf}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteColumns\RelatedIssues\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c7079766-60ea-4351-a960-847f9f4c5713}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteColumns\RelatedLinks\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{540c2a7f-0a34-4021-9cca-eb656fee0289}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteColumns\SetItemID\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1c3f9c4e-b532-4cd7-b31a-9ec845ee1abf}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteColumns\ShareWithUser\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{62bbb0d4-b613-4f9c-b887-42a45276a457}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteColumns\Shorthand\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{267d3990-62db-475c-967c-611023653e71}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Contacts\GroupProxy\Bureau\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{145a04ed-8a3d-48c4-9eff-128844fedd4a}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Contacts\GroupProxy\Investigator\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{68ca4fb4-6c2a-4e0d-9612-e64413007e70}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Contacts\GroupProxy\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{291003b3-0815-4a3e-9c5c-465a6058ba50}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Contacts\RelatedContacts\RelatedContactsInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{67139232-b0e5-4e1d-90bf-d71a265be9df}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Contacts\RelatedContacts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{94ef35b4-b782-40ba-9dad-d2552b7efcb3}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\DiscussionBoards\DiscussionBoard\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{968ac7c2-b4c3-4147-8016-a726d4b09153}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\DocLibs\ReferralDocuments\CaseDocumentsInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e70f35ac-a84e-4607-a63a-805a1ae15b5f}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\DocLibs\ReferralDocuments\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c1edbb10-960c-4c99-b6d6-88cf3161d178}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Calendars\CaseRelatedDates\CaseRelatedDatesInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a2b12d73-1932-42b7-ac57-6fe445f01496}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Calendars\CaseRelatedDates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c26283e0-b232-4bb0-81d4-1d69c729d471}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\DocLibs\SDODocuments\FinishedWorkProductsInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{00396943-715e-4164-9327-6e819f1e6558}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\DocLibs\SDODocuments\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bdb7b3e0-512d-404f-914b-71cf5aa1c5c4}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\DocLibs\InvestigationDocuments\RelatedDocumentsInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5c787e29-1928-418b-8f72-840be56fa897}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\DocLibs\InvestigationDocuments\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e1192cc5-c455-4cc5-944c-2145d3578f52}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\DocLibs\ShareWithExternalUsers\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c8c98003-69c5-4553-ae51-3f4080e8ff57}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\DocLibs\ShareWithExternalUsers\ShareWithExternalUsersInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{de80ebbd-6777-4929-aa21-7c5fb0a87edc}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Other\CaseNotes\CaseNotesInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b435532e-124c-4bff-a664-50515fc5a4a9}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Other\CaseNotes\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{52ad7186-7214-4f1b-828b-cd212a0caaf6}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Other\ExternalLinks\RelevantWebLinks\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6213d2ac-6814-4ba5-b1f7-52b4a272a02c}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Other\ExternalLinks\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{51500d78-ff21-4fe0-b5fc-3c0d8dd748e3}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Other\LegalIssues\LegalIssuesInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7d624c8d-1228-4731-9117-e8d8bc058968}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Other\LegalIssues\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0d2010ac-d8e7-4b4f-a796-917684ea03b4}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Calendars\MatterRelatedDates\MatterRelatedDatesInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a853e24a-9a66-483b-8c4f-ef531c545037}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Calendars\MatterRelatedDates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{25830c07-79e1-49b2-8481-03b00a723215}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Other\PartyAssociations\PartyAssociationsInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cb39d7ae-c68d-4823-819e-5e1949c0c2cc}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Other\PartyAssociations\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d1e69185-5cb1-4f44-8a88-620c9c7c4916}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Other\TaskAndActivities\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e9a791bc-83c9-4b76-aef3-06a37d0df05f}</SharePointProjectItemId>
+    </None>
+    <None Include="CaseSiteDefinition\SiteLists\Other\TaskAndActivities\TaskAndActivitiesInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a0e0b44e-97d8-495a-8211-da7e034b22d8}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\CaseSiteComponents\CaseSiteComponents.feature">
+      <FeatureId>{b57a2080-f3da-4410-82ec-41095b720d59}</FeatureId>
+    </None>
+    <None Include="Features\CaseWebComponents\CaseWebComponents.feature">
+      <FeatureId>{22df5e5d-d41d-4d29-9a6a-97a83f14c88d}</FeatureId>
+    </None>
+    <None Include="Features\Web.WebParts\Web.WebParts.feature">
+      <FeatureId>{5d41cc88-2c11-4fce-b83b-e3a4e4bdcb84}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2efe25f4-e402-4096-80c1-d39b4420c409}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{d41c8e6b-ece2-496f-91de-14a6357e0698}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="WebParts\EmptyWebPart\EmptyWebPart.webpart" />
+    <None Include="WebParts\EmptyWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f26c5c0e-ec3b-4693-88a0-6e1b1b17e945}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CaseSiteDefinition\ContentTypes\CaseDocument\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CaseSiteDefinition\ContentTypes\CaseNote\Elements.xml" />
+    <Content Include="CaseSiteDefinition\ContentTypes\eCaseDocSet\Elements.xml" />
+    <Content Include="CaseSiteDefinition\ContentTypes\FinishedWorkProduct\Elements.xml" />
+    <Content Include="CaseSiteDefinition\ContentTypes\LegalIssue\Elements.xml" />
+    <Content Include="CaseSiteDefinition\ContentTypes\RelatedDocument\Elements.xml" />
+    <Content Include="CaseSiteDefinition\ContentTypes\ShareWithExternalUser\Elements.xml" />
+    <Content Include="CaseSiteDefinition\CustomActions\AuditReportAccessAction\Elements.xml" />
+    <Content Include="CaseSiteDefinition\CustomActions\BatchCopyButton\Elements.xml" />
+    <Content Include="CaseSiteDefinition\CustomActions\CaseDocsMoveButton\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CaseSiteDefinition\CustomActions\CaseDocsTagButton\Elements.xml" />
+    <Content Include="CaseSiteDefinition\CustomActions\DocumentIdApplyButton\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CaseSiteDefinition\CustomActions\ExportToCSV\Elements.xml" />
+    <Content Include="CaseSiteDefinition\CustomActions\FinishedWorkProductMoveButton\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CaseSiteDefinition\CustomActions\FinishedWorkProductTagButton\Elements.xml" />
+    <Content Include="CaseSiteDefinition\CustomActions\RelatedDocsMoveButton\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CaseSiteDefinition\CustomActions\RelatedDocsTagButton\Elements.xml" />
+    <Content Include="CaseSiteDefinition\EventReceivers\ActivitiesTasksER\Elements.xml" />
+    <Content Include="CaseSiteDefinition\EventReceivers\CaseDocsER\Elements.xml" />
+    <Content Include="CaseSiteDefinition\EventReceivers\CaseRelatedDatesER\Elements.xml" />
+    <Content Include="CaseSiteDefinition\EventReceivers\FinishedWorkProduceER\Elements.xml" />
+    <Content Include="CaseSiteDefinition\EventReceivers\GroupProxyER\Elements.xml" />
+    <Content Include="CaseSiteDefinition\EventReceivers\RelatedDocsER\Elements.xml" />
+    <Content Include="CaseSiteDefinition\EventReceivers\ShareWithExternalUsersER\Elements.xml" />
+    <Content Include="CaseSiteDefinition\Modules\eCasePages\CaseData.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CaseSiteDefinition\Modules\eCasePages\CaseInfo.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CaseSiteDefinition\SiteColumns\MergeDocumentOrder\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteColumns\MergeDocument\Elements.xml" />
+    <Content Include="Layouts\eCaseWeb\AuditReport.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CaseSiteDefinition\Modules\eCasePages\Discussion.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CaseSiteDefinition\Modules\eCasePages\Documents.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CaseSiteDefinition\Modules\eCasePages\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CaseSiteDefinition\Modules\eCasePages\default.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CaseSiteDefinition\onet.xml" />
+    <Content Include="CaseSiteDefinition\SiteColumns\BatesRange\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteColumns\CaseDocId\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteColumns\Codes\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteColumns\DocumentDate\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteColumns\DocumentType\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteColumns\ExhibitNumber\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteColumns\GroupMember\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteColumns\Originator\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteColumns\Recipients\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteColumns\RelatedIssues\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteColumns\RelatedLinks\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteColumns\SetItemID\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteColumns\ShareWithUser\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteColumns\Shorthand\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Contacts\GroupProxy\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Contacts\GroupProxy\Bureau\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Contacts\GroupProxy\Investigator\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Contacts\GroupProxy\Schema.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Contacts\RelatedContacts\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Contacts\RelatedContacts\RelatedContactsInstance\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Contacts\RelatedContacts\Schema.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\DiscussionBoards\DiscussionBoard\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\ReferralDocuments\CaseDocumentsInstance\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\ReferralDocuments\EditDlg.htm" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\ReferralDocuments\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\ReferralDocuments\FileDlg.htm" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\ReferralDocuments\Repair.aspx" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\ReferralDocuments\Schema.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\ReferralDocuments\Upload.aspx" />
+    <Content Include="CaseSiteDefinition\SiteLists\Calendars\CaseRelatedDates\CaseRelatedDatesInstance\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Calendars\CaseRelatedDates\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Calendars\CaseRelatedDates\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\SDODocuments\EditDlg.htm" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\SDODocuments\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\SDODocuments\FileDlg.htm" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\SDODocuments\FinishedWorkProductsInstance\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\SDODocuments\Repair.aspx" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\SDODocuments\Schema.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\SDODocuments\Upload.aspx" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\InvestigationDocuments\EditDlg.htm" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\InvestigationDocuments\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\InvestigationDocuments\FileDlg.htm" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\InvestigationDocuments\RelatedDocumentsInstance\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\InvestigationDocuments\Repair.aspx" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\InvestigationDocuments\Schema.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\InvestigationDocuments\Upload.aspx" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\ShareWithExternalUsers\EditDlg.htm" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\ShareWithExternalUsers\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\ShareWithExternalUsers\FileDlg.htm" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\ShareWithExternalUsers\Repair.aspx" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\ShareWithExternalUsers\Schema.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\ShareWithExternalUsers\ShareWithExternalUsersInstance\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\DocLibs\ShareWithExternalUsers\Upload.aspx" />
+    <Content Include="CaseSiteDefinition\SiteLists\Other\CaseNotes\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Other\CaseNotes\CaseNotesInstance\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Other\CaseNotes\Schema.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Other\ExternalLinks\RelevantWebLinks\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Other\ExternalLinks\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Other\ExternalLinks\Schema.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Other\LegalIssues\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Other\LegalIssues\LegalIssuesInstance\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Other\LegalIssues\Schema.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Calendars\MatterRelatedDates\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Calendars\MatterRelatedDates\MatterRelatedDatesInstance\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Calendars\MatterRelatedDates\Schema.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Other\PartyAssociations\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Other\PartyAssociations\PartyAssociationsInstance\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Other\PartyAssociations\Schema.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Other\TaskAndActivities\Elements.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Other\TaskAndActivities\Schema.xml" />
+    <Content Include="CaseSiteDefinition\SiteLists\Other\TaskAndActivities\TaskAndActivitiesInstance\Elements.xml" />
+    <Content Include="CaseSiteDefinition\webtemp_CaseSiteDefinition.xml" />
+    <Content Include="Features\CaseSiteComponents\CaseSiteComponents.Template.xml">
+      <DependentUpon>CaseSiteComponents.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CaseWebComponents\CaseWebComponents.Template.xml">
+      <DependentUpon>CaseWebComponents.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Web.WebParts\Web.WebParts.Template.xml">
+      <DependentUpon>Web.WebParts.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\eCaseWeb\BatchCopyMove.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\eCaseWeb\BatchTagging.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\eCaseWeb\BatchMoving.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\eCaseWeb\BatchCopying.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CaseSiteDefinition\SiteLists\Other\TaskAndActivities\TaskActivitiesNewForm.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\eCaseWeb\DocumentIdApply.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\eCaseWeb\ExportToCSV.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebParts\EmptyWebPart\Elements.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Treasury.ECM.eCase.SD.DOI.Common\Treasury.ECM.eCase.SD.DOI.Common.csproj">
+      <Project>{93DCF326-16A4-4CA6-92A6-C8D653421840}</Project>
+      <Name>Treasury.ECM.eCase.SD.DOI.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Treasury.ECM.eCase.SD.DOI.Extensions\Treasury.ECM.eCase.SD.DOI.Extensions.csproj">
+      <Project>{F1FBC340-0B01-4072-A2ED-16384D16ADDC}</Project>
+      <Name>Treasury.ECM.eCase.SD.DOI.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Treasury.ECM.eCase.SD.DOI.Logging\Treasury.ECM.eCase.SD.DOI.Logging.csproj">
+      <Project>{C9BF7D2E-AE6F-4AB1-85D8-64FD658C600B}</Project>
+      <Name>Treasury.ECM.eCase.SD.DOI.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEventDependsOn>CreatePackage</PostBuildEventDependsOn>
+  </PropertyGroup>
+</Project>

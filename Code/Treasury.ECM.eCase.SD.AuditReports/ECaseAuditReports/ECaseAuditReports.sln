@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECaseAuditWebPart", "ECaseAuditWebPart\ECaseAuditWebPart\ECaseAuditWebPart.csproj", "{F5DDE83E-488C-48B1-8D03-DADA47463C8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECaseAuditBuilder", "ECaseAuditBuilder\ECaseAuditBuilder\ECaseAuditBuilder.csproj", "{02FEF52C-F221-41A7-A94E-1B14843E0C7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5DDE83E-488C-48B1-8D03-DADA47463C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5DDE83E-488C-48B1-8D03-DADA47463C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5DDE83E-488C-48B1-8D03-DADA47463C8C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F5DDE83E-488C-48B1-8D03-DADA47463C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5DDE83E-488C-48B1-8D03-DADA47463C8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5DDE83E-488C-48B1-8D03-DADA47463C8C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{02FEF52C-F221-41A7-A94E-1B14843E0C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02FEF52C-F221-41A7-A94E-1B14843E0C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02FEF52C-F221-41A7-A94E-1B14843E0C7A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{02FEF52C-F221-41A7-A94E-1B14843E0C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02FEF52C-F221-41A7-A94E-1B14843E0C7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02FEF52C-F221-41A7-A94E-1B14843E0C7A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

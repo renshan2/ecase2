@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93DCF326-16A4-4CA6-92A6-C8D653421840}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Treasury.ECM.eCase.SusDeb.DOI.Common</RootNamespace>
+    <AssemblyName>Treasury.ECM.eCase.SusDeb.DOI.Common</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SandboxedSolution>False</SandboxedSolution>
+    <AssemblyDeploymentTarget>GlobalAssemblyCache</AssemblyDeploymentTarget>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.DocumentManagement, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Server, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=AMD64" />
+    <Reference Include="Microsoft.Office.Server.UserProfiles, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AIS.Federal.Treasury.Common\Microsoft.Practices.SharePoint\Microsoft.Practices.SharePoint\Release DLLs\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.SharePoint.Common, Version=2.0.0.0, Culture=neutral, PublicKeyToken=ef4330804b3c4129, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AIS.Federal.Treasury.Common\Microsoft.Practices.SharePoint\Microsoft.Practices.SharePoint\Release DLLs\Microsoft.Practices.SharePoint.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Security, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\DbAdapter.cs" />
+    <Compile Include="Database\StoredProcedures\CreateCaseWebSProc.cs" />
+    <Compile Include="Database\StoredProcedures\CreateSPObjPermSProc.cs" />
+    <Compile Include="Database\StoredProcedures\DeleteSPObjPermsSProc.cs" />
+    <Compile Include="Database\StoredProcedures\GetCaseWebsSProc.cs" />
+    <Compile Include="Database\StoredProcedures\GetCreateDocIdSProc.cs" />
+    <Compile Include="Database\StoredProcedures\GetSPObjPermsSProc.cs" />
+    <Compile Include="Database\StoredProcedures\IeCaseStoredProc.cs" />
+    <Compile Include="DocIdProvider\eCaseDocIdProvider.cs" />
+    <Compile Include="Extensions\RecordPermissionsExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimerJobs\UpdateNextDueDateTimerJob.cs" />
+    <Compile Include="Utilities\CasesNextDueDate.cs" />
+    <Compile Include="Utilities\eCaseAuditBuilder.cs" />
+    <Compile Include="Utilities\eCaseConstants.cs" />
+    <Compile Include="Utilities\eCaseGroups.cs" />
+    <Compile Include="Utilities\FileUtilities.cs" />
+    <Compile Include="WebParts\Empty\Empty.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Features\Common.WebParts\Common.WebParts.feature">
+      <FeatureId>{de2ef157-7094-4966-adfa-a33c3d0e93aa}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{8deed156-ac68-4743-9f0f-017c3d504227}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="WebParts\Empty\Empty.webpart" />
+    <None Include="WebParts\Empty\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ced9b54d-8778-4a07-8a92-5bb77552d97d}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\Sql\eCaseManagement.sql" />
+    <Content Include="Database\Sql\eCaseManagementDocumentIds-v2-Update.sql" />
+    <Content Include="Database\Sql\eCaseSavedSearchResults-v2.sql" />
+    <Content Include="Database\Sql\eCaseSavedSearchResults.sql" />
+    <Content Include="Features\Common.WebParts\Common.WebParts.Template.xml">
+      <DependentUpon>Common.WebParts.feature</DependentUpon>
+    </Content>
+    <Content Include="WebParts\Empty\Elements.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Treasury.ECM.eCase.SD.DOI.Extensions\Treasury.ECM.eCase.SD.DOI.Extensions.csproj">
+      <Project>{F1FBC340-0B01-4072-A2ED-16384D16ADDC}</Project>
+      <Name>Treasury.ECM.eCase.SD.DOI.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Treasury.ECM.eCase.SD.DOI.Logging\Treasury.ECM.eCase.SD.DOI.Logging.csproj">
+      <Project>{C9BF7D2E-AE6F-4AB1-85D8-64FD658C600B}</Project>
+      <Name>Treasury.ECM.eCase.SD.DOI.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEventDependsOn>CreatePackage</PostBuildEventDependsOn>
+  </PropertyGroup>
+</Project>

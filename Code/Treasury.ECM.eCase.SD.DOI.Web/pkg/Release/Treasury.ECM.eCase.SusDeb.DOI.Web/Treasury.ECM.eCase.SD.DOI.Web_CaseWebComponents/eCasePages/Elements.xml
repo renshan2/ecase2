@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="eCasePages" Path="eCasePages\">
+    <File Name="default.aspx" Url="default.aspx" Type="Ghostable" IgnoreIfAlreadyExists="TRUE" NavBarHome="True">
+      <!--<AllUsersWebPart WebPartZoneID="ZoneRight" WebPartOrder="1">
+        <![CDATA[
+        <WebPart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/WebPart/v2">
+          <Title>Find by Document ID</Title>
+          <FrameType>TitleBarOnly</FrameType>
+          <Description>Finds a document by its Document ID.</Description>
+          <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+          <Assembly>Microsoft.Office.DocumentManagement, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+          <TypeName>Microsoft.Office.Server.WebControls.DocIdSearchWebPart</TypeName>
+          <Height>80px</Height>
+          <ChromeType>TitleOnly</ChromeType>
+        </WebPart>
+       ]]>
+      </AllUsersWebPart>-->
+      <View List="Lists/CaseNotes" BaseViewID="10" WebPartZoneID="ZoneRight" WebPartOrder="2">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">None</property> 
+                                    <property name="AllowClose" type="bool">False</property> 
+                                    <property name="XslLink" type="string">../Style%20Library/notes-list-styles.xsl</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>
+    </File>
+    <File Path="CaseInfo.aspx" Url="CaseInfo.aspx" Type="Ghostable" IgnoreIfAlreadyExists="TRUE">
+      <View List="Lists/TasksAndActivities" BaseViewID="4" WebPartZoneID="ID2A" WebPartOrder="1">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">TitleOnly</property> 
+                                    <property name="AllowClose" type="bool">False</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>
+      <View List="Lists/Related Contacts" BaseViewID="0" WebPartZoneID="ID2A" WebPartOrder="2">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">TitleOnly</property> 
+                                    <property name="AllowClose" type="bool">False</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>
+      <!--<View List="Lists/Bureau" BaseViewID="10" WebPartZoneID="SUB2ID1" WebPartOrder="1">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">TitleOnly</property> 
+                                    <property name="AllowClose" type="bool">False</property>
+                                    <property name="XslLink" type="string">../Style%20Library/owners-list-styles.xsl</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>
+      <View List="Lists/Investigator" BaseViewID="10" WebPartZoneID="SUB2ID2" WebPartOrder="1">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">TitleOnly</property> 
+                                    <property name="AllowClose" type="bool">False</property>
+                                    <property name="XslLink" type="string">../Style%20Library/participants-list-styles.xsl</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>-->    
+      <View List="Lists/CaseRelatedDates" BaseViewID="4" WebPartZoneID="ID2B" WebPartOrder="1">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">TitleOnly</property> 
+                                    <property name="AllowClose" type="bool">False</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>
+      <View List="Lists/Relevant Web Links" BaseViewID="3" WebPartZoneID="ID2B" WebPartOrder="2">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">TitleOnly</property> 
+                                    <property name="AllowClose" type="bool">False</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>
+      <!--<AllUsersWebPart WebPartZoneID="ZoneRight" WebPartOrder="1">
+        <![CDATA[
+        <WebPart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/WebPart/v2">
+          <Title>Find by Document ID</Title>
+          <FrameType>TitleBarOnly</FrameType>
+          <Description>Finds a document by its Document ID.</Description>
+          <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+          <Assembly>Microsoft.Office.DocumentManagement, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+          <TypeName>Microsoft.Office.Server.WebControls.DocIdSearchWebPart</TypeName>
+          <Height>80px</Height>
+          <ChromeType>TitleOnly</ChromeType>
+        </WebPart>
+       ]]>
+      </AllUsersWebPart>-->
+      <View List="Lists/CaseNotes" BaseViewID="10" WebPartZoneID="ZoneRight" WebPartOrder="2">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">None</property> 
+                                    <property name="AllowClose" type="bool">False</property> 
+                                    <property name="XslLink" type="string">../Style%20Library/notes-list-styles.xsl</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>
+    </File>
+    <File Path="CaseData.aspx" Url="CaseData.aspx" Type="Ghostable" IgnoreIfAlreadyExists="TRUE">
+      <View List="Lists/LegalIssues" BaseViewID="2" WebPartZoneID="ID3" WebPartOrder="1">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">TitleOnly</property> 
+                                    <property name="AllowClose" type="bool">False</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>
+      <View List="Lists/MatterRelatedDates" BaseViewID="4" WebPartZoneID="ID3" WebPartOrder="2">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">TitleOnly</property> 
+                                    <property name="AllowClose" type="bool">False</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>
+      <!--<AllUsersWebPart WebPartZoneID="ZoneRight" WebPartOrder="1">
+        <![CDATA[
+        <WebPart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/WebPart/v2">
+          <Title>Find by Document ID</Title>
+          <FrameType>TitleBarOnly</FrameType>
+          <Description>Finds a document by its Document ID.</Description>
+          <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+          <Assembly>Microsoft.Office.DocumentManagement, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+          <TypeName>Microsoft.Office.Server.WebControls.DocIdSearchWebPart</TypeName>
+          <Height>80px</Height>
+          <ChromeType>TitleOnly</ChromeType>
+        </WebPart>
+       ]]>
+      </AllUsersWebPart>-->
+      <View List="Lists/CaseNotes" BaseViewID="10" WebPartZoneID="ZoneRight" WebPartOrder="2">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">None</property> 
+                                    <property name="AllowClose" type="bool">False</property> 
+                                    <property name="XslLink" type="string">../Style%20Library/notes-list-styles.xsl</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>
+    </File>
+    <File Path="Documents.aspx" Url="Documents.aspx" Type="Ghostable" IgnoreIfAlreadyExists="TRUE">
+      <View List="Lists/ReferralDocuments" BaseViewID="10" WebPartZoneID="SUBID1" WebPartOrder="1">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">TitleOnly</property> 
+                                    <property name="AllowClose" type="bool">False</property>
+                                    <property name="AutoRefresh" type="bool">True</property>
+                                    <property name="AutoRefreshInterval" type="int">60</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>
+      <View List="Lists/InvestigationDocuments" BaseViewID="10" WebPartZoneID="SUBID2" WebPartOrder="1">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">TitleOnly</property> 
+                                    <property name="AllowClose" type="bool">False</property>
+                                    <property name="AutoRefresh" type="bool">True</property>
+                                    <property name="AutoRefreshInterval" type="int">60</property>                                                                         
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>
+      <View List="Lists/SDODocuments" BaseViewID="10" WebPartZoneID="SUBID3" WebPartOrder="1">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">TitleOnly</property> 
+                                    <property name="AllowClose" type="bool">False</property>
+                                    <property name="AutoRefresh" type="bool">True</property>
+                                    <property name="AutoRefreshInterval" type="int">60</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>
+      <View List="Lists/ShareWithExternalUsers" BaseViewID="10" WebPartZoneID="SUBID4" WebPartOrder="1">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">TitleOnly</property> 
+                                    <property name="AllowClose" type="bool">False</property>
+                                    <property name="AutoRefresh" type="bool">True</property>
+                                    <property name="AutoRefreshInterval" type="int">60</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>
+      <!--<AllUsersWebPart WebPartZoneID="ZoneRight" WebPartOrder="1">
+        <![CDATA[
+        <WebPart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/WebPart/v2">
+          <Title>Find by Document ID</Title>
+          <FrameType>TitleBarOnly</FrameType>
+          <Description>Finds a document by its Document ID.</Description>
+          <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+          <Assembly>Microsoft.Office.DocumentManagement, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+          <TypeName>Microsoft.Office.Server.WebControls.DocIdSearchWebPart</TypeName>
+          <Height>80px</Height>
+          <ChromeType>TitleOnly</ChromeType>
+        </WebPart>
+       ]]>
+      </AllUsersWebPart>-->
+      <View List="Lists/CaseNotes" BaseViewID="10" WebPartZoneID="ZoneRight" WebPartOrder="2">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">None</property> 
+                                    <property name="AllowClose" type="bool">False</property> 
+                                    <property name="XslLink" type="string">../Style%20Library/notes-list-styles.xsl</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>
+    </File>
+   <File Path="Discussion.aspx" Url="Discussion.aspx" Type="Ghostable" IgnoreIfAlreadyExists="TRUE">
+     <View List="Lists/DiscussionBoard" BaseViewID="3" WebPartZoneID="ID5" WebPartOrder="1">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">TitleOnly</property> 
+                                    <property name="AllowClose" type="bool">False</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+     </View>
+     <!--<AllUsersWebPart WebPartZoneID="ZoneRight" WebPartOrder="1">
+       <![CDATA[
+        <WebPart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/WebPart/v2">
+          <Title>Find by Document ID</Title>
+          <FrameType>TitleBarOnly</FrameType>
+          <Description>Finds a document by its Document ID.</Description>
+          <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+          <Assembly>Microsoft.Office.DocumentManagement, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+          <TypeName>Microsoft.Office.Server.WebControls.DocIdSearchWebPart</TypeName>
+          <Height>80px</Height>
+          <ChromeType>TitleOnly</ChromeType>
+        </WebPart>
+       ]]>
+     </AllUsersWebPart>-->     
+     <View List="Lists/CaseNotes" BaseViewID="10" WebPartZoneID="ZoneRight" WebPartOrder="2">
+       <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">None</property> 
+                                    <property name="AllowClose" type="bool">False</property> 
+                                    <property name="XslLink" type="string">../Style%20Library/notes-list-styles.xsl</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+     </View>
+   </File>
+  </Module>
+</Elements>

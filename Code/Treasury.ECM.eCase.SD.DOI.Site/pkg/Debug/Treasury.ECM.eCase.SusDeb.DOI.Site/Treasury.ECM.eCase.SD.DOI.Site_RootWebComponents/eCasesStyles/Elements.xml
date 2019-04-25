@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="eCasesStyles" Path="eCasesStyles\" Url="Style Library">
+    <File Name="eCase-styles.css"
+          Url="eCase-styles.css"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="eCase-tab-styles.css"
+          Url="eCase-tab-styles.css"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="jquery-ui.css"
+          Url="jquery-ui.css"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="case-details-styles.xsl"
+          Url="case-details-styles.xsl"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="owners-list-styles.xsl"
+          Url="owners-list-styles.xsl"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="participants-list-styles.xsl"
+          Url="participants-list-styles.xsl"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="reviewers-list-styles.xsl"
+          Url="reviewers-list-styles.xsl"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="witnesses-list-styles.xsl"
+          Url="witnesses-list-styles.xsl"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="fullcalendar.css"
+          Url="fullcalendar.css"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="fullcalendar.print.css"
+          Url="fullcalendar.print.css"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="aggregate-calendar-styles.xsl"
+          Url="aggregate-calendar-styles.xsl"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+<File Path="font-awesome.css" Url="font-awesome.css" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+<File Path="font-awesome-ie7.css" Url="font-awesome-ie7.css" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+<File Path="notes-list-styles.xsl" Url="notes-list-styles.xsl" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+</Module>
+</Elements>

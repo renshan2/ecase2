@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/"> 
+  <!-- Parent ContentType: Document Set (0x0120D520) --> 
+  <ContentType ID="0x0120D520008d2ff418027e4c31b54d155b98596748" 
+               Overwrite="True" 
+               Name="eCases Document Set" 
+               Group="eCases Content Types" 
+               Description="A custom document set for the grouping of case documents." 
+               Inherits="True" 
+               Version="0">
+    <XmlDocuments> 
+      <XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/allowedcontenttypes"> 
+        <act:AllowedContentTypes xmlns:act="http://schemas.microsoft.com/office/documentsets/allowedcontenttypes" LastModified="05/31/2012 08:46:56">
+        </act:AllowedContentTypes> 
+      </XmlDocument> 
+    </XmlDocuments> 
+  </ContentType> 
+</Elements> 

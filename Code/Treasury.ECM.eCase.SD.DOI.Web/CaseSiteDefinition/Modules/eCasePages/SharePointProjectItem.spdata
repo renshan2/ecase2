@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="eCasePages\" Type="ElementManifest" />
+    <ProjectItemFile Source="default.aspx" Target="eCasePages\" Type="ElementFile" />
+    <ProjectItemFile Source="CaseInfo.aspx" Target="eCasePages\" Type="ElementFile" />
+    <ProjectItemFile Source="CaseData.aspx" Target="eCasePages\" Type="ElementFile" />
+    <ProjectItemFile Source="Documents.aspx" Target="eCasePages\" Type="ElementFile" />
+    <ProjectItemFile Source="Discussion.aspx" Target="eCasePages\" Type="ElementFile" />
+  </Files>
+  <ExtensionData>
+    <ExtensionDataItem Key="DeploymentConflictResolutionBehavior" Value="None" />
+  </ExtensionData>
+</ProjectItem>

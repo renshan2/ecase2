@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{fc1c5df0-56f7-40e4-b70c-79ac5b4255f3}"
+       Name="Shorthand"
+       DisplayName="Shorthand"
+       Type="Text"
+       Required="FALSE"
+       Group="eCases Site Columns">
+  </Field>
+</Elements>

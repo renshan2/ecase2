@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="c88bb278-cd02-4aa5-82b0-ac4c540c0235" solutionId="c88bb278-cd02-4aa5-82b0-ac4c540c0235" resetWebServer="false" name="ECaseAuditWebPart" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="ECaseAuditBuilder.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\..\ECaseAuditBuilder\ECaseAuditBuilder\ECaseAuditBuilder.csproj" />
+  </assemblies>
+  <features>
+    <featureReference itemId="7de1c648-00fe-497d-8d23-ada022e9f63a" />
+  </features>
+</package>

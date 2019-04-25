@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{fd091cb9-9516-424d-ae7b-2fde69be392b}"
+       Name="RelatedLinks"
+       DisplayName="Related Links"
+       Type="Note"
+       RichText="TRUE"
+       RichTextMode="FullHtml"
+       AllowHyperlink="TRUE"
+       IsolateStyles="TRUE"
+       Required="FALSE"
+       Group="eCases Site Columns">
+  </Field>
+</Elements>

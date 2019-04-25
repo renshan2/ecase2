@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Activities &amp; Tasks" OnQuickLaunch="TRUE" TemplateType="10006" 
+                FeatureId="a739371e-a68a-49f7-833b-b0e9a3ec6832" Url="Lists/TasksAndActivities" 
+                Description="My List Instance" VersioningEnabled="TRUE"></ListInstance>
+  <Receivers ListTemplateId="10006">
+    <Receiver>
+      <Name>TaxonomyItemSynchronousAddedEventReceiver</Name>
+      <Type>ItemAdding</Type>
+      <Assembly>Microsoft.SharePoint.Taxonomy, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+      <Class>Microsoft.SharePoint.Taxonomy.TaxonomyItemEventReceiver</Class>
+      <SequenceNumber>10000</SequenceNumber>
+    </Receiver>
+    <Receiver>
+      <Name>TaxonomyItemUpdatingEventReceiver</Name>
+      <Type>ItemUpdating</Type>
+      <Assembly>Microsoft.SharePoint.Taxonomy, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+      <Class>Microsoft.SharePoint.Taxonomy.TaxonomyItemEventReceiver</Class>
+      <SequenceNumber>10000</SequenceNumber>
+    </Receiver>
+  </Receivers>
+</Elements>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{b973376e-ceaf-4187-ab5c-20bc7decb3b1}"
+       Name="Originator"
+       DisplayName="Originator"
+       Type="Text"
+       Required="FALSE"
+       Group="eCases Site Columns">
+  </Field>
+</Elements>

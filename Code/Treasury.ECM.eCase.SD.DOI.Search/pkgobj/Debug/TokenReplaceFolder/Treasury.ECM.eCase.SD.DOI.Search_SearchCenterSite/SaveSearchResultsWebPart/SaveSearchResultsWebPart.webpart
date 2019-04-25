@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Treasury.ECM.eCase.SusDeb.DOI.Search.SaveSearchResultsWebPart.SaveSearchResultsWebPart, Treasury.ECM.eCase.SusDeb.DOI.Search, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4e7a656e7f3196c4" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Save Search Results</property>
+        <property name="Description" type="string">Navigation to bring you to the Save eCase Search Results Functions.</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

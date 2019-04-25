@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+  Id="ExportToCSVCustomRibbonButton"
+  RegistrationId="0x0101"
+  RegistrationType="ContentType"
+  Location="CommandUI.Ribbon"
+  Sequence="0"
+  Title="Export To CSV">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Documents.Copies.Controls._children">
+          <Button
+          Id="Ribbon.Documents.New.ExportToCSVButton"
+          Alt="Export Metadata"
+          Sequence="0"
+          Command="Export_To_CSV_Button"
+          Image16by16="../Style%20Library/images/export_to_csv_16.png"
+          Image32by32="../Style%20Library/images/export_to_csv_32.png"
+          LabelText="Export Metadata"
+          TemplateAlias="o1" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+          Command="Export_To_CSV_Button"
+          EnabledScript="javascript:SP.ListOperation.Selection.getSelectedItems().length > 0;"
+          CommandAction="javascript:
+            function batchCopyCallback(dialogResult, returnValue)
+            {
+              if(dialogResult === SP.UI.DialogResult.OK)
+              {
+                SP.UI.Notify.addNotification('Metadata Exported!');
+              }
+              else if(dialogResult === SP.UI.DialogResult.cancel)
+              {
+                SP.UI.Notify.addNotification('User action cancelled!');
+              }
+              SP.UI.ModalDialog.RefreshPage(SP.UI.DialogResult.OK);
+            }
+            
+            var ctx = SP.ClientContext.get_current();
+            var items = SP.ListOperation.Selection.getSelectedItems(ctx);
+            var myItems = '';
+            var d;
+            
+            for (d in items)
+            {
+              myItems += '|' + items[d].id;
+            }
+          
+            var options = {
+              url: '{SiteUrl}/_layouts/eCaseWeb/ExportToCSV.aspx?items=' + myItems + '&amp;source=' + SP.ListOperation.Selection.getSelectedList() + '&amp;sourceurl=\'{SiteUrl}\'',
+              width: 450,
+              height: 300,
+              title: 'eCase - Export Metadata',
+              showClose: true,
+              allowMaximize: false,
+              dialogReturnValueCallback: batchCopyCallback };
+              
+            SP.UI.ModalDialog.showModalDialog(options);" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>
+

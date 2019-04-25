@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="eCasesScripts" Path="eCasesScripts\" Url="Style Library/Scripts">
+    <File Name="jquery.cookie.js"
+          Url="jquery.cookie.js"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="jquery-ui.js"
+          Url="jquery-ui.js"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="jquery-1.8.2.js"
+          Url="jquery-1.8.2.js"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="fullcalendar.min.js"
+          Url="fullcalendar.min.js"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="jquery.SPServices-0.7.2.min.js"
+          Url="jquery.SPServices-0.7.2.min.js"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Path="jquery.dotdotdot.min.js" 
+          Url="jquery.dotdotdot.min.js" 
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Path="highcharts.js"
+          Url="highcharts.js"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Path="eCaseWebHomePageScripts.js"  
+          Url="eCaseWebHomePageScripts.js"  
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Path="eCaseRootWebHomePageScripts.js"   
+          Url="eCaseRootWebHomePageScripts.js"   
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Path="dashboardcontent.js"    
+          Url="dashboardcontent.js"    
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Path="dashboardcontent2.js"    
+          Url="dashboardcontent2.js"    
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+</Module>
+</Elements>

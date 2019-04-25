@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Hidden="TRUE" ActivateOnDefault="FALSE" Description="Do not activate; nothing of value inside." Id="313a5fdf-d80d-4580-a32d-4fddaa9d4c84" Scope="Site" Title="Treasury.ECM.eCaseLogging Web Parts">
+  <ElementManifests>
+    <ElementManifest Location="EmptyWebPart\Elements.xml" />
+    <ElementFile Location="EmptyWebPart\EmptyWebPart.webpart" />
+  </ElementManifests>
+</Feature>

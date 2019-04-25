@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Document (0x0101) -->
+  <ContentType ID="0x0101003079571AD5D4460EB5CA06D46026B835" Name="Finished Work Product" Group="eCases Content Types" Description="Represents a Finished Work Product with additional taxonomy fields for capturing tags." Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{624d6d0e-a5d0-4a88-a74d-819c77b8bcbc}" Name="CaseDocId" />
+      <FieldRef ID="{b973376e-ceaf-4187-ab5c-20bc7decb3b1}" Name="Originator" />
+      <FieldRef ID="{33d643b6-35dc-4ea7-a4f7-a49ef0fb6668}" Name="DocumentType" />
+      <FieldRef ID="{d4f2743c-e87f-4f55-9a7c-1d1864c2ad75}" Name="DocumentDate" />
+      <FieldRef ID="{a4fd91b8-74c2-46d7-a81d-1a5f2e081c5e}" Name="Recipients" />
+      <FieldRef ID="{890c7f37-eec2-4386-b598-5e9463215bd9}" Name="ExhibitNumber" />
+      <FieldRef ID="{65b9fe93-74ee-4843-824a-fcfa666212ac}" Name="BatesRange" />
+      <FieldRef ID="{b502558e-3743-4520-b392-1c03845ffcb7}" Name="SetItemID" />
+      <FieldRef ID="{23f27201-bee3-471e-b2e7-b64fd8b7ca38}" Name="TaxKeyword" />
+      <FieldRef ID="{1390a86a-23da-45f0-8efe-ef36edadfb39}" Name="TaxKeywordTaxHTField" />
+      <FieldRef ID="{f3b0adf9-c1a2-4b02-920d-943fba4b3611}" Name="TaxCatchAll" />
+      <FieldRef ID="{8f6b6dd8-9357-4019-8172-966fcd502ed2}" Name="TaxCatchAllLabel" />
+      <FieldRef ID="{a8e21586-6c9a-412d-b2b0-78aa9b6fe015}" DisplayName="Merge Document" Required="FALSE" Name="Merge Document" />
+      <FieldRef ID="{38d79239-8ac3-4022-b771-a2b8dcbe06ed}" DisplayName="Merge Document Order" Required="FALSE" Name="Merge Document Order" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

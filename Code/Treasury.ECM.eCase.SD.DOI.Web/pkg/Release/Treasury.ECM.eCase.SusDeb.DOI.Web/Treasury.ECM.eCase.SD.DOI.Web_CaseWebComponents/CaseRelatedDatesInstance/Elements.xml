@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Case Related Dates" OnQuickLaunch="TRUE" TemplateType="10009" FeatureId="a739371e-a68a-49f7-833b-b0e9a3ec6832" Url="Lists/CaseRelatedDates" Description="Events specific to a Case" VersioningEnabled="TRUE"></ListInstance>
+</Elements>

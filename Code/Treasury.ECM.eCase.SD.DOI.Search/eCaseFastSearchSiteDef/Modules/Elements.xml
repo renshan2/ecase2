@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="eCaseSearchImages" Path="eCaseSearchImages\" Url="Style Library/Images">
+  <File Name="move_docs_16.png" 
+        Url="move_docs_16.png" 
+        Type="GhostableInLibrary"
+        IgnoreIfAlreadyExists="TRUE" /> />
+  <File Name="move_docs_32.png" 
+        Url="move_docs_32.png" 
+        Type="GhostableInLibrary"
+        IgnoreIfAlreadyExists="TRUE" /> />
+</Module>
+</Elements>

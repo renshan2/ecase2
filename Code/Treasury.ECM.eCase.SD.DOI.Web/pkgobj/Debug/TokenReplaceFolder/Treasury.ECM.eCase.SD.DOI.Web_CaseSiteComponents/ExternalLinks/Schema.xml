@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="External Links" Direction="$Resources:core,Direction;" OrderedList="TRUE" Url="Lists/External Links" BaseType="0" DisableAttachments="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x01007fab0631eb9447b4bec8df3789d2e87f" Name="ListFieldsContentType">
+        <FieldRefs>
+          <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" Name="LinkTitle" />
+          <FieldRef ID="{bc91a437-52e7-49e1-8c4e-4698904b2b6d}" Name="LinkTitleNoMenu" />
+          <FieldRef ID="{081c6e4c-5c14-4f20-b23e-1a71ceb6a67c}" Name="DocIcon" />
+          <FieldRef ID="{503f1caa-358e-4918-9094-4a2cdc4bc034}" Name="Edit" />
+          <FieldRef ID="{c29e077d-f466-4d8e-8bbe-72b66c5f205c}" Name="URL" />
+          <FieldRef ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Comments" />
+          <FieldRef ID="{2a9ab6d3-268a-4c1c-9897-e5f018f87e64}" Name="URLwMenu" />
+          <FieldRef ID="{7A7F3660-D408-4734-9AA0-2D86E33D79AB}" Name="URLwMenu2" />
+          <FieldRef ID="{aeaf07ee-d2fb-448b-a7a3-cf7e062d6c2a}" Name="URLNoMenu" />
+          <FieldRef ID="{23f27201-bee3-471e-b2e7-b64fd8b7ca38}" DisplayName="Tags" Required="FALSE" Description="$Resources:osrvcore,field_KeywordsFieldDesc" Hidden="FALSE" Name="TaxKeyword" Sealed="TRUE" Sortable="FALSE" />
+          <FieldRef ID="{1390a86a-23da-45f0-8efe-ef36edadfb39}" DisplayName="TaxKeywordTaxHTField" Required="FALSE" Hidden="TRUE" Name="TaxKeywordTaxHTField" />
+          <FieldRef ID="{f3b0adf9-c1a2-4b02-920d-943fba4b3611}" DisplayName="Taxonomy Catch All Column" Required="FALSE" Hidden="TRUE" Name="TaxCatchAll" Sealed="TRUE" Sortable="FALSE" />
+          <FieldRef ID="{8f6b6dd8-9357-4019-8172-966fcd502ed2}" DisplayName="Taxonomy Catch All Column1" Required="FALSE" Hidden="TRUE" Name="TaxCatchAllLabel" ReadOnly="TRUE" Sealed="TRUE" Sortable="FALSE" />
+        </FieldRefs>
+      </ContentType>
+      <ContentTypeRef ID="0x0105">
+        <Folder TargetName="Link" />
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" ReadOnly="TRUE" Required="FALSE" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title"></Field>
+      <Field ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" Type="Computed" Name="LinkTitle" DisplayName="$Resources:core,Title;" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitle"></Field>
+      <Field ID="{bc91a437-52e7-49e1-8c4e-4698904b2b6d}" Type="Computed" Name="LinkTitleNoMenu" DisplayName="$Resources:core,Title;" Hidden="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitleNoMenu"></Field>
+      <Field ID="{081c6e4c-5c14-4f20-b23e-1a71ceb6a67c}" Type="Computed" Name="DocIcon" DisplaceOnUpgrade="TRUE" DisplayName="$Resources:core,Type;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="DocIcon"></Field>
+      <Field ID="{503f1caa-358e-4918-9094-4a2cdc4bc034}" Type="Computed" Name="Edit" DisplayName="$Resources:core,Edit;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Edit"></Field>
+      <Field ID="{c29e077d-f466-4d8e-8bbe-72b66c5f205c}" Type="URL" Name="URL" DisplayName="$Resources:core,URL;" Required="TRUE" FromBaseType="TRUE" ShowInViewForms="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="URL"></Field>
+      <Field ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Type="Note" Name="Comments" DisplayName="$Resources:core,Notes;" Sortable="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Comments"></Field>
+      <Field ID="{2a9ab6d3-268a-4c1c-9897-e5f018f87e64}" ReadOnly="TRUE" Filterable="FALSE" Type="Computed" Name="URLwMenu" DisplayName="$Resources:core,URL;" DisplayNameSrcField="URL" ClassInfo="Menu" AuthoringInfo="$Resources:core,URLwEditMenu;" ListItemMenuAllowed="Required" LinkToItemAllowed="Prohibited" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="URLwMenu">
+        <FieldRefs>
+          <FieldRef Name="URL" />
+          <FieldRef Name="FileLeafRef" />
+          <FieldRef Name="FileRef" />
+          <FieldRef Name="FSObjType" />
+          <FieldRef Name="_EditMenuTableStart2" />
+          <FieldRef Name="_EditMenuTableEnd" />
+        </FieldRefs>
+      </Field>
+      <Field ID="{7A7F3660-D408-4734-9AA0-2D86E33D79AB}" ReadOnly="TRUE" Filterable="FALSE" Type="Computed" Name="URLwMenu2" DisplayName="$Resources:core,URL;" DisplayNameSrcField="URL" ClassInfo="Menu" AuthoringInfo="$Resources:core,URLwEditMenu; (old)" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="URLwMenu2">
+        <FieldRefs>
+          <FieldRef Name="URL" />
+          <FieldRef Name="FileLeafRef" />
+          <FieldRef Name="FileRef" />
+          <FieldRef Name="FSObjType" />
+          <FieldRef Name="_EditMenuTableStart" />
+          <FieldRef Name="_EditMenuTableEnd" />
+        </FieldRefs>
+      </Field>
+      <Field ID="{aeaf07ee-d2fb-448b-a7a3-cf7e062d6c2a}" DisplaceOnUpgrade="TRUE" ReadOnly="TRUE" Filterable="FALSE" Type="Computed" Name="URLNoMenu" DisplayName="$Resources:core,URL;" DisplayNameSrcField="URL" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="URLNoMenu">
+        <FieldRefs>
+          <FieldRef Name="URL" />
+          <FieldRef Name="FileLeafRef" />
+          <FieldRef Name="FileRef" />
+          <FieldRef Name="FSObjType" />
+        </FieldRefs>
+      </Field>
+      <Field Type="TaxonomyFieldTypeMulti" DisplayName="Tags" StaticName="TaxKeyword" Name="TaxKeyword" ID="{23f27201-bee3-471e-b2e7-b64fd8b7ca38}" ShowInViewForms="TRUE" Mult="TRUE" ShowInEditForm="TRUE" ShowInNewForm="TRUE" DefaultListField="TRUE" Required="FALSE" Hidden="FALSE" ShowField="Term$Resources:core,Language;" Version="3" Sortable="FALSE" Group="$Resources:osrvcore,field_KeywordsGroupName" Description="$Resources:osrvcore,field_KeywordsFieldDesc" >
+        <Customization>
+          <ArrayOfProperty>
+            <Property>
+              <Name>SspId</Name>
+              <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">ba863631-94a8-48b0-9951-2a2b755f60bc</Value>
+            </Property>
+            <Property>
+              <Name>GroupId</Name>
+            </Property>
+            <Property>
+              <Name>TermSetId</Name>
+              <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+            </Property>
+            <Property>
+              <Name>AnchorId</Name>
+              <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+            </Property>
+            <Property>
+              <Name>UserCreated</Name>
+              <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>Open</Name>
+              <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+            </Property>
+            <Property>
+              <Name>TextField</Name>
+              <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{1390a86a-23da-45f0-8efe-ef36edadfb39}</Value>
+            </Property>
+            <Property>
+              <Name>IsPathRendered</Name>
+              <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>IsKeyword</Name>
+              <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+            </Property>
+            <Property>
+              <Name>TargetTemplate</Name>
+            </Property>
+            <Property>
+              <Name>CreateValuesInEditForm</Name>
+              <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>FilterAssemblyStrongName</Name>
+            </Property>
+            <Property>
+              <Name>FilterClassName</Name>
+            </Property>
+            <Property>
+              <Name>FilterMethodName</Name>
+            </Property>
+            <Property>
+              <Name>FilterJavascriptProperty</Name>
+            </Property>
+          </ArrayOfProperty>
+        </Customization>
+      </Field>
+      <Field Type="Note" DisplayName="TaxKeywordTaxHTField" StaticName="TaxKeywordTaxHTField" Name="TaxKeywordTaxHTField" ID="{1390a86a-23da-45f0-8efe-ef36edadfb39}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" SourceID="{621202aa-da29-4d7c-bdbc-4b8408c67a7e}" />
+      <Field Type="LookupMulti" DisplayName="Taxonomy Catch All Column" StaticName="TaxCatchAll" Name="TaxCatchAll" ID="{f3b0adf9-c1a2-4b02-920d-943fba4b3611}" ShowInViewForms="FALSE" List="{5e4bbb79-f8b7-449a-8d09-057dce69d9d3}" WebId="621202aa-da29-4d7c-bdbc-4b8408c67a7e" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" ShowField="CatchAllData" SourceID="{621202aa-da29-4d7c-bdbc-4b8408c67a7e}" Mult="TRUE" Sortable="FALSE" AllowDeletion="TRUE" Sealed="TRUE" Version="2" />
+      <Field Type="LookupMulti" DisplayName="Taxonomy Catch All Column1" StaticName="TaxCatchAllLabel" Name="TaxCatchAllLabel" ID="{8f6b6dd8-9357-4019-8172-966fcd502ed2}" ShowInViewForms="FALSE" List="{5e4bbb79-f8b7-449a-8d09-057dce69d9d3}" WebId="621202aa-da29-4d7c-bdbc-4b8408c67a7e" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" ShowField="CatchAllDataLabel" FieldRef="{F3B0ADF9-C1A2-4b02-920D-943FBA4B3611}" SourceID="{621202aa-da29-4d7c-bdbc-4b8408c67a7e}" ReadOnly="TRUE" Mult="TRUE" Sortable="FALSE" AllowDeletion="TRUE" Sealed="TRUE" Version="2" />
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" OrderedView="TRUE" TabularView="FALSE" MobileView="TRUE">
+        <Toolbar Type="Standard" />
+        <XslLink>main.xsl</XslLink>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Order" Ascending="TRUE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ViewFields>
+          <FieldRef Name="URL" Explicit="TRUE"></FieldRef>
+          <FieldRef Name="URLNoMenu"></FieldRef>
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,nofavlinks_toaddlinkclickaddnewlink)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,nofavlinks_toaddlinkclickaddnewlink_howto)" />
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,AddNewLink)" />
+          <ParameterBinding Name="MoreAnnouncements" Location="Resource(wss,morelinks_ellipses)" />
+        </ParameterBindings>
+        <RowLimit>20</RowLimit>
+      </View>
+      <View BaseViewID="1" Type="HTML" OrderedView="TRUE" WebPartZoneID="Main" DisplayName="$Resources:core,All_Links;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/links.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="DocIcon"></FieldRef>
+          <FieldRef Name="Edit"></FieldRef>
+          <FieldRef Name="URLwMenu"></FieldRef>
+          <FieldRef Name="Comments"></FieldRef>
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Order" Ascending="TRUE"></FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="3" Type="HTML" TabularView="FALSE" OrderedView="TRUE">
+        <Toolbar Type="Standard" />
+        <XslLink>main.xsl</XslLink>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Order" Ascending="TRUE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ViewFields>
+          <FieldRef Name="URL"></FieldRef>
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <RowLimit>12</RowLimit>
+      </View>
+      <View BaseViewID="4" Type="HTML" TabularView="FALSE" OrderedView="TRUE" FreeForm="TRUE">
+        <Toolbar Type="Standard" />
+        <XslLink>blog.xsl</XslLink>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Order" Ascending="TRUE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ViewFields>
+          <FieldRef Name="URL"></FieldRef>
+        </ViewFields>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <RowLimit>30</RowLimit>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>
+            $Resources:core,linksList_Usage;
+        </DefaultDescription>
+  </MetaData>
+</List>

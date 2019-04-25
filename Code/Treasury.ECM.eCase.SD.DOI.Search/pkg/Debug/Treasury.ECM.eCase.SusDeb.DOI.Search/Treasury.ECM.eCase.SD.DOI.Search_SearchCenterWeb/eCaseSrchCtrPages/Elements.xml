@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="eCaseSrchCtrPages" Url="$Resources:osrvcore,List_Pages_UrlName;" Path="eCaseSrchCtrPages\">
+    <File Url="default.aspx" Type="GhostableInLibrary">
+      <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/searchmain.aspx, $Resources:Microsoft.Office.Server.Search,SearchMainTitle;" />
+      <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,SearchCenterPageTitle;" />
+      <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,contenttype_welcomepage_name;" />
+      <AllUsersWebPart WebPartZoneID="TopZone" WebPartOrder="1">
+        <![CDATA[
+                    <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                        <Assembly>Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.SharePoint.Portal.WebControls.SearchBoxEx</TypeName>
+                        <Title>$Resources:Microsoft.Office.Server.Search,SearchBoxWP_Title;</Title>
+                        <Description>$Resources:Microsoft.Office.Server.Search,SearchBoxWP_Desc;</Description>
+                        <FrameType>None</FrameType>
+                        <AllowMinimize>true</AllowMinimize>
+                        <AllowRemove>true</AllowRemove>
+                        <IsVisible>true</IsVisible>
+                        <Width>800px</Width>
+                        <GoImageUrl xmlns="urn:schemas-microsoft-com:SearchBoxEx">/_layouts/images/gosearch30.png</GoImageUrl>
+                        <GoImageUrlRTL  xmlns="urn:schemas-microsoft-com:SearchBoxEx">/_layouts/images/gosearchrtl30.png</GoImageUrlRTL>
+                        <GoImageActiveUrl xmlns="urn:schemas-microsoft-com:SearchBoxEx">/_layouts/images/gosearchhover30.png</GoImageActiveUrl>
+                        <GoImageActiveUrlRTL  xmlns="urn:schemas-microsoft-com:SearchBoxEx">/_layouts/images/gosearchrtlhover30.png</GoImageActiveUrlRTL>
+                        <TextBoxWidth xmlns="urn:schemas-microsoft-com:SearchBoxEx">368</TextBoxWidth>
+                        <SearchResultPageURL xmlns="urn:schemas-microsoft-com:SearchBoxEx">results.aspx</SearchResultPageURL>
+                        <AdvancedSearchPageURL xmlns="urn:schemas-microsoft-com:SearchBoxEx">~Site/$Resources:osrvcore,List_Pages_UrlName;/advanced.aspx</AdvancedSearchPageURL>
+                        <ShowAdvancedSearch xmlns="urn:schemas-microsoft-com:SearchBoxEx">true</ShowAdvancedSearch>
+                        <DropDownMode xmlns="urn:schemas-microsoft-com:SearchBoxEx">HideScopeDD</DropDownMode>
+                        <ScopeDisplayGroupName xmlns="urn:schemas-microsoft-com:SearchBoxEx">$Resources:spscore,ScopeDisplayGroup_SearchDropdown_Name;</ScopeDisplayGroupName>
+                        <ShouldTakeFocusIfEmpty xmlns="urn:schemas-microsoft-com:SearchBoxEx">true</ShouldTakeFocusIfEmpty>
+                        <ShowQuerySuggestions xmlns="urn:schemas-microsoft-com:SearchBoxEx">true</ShowQuerySuggestions>
+                        <ShowPerferenceLink xmlns="urn:schemas-microsoft-com:SearchBoxEx">true</ShowPerferenceLink>
+                        <SearchBoxVisual xmlns="urn:schemas-microsoft-com:SearchBoxEx">SearchCenterDefault</SearchBoxVisual>
+                    </WebPart>
+                    ]]>
+      </AllUsersWebPart>
+    </File>
+    <File Url="advanced.aspx" Type="GhostableInLibrary">
+      <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/AdvancedSearchLayout.aspx, $Resources:Microsoft.Office.Server.Search,SearchCenterAdvancedSearchTitle;" />
+      <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,SearchCenterAdvancedSearchTitle;" />
+      <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,contenttype_welcomepage_name;" />
+      <AllUsersWebPart WebPartZoneID="BottomZone" WebPartOrder="1">
+        <![CDATA[
+                    <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                        <Assembly>Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.Office.Server.Search.WebControls.AdvancedSearchBox</TypeName>
+                        <Title>$Resources:Microsoft.Office.Server.Search,AdvancedSearch_Webpart_Title;</Title>
+                        <Description>$Resources:Microsoft.Office.Server.Search,AdvancedSearch_Webpart_Description;</Description>
+                        <FrameType>None</FrameType>
+                        <AllowMinimize>true</AllowMinimize>
+                        <AllowRemove>true</AllowRemove>
+                        <IsVisible>true</IsVisible>
+                        <SearchResultPageURL xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">~Site/$Resources:osrvcore,List_Pages_UrlName;/results.aspx</SearchResultPageURL>
+                        <TextQuerySectionLabelText xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">$Resources:Microsoft.Office.Server.Search,AdvancedSearch_FindDocsWith_Title;</TextQuerySectionLabelText>
+                        <ShowAndQueryTextBox xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">true</ShowAndQueryTextBox>
+                        <ShowPhraseQueryTextBox xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">true</ShowPhraseQueryTextBox>
+                        <ShowOrQueryTextBox xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">true</ShowOrQueryTextBox>
+                        <ShowNotQueryTextBox xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">true</ShowNotQueryTextBox>
+                        <ScopeSectionLabelText xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">$Resources:Microsoft.Office.Server.Search,AdvancedSearch_NarrowSearch_Title;</ScopeSectionLabelText>
+                        <ShowScopes xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">false</ShowScopes>
+                        <ShowLanguageOptions xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">true</ShowLanguageOptions>
+                        <ShowResultTypePicker xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">true</ShowResultTypePicker>
+                        <ShowPropertiesSection xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">true</ShowPropertiesSection>
+                        <PropertiesSectionLabelText xmlns="urn:schemas-microsoft-com:AdvancedSearchBox">$Resources:Microsoft.Office.Server.Search,AdvancedSearch_AddPropRestrictions_Title;</PropertiesSectionLabelText>
+                    </WebPart>
+                    ]]>
+      </AllUsersWebPart>
+    </File>
+    <File Url="people.aspx" Type="GhostableInLibrary">
+      <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/searchmain.aspx, $Resources:Microsoft.Office.Server.Search,SearchMainTitle;" />
+      <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,SearchCenterPeopleSearchTitle;" />
+      <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,contenttype_welcomepage_name;" />
+      <AllUsersWebPart WebPartZoneID="TopZone" WebPartOrder="1">
+        <![CDATA[
+                    <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                        <Assembly>Microsoft.SharePoint.Portal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.SharePoint.Portal.WebControls.PeopleSearchBoxEx</TypeName>
+                        <Title>$Resources:Microsoft.Office.Server.Search,PeopleSearchBoxTitle;</Title>
+                        <Description>$Resources:Microsoft.Office.Server.Search,PeopleSearchBoxDescription;</Description>
+                        <FrameType>None</FrameType>
+                        <AllowMinimize>true</AllowMinimize>
+                        <AllowRemove>true</AllowRemove>
+                        <IsVisible>true</IsVisible>
+                        <Width>800px</Width>
+                        <GoImageUrl xmlns="urn:schemas-microsoft-com:SearchBoxEx">/_layouts/images/gosearch30.png</GoImageUrl>
+                        <GoImageUrlRTL  xmlns="urn:schemas-microsoft-com:SearchBoxEx">/_layouts/images/gosearchrtl30.png</GoImageUrlRTL>
+                        <GoImageActiveUrl xmlns="urn:schemas-microsoft-com:SearchBoxEx">/_layouts/images/gosearchhover30.png</GoImageActiveUrl>
+                        <GoImageActiveUrlRTL  xmlns="urn:schemas-microsoft-com:SearchBoxEx">/_layouts/images/gosearchrtlhover30.png</GoImageActiveUrlRTL> 
+                        <DropDownMode xmlns="urn:schemas-microsoft-com:SearchBoxEx">HideScopeDD</DropDownMode>
+                        <ScopeDisplayGroupName xmlns="urn:schemas-microsoft-com:SearchBoxEx">$Resources:spscore,ScopeDisplayGroup_SearchDropdown_Name;</ScopeDisplayGroupName>
+                        <TextBoxWidth xmlns="urn:schemas-microsoft-com:SearchBoxEx">368</TextBoxWidth>
+                        <SearchResultPageURL xmlns="urn:schemas-microsoft-com:SearchBoxEx">peopleresults.aspx</SearchResultPageURL>
+                        <ShowSearchOptions xmlns="urn:schemas-microsoft-com:SearchBoxEx">true</ShowSearchOptions>
+                        <ShouldTakeFocusIfEmpty xmlns="urn:schemas-microsoft-com:SearchBoxEx">true</ShouldTakeFocusIfEmpty>
+                        <ShowPerferenceLink xmlns="urn:schemas-microsoft-com:SearchBoxEx">true</ShowPerferenceLink>
+                        <SearchBoxVisual xmlns="urn:schemas-microsoft-com:SearchBoxEx">SearchCenterDefault</SearchBoxVisual>
+                    </WebPart>
+                    ]]>
+      </AllUsersWebPart>
+    </File>
+    <File Url="results.aspx" Type="GhostableInLibrary">
+      <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/searchresults.aspx, $Resources:Microsoft.Office.Server.Search,SearchResultsTitle;" />
+      <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,SearchCenterResultsPageTitle;" />
+      <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,contenttype_welcomepage_name;" />
+      <AllUsersWebPart WebPartZoneID="TopZone" WebPartOrder="1">
+        <![CDATA[
+                    <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                        <Assembly>Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.SharePoint.Portal.WebControls.SearchBoxEx</TypeName>
+                        <Title>$Resources:Microsoft.Office.Server.Search,SearchBoxWP_Title;</Title>
+                        <Description>$Resources:Microsoft.Office.Server.Search,SearchBoxWP_Desc;</Description>
+                        <FrameType>None</FrameType>
+                        <AllowMinimize>true</AllowMinimize>
+                        <AllowRemove>true</AllowRemove>
+                        <IsVisible>true</IsVisible>
+                        <Width>800px</Width>
+                        <GoImageUrl xmlns="urn:schemas-microsoft-com:SearchBoxEx">/_layouts/images/gosearch30.png</GoImageUrl>
+                        <GoImageUrlRTL  xmlns="urn:schemas-microsoft-com:SearchBoxEx">/_layouts/images/gosearchrtl30.png</GoImageUrlRTL>
+                        <GoImageActiveUrl xmlns="urn:schemas-microsoft-com:SearchBoxEx">/_layouts/images/gosearchhover30.png</GoImageActiveUrl>
+                        <GoImageActiveUrlRTL  xmlns="urn:schemas-microsoft-com:SearchBoxEx">/_layouts/images/gosearchrtlhover30.png</GoImageActiveUrlRTL> 
+                        <DropDownMode xmlns="urn:schemas-microsoft-com:SearchBoxEx">HideScopeDD</DropDownMode>
+                        <ScopeDisplayGroupName xmlns="urn:schemas-microsoft-com:SearchBoxEx">$Resources:spscore,ScopeDisplayGroup_SearchDropdown_Name;</ScopeDisplayGroupName>
+                        <TextBoxWidth xmlns="urn:schemas-microsoft-com:SearchBoxEx">368</TextBoxWidth>
+                        <SearchResultPageURL xmlns="urn:schemas-microsoft-com:SearchBoxEx">results.aspx</SearchResultPageURL>
+                        <AdvancedSearchPageURL xmlns="urn:schemas-microsoft-com:SearchBoxEx">~Site/$Resources:osrvcore,List_Pages_UrlName;/advanced.aspx</AdvancedSearchPageURL>
+                        <ShowAdvancedSearch xmlns="urn:schemas-microsoft-com:SearchBoxEx">true</ShowAdvancedSearch>
+                        <ShouldTakeFocusIfEmpty xmlns="urn:schemas-microsoft-com:SearchBoxEx">true</ShouldTakeFocusIfEmpty>
+                        <ShowQuerySuggestions xmlns="urn:schemas-microsoft-com:SearchBoxEx">true</ShowQuerySuggestions>
+                        <ShowPerferenceLink xmlns="urn:schemas-microsoft-com:SearchBoxEx">true</ShowPerferenceLink>
+                        <SearchBoxVisual xmlns="urn:schemas-microsoft-com:SearchBoxEx">SearchCenterDefault</SearchBoxVisual>
+                    </WebPart>
+                    ]]>
+      </AllUsersWebPart>
+      <AllUsersWebPart WebPartZoneID="TopZone" WebPartOrder="2">
+        <![CDATA[
+                    <webParts>
+                      <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                          <type name="Treasury.ECM.eCase.SusDeb.DOI.Search.SaveSearchCriteriaWebPart.SaveSearchCriteriaWebPart, Treasury.ECM.eCase.SusDeb.DOI.Search, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4e7a656e7f3196c4" />
+                          <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+                        </metaData>
+                        <data>
+                          <properties>
+                            <property name="Title" type="string">Save My Search</property>
+                            <property name="Description" type="string">Save a search query.</property>
+                            <property name="ChromeType" type="chrometype">None</property>
+                          </properties>
+                        </data>
+                      </webPart>
+                    </webParts>
+        ]]>
+      </AllUsersWebPart>
+
+      <AllUsersWebPart WebPartZoneID="TopZone" WebPartOrder="3">
+        <![CDATA[
+                    <webParts>
+                      <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                          <type name="Treasury.ECM.eCase.SusDeb.DOI.Search.SaveSearchResultsWebPart.SaveSearchResultsWebPart, Treasury.ECM.eCase.SusDeb.DOI.Search, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4e7a656e7f3196c4" />
+                          <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+                        </metaData>
+                        <data>
+                          <properties>
+                            <property name="Title" type="string">Save My Search Results</property>
+                            <property name="Description" type="string">Save results of a search query.</property>
+                            <property name="ChromeType" type="chrometype">None</property>
+                          </properties>
+                        </data>
+                      </webPart>
+                    </webParts>
+        ]]>
+      </AllUsersWebPart>
+      
+      <AllUsersWebPart WebPartZoneID="TopZone" WebPartOrder="4">
+        <![CDATA[
+                    <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                        <Assembly>Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.Office.Server.Search.WebControls.SearchSummaryWebPart</TypeName>
+                        <Title>$Resources:Microsoft.Office.Server.Search,SearchSummaryWP_Title;</Title>
+                        <Description>$Resources:Microsoft.Office.Server.Search,SearchSummaryWP_Desc;</Description>
+                        <PartOrder>1</PartOrder>
+                        <FrameType>None</FrameType>
+                        <AllowMinimize>true</AllowMinimize>
+                        <AllowRemove>true</AllowRemove>
+                        <IsVisible>true</IsVisible>
+                    </WebPart>
+                    ]]>
+      </AllUsersWebPart>
+
+      <AllUsersWebPart WebPartZoneID="LeftZone" WebPartOrder="1">
+        <![CDATA[
+                    <webParts>
+                       <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                          <metaData>
+                             <type name="Microsoft.Office.Server.Search.WebControls.RefinementWebPart,Microsoft.Office.Server.Search,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                             <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                          </metaData>
+                          <data>	
+                             <properties>
+                                <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,Refinement_Title;</property>
+                                <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,Refinement_Desc;</property>
+                                <property name="ChromeType">None</property>
+                                <property name="AllowMinimize" type="bool">true</property>
+                                <property name="AllowClose" type="bool">true</property> 					
+                                <property name="Hidden" type="bool">false</property>                                                                     
+                                <property name="UseDefaultConfiguration" type="bool">true</property>
+                                <property name="NumberOfCharsToDisplay" type="int">16</property>
+                            </properties>
+                          </data>
+                       </webPart>
+                    </webParts>
+                    ]]>
+      </AllUsersWebPart>
+      <AllUsersWebPart WebPartZoneID="MidLowerLeftZone" WebPartOrder="1">
+        <![CDATA[
+                    <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                        <Assembly>Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.Office.Server.Search.WebControls.SearchStatsWebPart</TypeName>
+                        <Title>$Resources:Microsoft.Office.Server.Search,SearchStatsWP_Title;</Title>
+                        <Description>$Resources:Microsoft.Office.Server.Search,SearchStatsWP_Desc;</Description>
+                        <PartOrder>2</PartOrder>
+                        <FrameType>None</FrameType>
+                        <AllowMinimize>true</AllowMinimize>
+                        <AllowRemove>true</AllowRemove>
+                        <IsVisible>true</IsVisible>
+                    </WebPart>
+                    ]]>
+      </AllUsersWebPart>
+      <AllUsersWebPart WebPartZoneID="MidLowerRightZone" WebPartOrder="1">
+        <![CDATA[
+                  <webParts>
+                    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                      <metaData>
+                        <type name="Microsoft.Office.Server.Search.WebControls.CoreResultsWebPart,Microsoft.Office.Server.Search,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                        <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                      </metaData>
+                      <data>
+                        <properties>
+                          <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,SearchActionsWP_Title;</property>
+                          <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,SearchActionsWP_Desc;</property>
+                          <property name="ChromeType">None</property>
+                          <property name="AllowMinimize" type="bool">true</property>
+                          <property name="AllowClose" type="bool">true</property> 
+                          <property name="Hidden" type="bool">false</property>
+                          <property name="ShowMessages" type="bool">false</property>
+                          <property name="ShowSearchResults" type="bool">false</property>
+                          <property name="uselocationvisualization" type="bool">false</property>
+                          <property name="Location" type="string">FASTSearch</property>
+                        </properties>
+                      </data>
+                    </webPart>
+                  </webParts>]]>
+      </AllUsersWebPart>
+      <AllUsersWebPart WebPartZoneID="BottomZone" WebPartOrder="3">
+        <![CDATA[
+                <webParts>
+                  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                    <metaData>
+                      <type name="Treasury.ECM.eCase.SusDeb.DOI.Search.eCaseCoreResults,Treasury.ECM.eCase.SusDeb.DOI.Search,Version=1.0.0.0,Culture=neutral,PublicKeyToken=4e7a656e7f3196c4" />
+
+                      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                    </metaData>
+                    <data>
+                      <properties>
+                        <property name="Title" type="string">eCase Core Results</property>
+                        <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,CoreResultsWP_Desc;</property>
+                        <property name="ChromeType">None</property>
+                        <property name="AllowMinimize" type="bool">true</property>
+                        <property name="AllowClose" type="bool">true</property> 
+                        <property name="Hidden" type="bool">false</property>
+                        <property name="ShowActionLinks" type="bool">false</property>
+                        <property name="DateView" type="bool">false</property>
+                        <property name="RelevanceView" type="bool">false</property>
+                        <property name="DisplayAlertMeLink" type="bool">false</property>
+                        <property name="DisplayRSSLink" type="bool">false</property>
+                        <property name="DisplayDiscoveredDefinition" type="bool">true</property>
+                        <property name="ScopeID" type="int">1</property>
+                        <property name="uselocationvisualization" type="bool">true</property>
+                        <property name="Location" type="string">FASTSearch</property>
+                        <property name="EnableStemming" type="bool">true</property>                        
+                     </properties>
+                    </data>
+                  </webPart>
+                </webParts>]]>
+      </AllUsersWebPart>
+      <AllUsersWebPart WebPartZoneID="BottomZone" WebPartOrder="4">
+        <![CDATA[
+                        <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                            <Assembly>Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, 					PublicKeyToken=71e9bce111e9429c</Assembly>
+                            <TypeName>Microsoft.Office.Server.Search.WebControls.SearchPagingWebPart</TypeName>
+                            <Title>$Resources:Microsoft.Office.Server.Search,SearchPagingWP_Title;</Title>
+                            <Description>$Resources:Microsoft.Office.Server.Search,SearchPagingWPWP_Desc;</Description>
+                            <PartOrder>1</PartOrder>
+                            <FrameType>None</FrameType>
+                            <AllowMinimize>true</AllowMinimize>
+                            <AllowRemove>true</AllowRemove>
+                            <IsVisible>true</IsVisible>
+                        </WebPart>
+                    ]]>
+      </AllUsersWebPart>
+      <AllUsersWebPart WebPartZoneID="RightZone" WebPartOrder="1">
+        <![CDATA[
+                    <webParts>
+                       <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                          <metaData>
+                             <type name="Microsoft.Office.Server.Search.WebControls.QuerySuggestionsWebPart,Microsoft.Office.Server.Search,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+
+                             <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                          </metaData>
+                          <data>
+                             <properties>
+                                <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,QuerySuggestions_Title;</property>
+                                <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,QuerySuggestions_Desc;</property>
+                                <property name="ChromeType">None</property>
+                                <property name="AllowMinimize" type="bool">true</property>
+                                <property name="AllowClose" type="bool">true</property>
+                                <property name="Hidden" type="bool">false</property>
+                                <property name="ResultsPerPage" type="int">5</property>
+                                <property name="ShowLoadingImage" type="bool">false</property>
+                                <property name="LoadAsynchronously" type="bool">true</property>
+                            </properties>
+                          </data>
+                       </webPart>
+                    </webParts>
+]]>
+      </AllUsersWebPart>
+
+      <AllUsersWebPart WebPartZoneID="RightZone" WebPartOrder="2">
+        <![CDATA[
+                    <webParts>
+                       <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                          <metaData>
+                             <type name="Microsoft.Office.Server.Search.WebControls.FederatedResultsWebPart,Microsoft.Office.Server.Search,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                             <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                          </metaData>
+                          <data>	
+                             <properties>
+                                <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,PeopleSummaryResults_Title;</property>
+                                <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,PeopleSummaryResults_Desc;</property>
+                                <property name="ChromeType">None</property>
+                                <property name="AllowMinimize" type="bool">true</property>
+                                <property name="AllowClose" type="bool">true</property> 					
+                                <property name="Hidden" type="bool">false</property>     
+                                <property name="Location" type="string">LocalPeopleSearchIndex</property>
+                                <property name="ResultsPerPage" type="int">3</property>
+                                <property name="ShowLoadingImage" type="bool">false</property>    
+                                <property name="LoadAsynchronously" type="bool">true</property>
+                                <property name="EnableNicknames" type="bool">true</property>
+                                <property name="EnablePhonetic" type="bool">true</property>
+                                <property name="MoreLinkLabel" type="string">$Resources:Microsoft.Office.Server.Search,PeopleSummaryResults_MoreLinkLabel;</property>
+                            </properties>
+                          </data>
+                       </webPart>
+                    </webParts>
+]]>
+      </AllUsersWebPart>
+
+      <AllUsersWebPart WebPartZoneID="BottomZone" WebPartOrder="1">
+        <![CDATA[
+                <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                  <Assembly>Microsoft.Office.Server.Search, version=14.0.0.0, Culture=neutral, PublicKeyToken=94de0004b6e3fcc5</Assembly>
+                  <TypeName>Microsoft.Office.Server.Search.WebControls.VisualBestBetWebPart</TypeName>
+                  <Title>$Resources:Microsoft.Office.Server.Search, VisualBestBetWebPartTitle</Title>
+                  <Description>$Resources:Microsoft.Office.Server.Search, VisualBestBetWebPartDescription</Description>
+                  <FrameType>None</FrameType>
+                  <AllowMinimize>true</AllowMinimize>
+                  <AllowRemove>true</AllowRemove>
+                  <IsVisible>true</IsVisible>
+                  </WebPart>
+                  ]]>
+      </AllUsersWebPart>
+      <AllUsersWebPart WebPartZoneID="BottomZone" WebPartOrder="2">
+        <![CDATA[
+                <webParts>
+                  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                    <metaData>
+                      <type name="Microsoft.Office.Server.Search.WebControls.HighConfidenceWebPart,Microsoft.Office.Server.Search,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+
+                      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                    </metaData>
+                    <data>
+                      <properties>
+                        <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,SearchBestBetsWP_Title;</property>
+                        <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,SearchBestBetsWP_Desc;</property>
+                        <property name="ChromeType">None</property>
+                        <property name="AllowMinimize" type="bool">true</property>
+                        <property name="AllowClose" type="bool">true</property> 
+                        <property name="Hidden" type="bool">false</property>
+                        <property name="PartOrder" type="int">1</property>
+                        <property name="DisplayHCImage" type="bool">false</property>
+                        <property name="DisplayHCTitle" type="bool">false</property>
+                        <property name="DisplayHCProps" type="bool">false</property>
+                        <property name="DisplayHCDescription" type="bool">false</property>
+                     </properties>
+                    </data>
+                  </webPart>
+                       </webParts>]]>
+      </AllUsersWebPart>
+    </File>
+    <File Url="peopleresults.aspx" Type="GhostableInLibrary">
+      <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/peoplesearchresults.aspx, $Resources:Microsoft.Office.Server.Search,PeopleSearchResultsTitle;" />
+      <Property Name="Title" Value="$Resources:Microsoft.Office.Server.Search,SearchCenterPeopleResultsPageTitle;" />
+      <Property Name="ContentType" Value="$Resources:Microsoft.Office.Server.Search,contenttype_welcomepage_name;" />
+      <AllUsersWebPart WebPartZoneID="TopZone" WebPartOrder="1">
+        <![CDATA[
+                    <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                        <Assembly>Microsoft.SharePoint.Portal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.SharePoint.Portal.WebControls.PeopleSearchBoxEx</TypeName>
+                        <Title>$Resources:Microsoft.Office.Server.Search,PeopleSearchBoxTitle;</Title>
+                        <Description>$Resources:Microsoft.Office.Server.Search,PeopleSearchBoxDescription;</Description>
+                        <FrameType>None</FrameType>
+                        <AllowMinimize>true</AllowMinimize>
+                        <AllowRemove>true</AllowRemove>
+                        <IsVisible>true</IsVisible>
+                        <Width>800px</Width>
+                        <GoImageUrl xmlns="urn:schemas-microsoft-com:SearchBoxEx">/_layouts/images/gosearch30.png</GoImageUrl>
+                        <GoImageUrlRTL  xmlns="urn:schemas-microsoft-com:SearchBoxEx">/_layouts/images/gosearchrtl30.png</GoImageUrlRTL>
+                        <GoImageActiveUrl xmlns="urn:schemas-microsoft-com:SearchBoxEx">/_layouts/images/gosearchhover30.png</GoImageActiveUrl>
+                        <GoImageActiveUrlRTL  xmlns="urn:schemas-microsoft-com:SearchBoxEx">/_layouts/images/gosearchrtlhover30.png</GoImageActiveUrlRTL> 
+                        <DropDownMode xmlns="urn:schemas-microsoft-com:SearchBoxEx">HideScopeDD</DropDownMode>
+                        <ScopeDisplayGroupName xmlns="urn:schemas-microsoft-com:SearchBoxEx">$Resources:spscore,ScopeDisplayGroup_SearchDropdown_Name;</ScopeDisplayGroupName>
+                        <TextBoxWidth xmlns="urn:schemas-microsoft-com:SearchBoxEx">368</TextBoxWidth>
+                        <SearchResultPageURL xmlns="urn:schemas-microsoft-com:SearchBoxEx">peopleresults.aspx</SearchResultPageURL>
+                        <ShowSearchOptions xmlns="urn:schemas-microsoft-com:SearchBoxEx">true</ShowSearchOptions>
+                        <ShouldTakeFocusIfEmpty xmlns="urn:schemas-microsoft-com:SearchBoxEx">true</ShouldTakeFocusIfEmpty>
+                        <ShowPerferenceLink xmlns="urn:schemas-microsoft-com:SearchBoxEx">true</ShowPerferenceLink>
+                        <SearchBoxVisual xmlns="urn:schemas-microsoft-com:SearchBoxEx">SearchCenterDefault</SearchBoxVisual>
+                    </WebPart>
+                    ]]>
+      </AllUsersWebPart>
+      <AllUsersWebPart WebPartZoneID="LeftZone" WebPartOrder="1">
+        <![CDATA[
+                    <webParts>
+                       <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                          <metaData>
+                             <type name="Microsoft.Office.Server.Search.WebControls.PeopleRefinementWebPart,Microsoft.Office.Server.Search,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+
+                             <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                          </metaData>
+                          <data>	
+                             <properties>
+                                <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,PeopleRefinement_Title;</property>
+                                <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,PeopleRefinement_Desc;</property>
+                                <property name="ChromeType">None</property>
+                                <property name="AllowMinimize" type="bool">true</property>
+                                <property name="AllowClose" type="bool">true</property>
+                                <property name="Hidden" type="bool">false</property>
+                            </properties>
+                          </data>
+                       </webPart>
+                    </webParts>
+                    ]]>
+      </AllUsersWebPart>
+      <AllUsersWebPart WebPartZoneID="MidLowerRightZone" WebPartOrder="1">
+        <![CDATA[
+                    <webParts>
+                      <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                        <metaData>
+                          <type name="Microsoft.Office.Server.Search.WebControls.PeopleCoreResultsWebPart,Microsoft.Office.Server.Search,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+
+                          <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                        </metaData>
+                        <data>
+                          <properties>
+                            <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,SearchActionsWP_Title;</property>
+                            <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,SearchActionsWP_Desc;</property>
+                            <property name="ChromeType">None</property>
+                            <property name="AllowMinimize" type="bool">true</property>
+                            <property name="AllowClose" type="bool">true</property> 
+                            <property name="Hidden" type="bool">false</property>
+                            <property name="ShowSearchResults" type="bool">false</property>
+                            <property name="ShowMessages" type="bool">false</property>
+                         </properties>
+                        </data>
+                      </webPart>
+                    </webParts>
+                    ]]>
+      </AllUsersWebPart>
+      <AllUsersWebPart WebPartZoneID="MidLowerLeftZone" WebPartOrder="1">
+        <![CDATA[
+                    <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                        <Assembly>Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.Office.Server.Search.WebControls.SearchStatsWebPart</TypeName>
+                        <Title>$Resources:Microsoft.Office.Server.Search,SearchStatsWP_Title;</Title>
+                        <Description>$Resources:Microsoft.Office.Server.Search,SearchStatsWP_Desc;</Description>
+                        <PartOrder>2</PartOrder>
+                        <FrameType>None</FrameType>
+                        <AllowMinimize>true</AllowMinimize>
+                        <AllowRemove>true</AllowRemove>
+                        <IsVisible>true</IsVisible>
+                    </WebPart>
+                    ]]>
+      </AllUsersWebPart>
+      <AllUsersWebPart WebPartZoneID="BottomZone" WebPartOrder="1">
+        <![CDATA[
+                  <webParts>
+                    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                      <metaData>
+                        <type name="Microsoft.Office.Server.Search.WebControls.PeopleCoreResultsWebPart,Microsoft.Office.Server.Search,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" />
+                        <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+                      </metaData>
+                      <data>
+                        <properties>
+                          <property name="Title" type="string">$Resources:Microsoft.Office.Server.Search,PeopleCoreResultsWP_Title;</property>
+                          <property name="Description" type="string">$Resources:Microsoft.Office.Server.Search,PeopleCoreResultsWP_Desc;</property>
+                          <property name="ChromeType">None</property>
+                          <property name="AllowMinimize" type="bool">true</property>
+                          <property name="AllowClose" type="bool">true</property> 
+                          <property name="Hidden" type="bool">false</property>
+                          <property name="ShowActionLinks" type="bool">false</property>
+                          <property name="ShowMessages" type="bool">true</property>
+                        </properties>
+                      </data>
+                    </webPart>
+                  </webParts>]]>
+      </AllUsersWebPart>
+
+      <AllUsersWebPart WebPartZoneID="BottomZone" WebPartOrder="2">
+        <![CDATA[
+                    <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                        <Assembly>Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                        <TypeName>Microsoft.Office.Server.Search.WebControls.SearchPagingWebPart</TypeName>
+                        <Title>$Resources:Microsoft.Office.Server.Search,SearchPagingWP_Title;</Title>
+                        <Description>$Resources:Microsoft.Office.Server.Search,SearchPagingWPWP_Desc;</Description>
+                        <PartOrder>1</PartOrder>
+                        <FrameType>None</FrameType>
+                        <AllowMinimize>true</AllowMinimize>
+                        <AllowRemove>true</AllowRemove>
+                        <IsVisible>true</IsVisible>
+                    </WebPart>
+                    ]]>
+      </AllUsersWebPart>
+    </File>
+  </Module>
+
+</Elements>

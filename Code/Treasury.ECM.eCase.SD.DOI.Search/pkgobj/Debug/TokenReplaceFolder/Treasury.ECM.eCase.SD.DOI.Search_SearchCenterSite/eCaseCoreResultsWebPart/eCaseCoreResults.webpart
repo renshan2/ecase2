@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Treasury.ECM.eCase.SusDeb.DOI.Search.eCaseCoreResults, Treasury.ECM.eCase.SusDeb.DOI.Search, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4e7a656e7f3196c4" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">eCase Search Core Results</property>
+        <property name="Description" type="string">Search Core Results Replacement</property>
+        <property name="ChromeType">None</property>
+        <property name="AllowMinimize" type="bool">true</property>
+        <property name="AllowClose" type="bool">true</property>
+        <property name="Hidden" type="bool">false</property>
+        <property name="ShowActionLinks" type="bool">false</property>
+        <property name="ShowMessages" type="bool">true</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

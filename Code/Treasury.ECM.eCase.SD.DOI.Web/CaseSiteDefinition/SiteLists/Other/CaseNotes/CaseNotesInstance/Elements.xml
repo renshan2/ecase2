@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Case Notes"
+                FeatureId="a739371e-a68a-49f7-833b-b0e9a3ec6832"
+                OnQuickLaunch="FALSE"
+                TemplateType="10014"
+                Url="Lists/CaseNotes"
+                Description="Case Notes pertaining to this case"
+                VersioningEnabled="FALSE">
+  </ListInstance>
+</Elements>

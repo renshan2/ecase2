@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+       Id="jQuery.Script"
+       Location="ScriptLink"
+       ScriptSrc ="eCaseSearch/jquery-1.8.2.js"
+       Sequence="100">
+  </CustomAction>
+  <CustomAction
+  Id="SearchMetadataCustomRibbonButton"
+  Location="CommandUI.Ribbon"
+  Sequence="2"
+  Title="Batch Metadata">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.WikiPageTab.Manage.Controls._children">
+          <Button
+          Id="Ribbon.WikiPageTab.New.SearchMetadataButton"
+          Alt="Search Metadata"
+          Sequence="2"
+          Command="Search_Metadata_Button"
+          Image16by16="../_layouts/eCaseSearch/form_icon_16.gif"
+          Image32by32="../_layouts/eCaseSearch/form_icon_32.gif"
+          LabelText="Batch Metadata"
+          TemplateAlias="o1" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+          Command="Search_Metadata_Button"
+        CommandAction="javascript:
+        function SearchMetadataCallback(dialogResult, returnValue) {
+            if (dialogResult === SP.UI.DialogResult.OK) {
+                SP.UI.Notify.addNotification('Metadata Saved!');
+            }
+            else if (dialogResult === SP.UI.DialogResult.cancel) {
+                SP.UI.Notify.addNotification('User action cancelled!');
+            }
+            SP.UI.ModalDialog.RefreshPage(SP.UI.DialogResult.OK);
+        }
+
+        var selectedItems = [];
+        $(':checkbox:checked').each(function () {
+                selectedItems.push($(this).val());
+        });
+
+        if (selectedItems.length > 1) {
+            var myItems = '';
+            var si;
+            for (si in selectedItems) {
+                myItems += '|' + selectedItems[si];
+            }
+
+            var options = {
+                url: '{SiteUrl}/_layouts/eCaseSearch/SearchBatchMetadata.aspx?items=' + myItems + '&amp;sourceurl=\'{SiteUrl}\'',
+                width: 900,
+                height: 700,
+                title: 'eCase - Apply Batch Metadata',
+                showClose: true,
+                allowMaximize: false,
+                dialogReturnValueCallback: SearchMetadataCallback
+            };
+            SP.UI.ModalDialog.showModalDialog(options);
+        }
+        else {
+            alert('You must select at least two items to perform batch metadata operations. Please check your number of selections and try again.');
+        }" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>
+

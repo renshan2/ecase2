@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Party Associations" OnQuickLaunch="TRUE" TemplateType="10002" 
+                FeatureId="a739371e-a68a-49f7-833b-b0e9a3ec6832" Url="Lists/PartyAssociations" 
+                Description="My List Instance"
+                VersioningEnabled="TRUE">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">Interested Parties</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

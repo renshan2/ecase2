@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field Type="Note"
+         DisplayName="LawIssueList_0"
+         StaticName="LawIssueListTaxHTField0"
+         Name="LawIssueListTaxHTField0"
+         ID="{8DB425C6-E029-45E2-B203-1BBED2EB86F2}"
+         ShowInViewForms="FALSE"
+         Required="FALSE"
+         Hidden="TRUE"
+         CanToggleHidden="TRUE"
+         RowOrdinal="0"
+         DisplaceOnUpgrade="TRUE"
+         Overwrite="TRUE" />
+  <Field
+       ID="{e7c447ba-fc04-451c-9c8d-1695cdaadf17}"
+       Name="LawIssueList"
+       DisplayName="Law Issue List"
+       StaticName="LawIssueList"
+       ShowField="Term$Resources:core,Language;"
+       Type="TaxonomyFieldTypeMulti"
+       Required="FALSE"
+       Group="eCases Site Columns"
+       DisplaceOnUpgrade="TRUE"
+       Overwrite="TRUE"
+       Mult="TRUE">
+    <Customization>
+      <ArrayOfProperty>
+        <Property>
+          <Name>UserCreated</Name>
+          <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>Open</Name>
+          <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>TextField</Name>
+          <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{8DB425C6-E029-45E2-B203-1BBED2EB86F2}</Value>
+        </Property>
+        <Property>
+          <Name>IsPathRendered</Name>
+          <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>IsKeyword</Name>
+          <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>CreateValuesInEditForm</Name>
+          <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+        </Property>
+        <Property>
+          <Name>AnchorId</Name>
+          <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+        </Property>
+        <Property>
+          <Name>TargetTemplate</Name>
+        </Property>
+      </ArrayOfProperty>
+    </Customization>
+  </Field>
+</Elements>

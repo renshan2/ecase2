@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{890c7f37-eec2-4386-b598-5e9463215bd9}"
+       Name="ExhibitNumber"
+       DisplayName="Exhibit Number"
+       Type="Text"
+       Required="FALSE"
+       Group="eCases Site Columns">
+  </Field>
+</Elements>

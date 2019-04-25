@@ -1,0 +1,6 @@
+F:\SusDeb\SusDeb_2014-11-11\Code\Treasury.ECM.eCase.SD.DOI.Common\bin\Debug\Treasury.ECM.eCase.SusDeb.DOI.Common.dll
+F:\SusDeb\SusDeb_2014-11-11\Code\Treasury.ECM.eCase.SD.DOI.Common\bin\Debug\Treasury.ECM.eCase.SusDeb.DOI.Common.pdb
+F:\SusDeb\SusDeb_2014-11-11\Code\Treasury.ECM.eCase.SD.DOI.Common\bin\Debug\Microsoft.Sharepoint.Sandbox.dll
+F:\SusDeb\SusDeb_2014-11-11\Code\Treasury.ECM.eCase.SD.DOI.Common\obj\Debug\ResolveAssemblyReference.cache
+F:\SusDeb\SusDeb_2014-11-11\Code\Treasury.ECM.eCase.SD.DOI.Common\obj\Debug\Treasury.ECM.eCase.SusDeb.DOI.Common.dll
+F:\SusDeb\SusDeb_2014-11-11\Code\Treasury.ECM.eCase.SD.DOI.Common\obj\Debug\Treasury.ECM.eCase.SusDeb.DOI.Common.pdb

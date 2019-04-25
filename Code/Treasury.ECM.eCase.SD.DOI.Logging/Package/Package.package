@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="07907aba-f23f-465d-996e-c3848256c52d" solutionId="643dff77-18af-4a77-82ce-84a1386472e6" resetWebServer="false" name="Treasury.ECM.eCase.SusDeb.DOI.Logging" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="afd1676b-e116-4324-90dc-475ec6dae9bc" />
+    <featureReference itemId="b53c8b1e-59e5-4124-bea5-457b69adcc68" />
+  </features>
+</package>

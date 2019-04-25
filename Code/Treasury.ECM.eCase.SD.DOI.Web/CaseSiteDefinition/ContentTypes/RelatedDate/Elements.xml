@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Event (0x0102) -->
+  <ContentType ID="0x0102005BCB360AEA6746A48FB84ECC1C779399" Name="Related Date" Group="eCases Content Types" 
+               Description="Matter or Case Related Date" Inherits="TRUE" Version="0"
+               FeatureId="{f9777555-bb0f-4319-a1d8-0b5ca4c01790}" >
+    <FieldRefs>
+      <FieldRef ID="{a4e7b3e1-1b0a-4ffa-8426-c94d4cb8cc57}" Name="Facilities" Hidden="TRUE" />
+      <FieldRef ID="{fd091cb9-9516-424d-ae7b-2fde69be392b}" Name="RelatedLinks" />
+      <FieldRef ID="{23f27201-bee3-471e-b2e7-b64fd8b7ca38}" Name="TaxKeyword" />
+      <FieldRef ID="{1390a86a-23da-45f0-8efe-ef36edadfb39}" Name="TaxKeywordTaxHTField" />
+      <FieldRef ID="{f3b0adf9-c1a2-4b02-920d-943fba4b3611}" Name="TaxCatchAll" />
+      <FieldRef ID="{8f6b6dd8-9357-4019-8172-966fcd502ed2}" Name="TaxCatchAllLabel" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

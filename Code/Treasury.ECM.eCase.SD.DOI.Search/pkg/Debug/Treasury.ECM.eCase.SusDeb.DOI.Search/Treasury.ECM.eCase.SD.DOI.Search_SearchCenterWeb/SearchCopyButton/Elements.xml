@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+       Id="jQuery.Script"
+       Location="ScriptLink"
+       ScriptSrc ="eCaseSearch/jquery-1.8.2.js"
+       Sequence="100">
+  </CustomAction>
+  <CustomAction
+  Id="SearchCopyCustomRibbonButton"
+  Location="CommandUI.Ribbon"
+  Sequence="0"
+  Title="Copy Documents">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.WikiPageTab.Manage.Controls._children">
+          <Button
+          Id="Ribbon.WikiPageTab.New.SearchCopyButton"
+          Alt="Search Copy"
+          Sequence="0"
+          Command="Search_Copy_Button"
+          Image16by16="../_layouts/eCaseSearch/move_docs_16.png"
+          Image32by32="../_layouts/eCaseSearch/move_docs_32.png"
+          LabelText="Batch Copy"
+          TemplateAlias="o1" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+          Command="Search_Copy_Button"
+        CommandAction="javascript:
+        function SearchCopyCallback(dialogResult, returnValue) {
+            if (dialogResult === SP.UI.DialogResult.OK) {
+                SP.UI.Notify.addNotification('Files copied!');
+            }
+            else if (dialogResult === SP.UI.DialogResult.cancel) {
+                SP.UI.Notify.addNotification('User action cancelled!');
+            }
+            SP.UI.ModalDialog.RefreshPage(SP.UI.DialogResult.OK);
+        }
+
+        var selectedDocs = [];
+        $(':checkbox:checked').each(function () {
+            if ($(this).prev().val() == 'True') {
+                selectedDocs.push($(this).val());
+            }
+        });
+
+        if (selectedDocs.length > 0) {
+            var myItems = '';
+            var d;
+            for (d in selectedDocs) {
+                myItems += '|' + selectedDocs[d];
+            }
+
+            var options = {
+                url: '{SiteUrl}/_layouts/eCaseSearch/SearchBatchCopying.aspx?items=' + myItems + '&amp;sourceurl=\'{SiteUrl}\'',
+                width: 900,
+                height: 700,
+                title: 'eCase - Document Search Copying',
+                showClose: true,
+                allowMaximize: false,
+                dialogReturnValueCallback: SearchCopyCallback
+            };
+            SP.UI.ModalDialog.showModalDialog(options);
+        }
+        else {
+            alert('No valid selections have been made. You have either failed to select an item by checking the adjacent checkbox, or have selected an item that is not valid for copy operations. Only documents may be selected for copying.');
+        }" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>
+

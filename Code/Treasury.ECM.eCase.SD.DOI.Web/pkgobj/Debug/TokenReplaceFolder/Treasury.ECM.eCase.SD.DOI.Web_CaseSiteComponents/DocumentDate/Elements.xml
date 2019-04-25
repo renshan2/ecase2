@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{d4f2743c-e87f-4f55-9a7c-1d1864c2ad75}"
+       Name="DocumentDate"
+       DisplayName="Document Date"
+       Format="DateOnly"
+       Type="DateTime"
+       Required="FALSE"
+       Group="eCases Site Columns">
+  </Field>
+</Elements>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Hidden="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/" AlwaysForceInstall="TRUE" Id="2b5212ac-cda7-4bcf-8a56-3c3b0cd48ef9" ReceiverAssembly="Treasury.ECM.eCase.SusDeb.DOI.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1dad96f5b8a688f6" ReceiverClass="Treasury.ECM.eCase.SusDeb.DOI.Web.Features.CaseWebComponents.CaseWebComponentsEventReceiver" Scope="Web" Title="eCase Web Components" Version="1.0.0.0">
+  <UpgradeActions ReceiverAssembly="$SharePoint.Project.AssemblyFullName$" ReceiverClass="$SharePoint.Type.dfdd482f-7717-4776-b9f4-4c0ccfdabe8b.FullName$" />
+  <ElementManifests>
+    <ElementManifest Location="eCasePages\Elements.xml" />
+    <ElementFile Location="eCasePages\default.aspx" />
+    <ElementFile Location="eCasePages\CaseInfo.aspx" />
+    <ElementFile Location="eCasePages\CaseData.aspx" />
+    <ElementFile Location="eCasePages\Documents.aspx" />
+    <ElementFile Location="eCasePages\Discussion.aspx" />
+    <ElementManifest Location="DiscussionBoard\Elements.xml" />
+    <ElementManifest Location="Bureau\Elements.xml" />
+    <ElementManifest Location="Investigator\Elements.xml" />
+    <ElementManifest Location="TaskAndActivitiesInstance\Elements.xml" />
+    <ElementManifest Location="PartyAssociationsInstance\Elements.xml" />
+    <ElementManifest Location="RelatedContactsInstance\Elements.xml" />
+    <ElementManifest Location="LegalIssuesInstance\Elements.xml" />
+    <ElementManifest Location="RelevantWebLinks\Elements.xml" />
+    <ElementManifest Location="CaseDocumentsInstance\Elements.xml" />
+    <ElementManifest Location="RelatedDocumentsInstance\Elements.xml" />
+    <ElementManifest Location="FinishedWorkProductsInstance\Elements.xml" />
+    <ElementManifest Location="CaseDocsTagButton\Elements.xml" />
+    <ElementManifest Location="GroupProxyER\Elements.xml" />
+    <ElementManifest Location="RelatedDocsTagButton\Elements.xml" />
+    <ElementManifest Location="FinishedWorkProductTagButton\Elements.xml" />
+    <ElementManifest Location="CaseDocsER\Elements.xml" />
+    <ElementManifest Location="FinishedWorkProduceER\Elements.xml" />
+    <ElementManifest Location="RelatedDocsER\Elements.xml" />
+    <ElementManifest Location="MatterRelatedDatesInstance\Elements.xml" />
+    <ElementManifest Location="CaseRelatedDatesInstance\Elements.xml" />
+    <ElementManifest Location="BatchCopyButton\Elements.xml" />
+    <ElementManifest Location="CaseDocId\Elements.xml" />
+    <ElementManifest Location="CaseRelatedDatesER\Elements.xml" />
+    <ElementManifest Location="ActivitiesTasksER\Elements.xml" />
+    <ElementManifest Location="CaseNotesInstance\Elements.xml" />
+    <ElementManifest Location="ShareWithExternalUsersInstance\Elements.xml" />
+    <ElementManifest Location="ShareWithExternalUsersER\Elements.xml" />
+    <ElementManifest Location="ExportToCSV\Elements.xml" />
+    <ElementManifest Location="AuditReportAccessAction\Elements.xml" />
+    <ElementManifest Location="MergeDocument\Elements.xml" />
+    <ElementManifest Location="MergeDocumentOrder\Elements.xml" />
+  </ElementManifests>
+</Feature>

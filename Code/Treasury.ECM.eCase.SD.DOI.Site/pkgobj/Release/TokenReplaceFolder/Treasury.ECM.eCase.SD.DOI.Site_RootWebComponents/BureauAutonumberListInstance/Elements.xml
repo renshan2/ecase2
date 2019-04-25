@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="BureauAutonumberList" OnQuickLaunch="TRUE" TemplateType="10015" Url="Lists/BureauAutonumberList" Description="My List Instance">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">OIG</Field>
+          <Field Name="AutoNumberId">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">TIGTA</Field>
+          <Field Name="AutoNumberId">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">SIGTARP</Field>
+          <Field Name="AutoNumberId">0</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

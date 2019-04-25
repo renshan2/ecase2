@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="SusDebAutonumberList" OnQuickLaunch="TRUE" TemplateType="10008" Url="Lists/SusDebAutonumberList" Description="My List Instance">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">AutonumberId</Field>
+          <Field Name="AutoNumberId">0</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

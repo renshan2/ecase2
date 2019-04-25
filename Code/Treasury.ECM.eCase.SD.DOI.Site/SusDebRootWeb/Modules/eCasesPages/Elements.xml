@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="eCasesPages" Path="eCasesPages\">
+    <File Name="default.aspx" Url="default.aspx" Type="Ghostable" IgnoreIfAlreadyExists="TRUE" NavBarHome="True">
+      <View List="Lists/Cases" BaseViewID="2" WebPartZoneID="wpzoneLeftColumn" WebPartOrder="0">
+        <![CDATA[ 
+                    <webParts> 
+                        <webPart xmlns="http://schemas.microsoft.com/WebPart/v3"> 
+                            <metaData> 
+                                <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,Microsoft.SharePoint,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c" /> 
+                                <importErrorMessage>Cannot import this Web Part.</importErrorMessage> 
+                            </metaData> 
+                            <data> 
+                                <properties> 
+                                    <property name="Title">Assigned Cases</property>
+                                    <property name="AllowConnect" type="bool">True</property> 
+                                    <property name="ChromeType" type="chrometype">TitleOnly</property> 
+                                    <property name="AllowClose" type="bool">False</property> 
+                                    <property name="AutoRefresh" type="bool">True</property>
+                                    <property name="AutoRefreshInterval" type="int">15</property>
+                                </properties> 
+                            </data> 
+                        </webPart> 
+                    </webParts> 
+                ]]>
+      </View>
+      <AllUsersWebPart WebPartZoneID="wpzoneRightColumn" WebPartOrder="1">
+        <![CDATA[ 
+                    <webParts>
+                    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+                      <metaData>
+                        <type name="Treasury.ECM.eCase.SusDeb.DOI.Site.WebParts.UserSavedSearchesWebPart.UserSavedSearchesWebPart, $SharePoint.Project.AssemblyFullName$" />
+                        <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+                      </metaData>
+                      <data>
+                        <properties>
+                          <property name="Title" type="string">Saved Searches</property>
+                          <property name="ChromeType" type="chrometype">TitleOnly</property>
+                          <property name="Description" type="string">List of user-specific search criteria.</property>
+                        </properties>
+                      </data>
+                    </webPart>
+                  </webParts>
+                ]]>
+      </AllUsersWebPart>
+    </File>
+    <File Name="ManagerDashboard.aspx" Url="ManagerDashboard.aspx" Type="Ghostable" IgnoreIfAlreadyExists="TRUE" NavBarHome="True">      
+    </File>
+    <File Path="ManagerDashboard2.aspx" Url="ManagerDashboard2.aspx" Type="Ghostable" IgnoreIfAlreadyExists="TRUE" NavBarHome="True">
+    </File>
+</Module>
+</Elements>

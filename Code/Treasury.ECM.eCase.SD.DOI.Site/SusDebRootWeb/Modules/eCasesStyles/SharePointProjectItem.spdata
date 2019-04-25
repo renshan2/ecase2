@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="eCasesStyles\" Type="ElementManifest" />
+    <ProjectItemFile Source="eCase-styles.css" Target="eCasesStyles\" Type="ElementFile" />
+    <ProjectItemFile Source="eCase-tab-styles.css" Target="eCasesStyles\" Type="ElementFile" />
+    <ProjectItemFile Source="witnesses-list-styles.xsl" Target="eCasesStyles\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-ui.css" Target="eCasesStyles\" Type="ElementFile" />
+    <ProjectItemFile Source="case-details-styles.xsl" Target="eCasesStyles\" Type="ElementFile" />
+    <ProjectItemFile Source="reviewers-list-styles.xsl" Target="eCasesStyles\" Type="ElementFile" />
+    <ProjectItemFile Source="owners-list-styles.xsl" Target="eCasesStyles\" Type="ElementFile" />
+    <ProjectItemFile Source="participants-list-styles.xsl" Target="eCasesStyles\" Type="ElementFile" />
+    <ProjectItemFile Source="fullcalendar.css" Target="eCasesStyles\" Type="ElementFile" />
+    <ProjectItemFile Source="fullcalendar.print.css" Target="eCasesStyles\" Type="ElementFile" />
+    <ProjectItemFile Source="aggregate-calendar-styles.xsl" Target="eCasesStyles\" Type="ElementFile" />
+    <ProjectItemFile Source="font-awesome.css" Target="eCasesStyles\" Type="ElementFile" />
+    <ProjectItemFile Source="font-awesome-ie7.css" Target="eCasesStyles\" Type="ElementFile" />
+    <ProjectItemFile Source="notes-list-styles.xsl" Target="eCasesStyles\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

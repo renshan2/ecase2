@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Hidden="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/" AlwaysForceInstall="TRUE" Description="Contains content types and list definitions required for the eCases'  root web." Id="06c207a3-d79a-44eb-9013-d2fee5376cfc" ReceiverAssembly="Treasury.ECM.eCase.SusDeb.DOI.Site, Version=1.0.0.0, Culture=neutral, PublicKeyToken=44198732fb780fac" ReceiverClass="Treasury.ECM.eCase.SusDeb.DOI.Site.Features.SiteComponents.SiteComponentsEventReceiver" Scope="Site" Title="eCases Site Components">
+  <ElementManifests>
+    <ElementManifest Location="eCasesList\Elements.xml" />
+    <ElementFile Location="eCasesList\Schema.xml" />
+    <ElementFile Location="eCasesList\CaseNewForm.aspx" />
+    <ElementManifest Location="eCaseStatusesList\Elements.xml" />
+    <ElementFile Location="eCaseStatusesList\Schema.xml" />
+    <ElementManifest Location="UserSavedSearchesWebPart\Elements.xml" />
+    <ElementFile Location="UserSavedSearchesWebPart\UserSavedSearchesWebPart.webpart" />
+    <ElementManifest Location="LawIssueList\Elements.xml" />
+    <ElementManifest Location="Judge\Elements.xml" />
+    <ElementManifest Location="MgrDashboardDueDates\Elements.xml" />
+    <ElementFile Location="MgrDashboardDueDates\MgrDashboardDueDates.webpart" />
+  </ElementManifests>
+</Feature>

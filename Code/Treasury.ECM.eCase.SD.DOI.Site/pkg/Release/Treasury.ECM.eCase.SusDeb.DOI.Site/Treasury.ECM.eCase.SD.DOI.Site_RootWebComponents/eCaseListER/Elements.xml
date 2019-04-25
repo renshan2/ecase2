@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Receivers ListUrl="Lists/Cases" Scope="Web">
+    <Receiver>
+      <Name>eCaseListERItemAdding</Name>
+      <Type>ItemAdding</Type>
+      <Assembly>Treasury.ECM.eCase.SusDeb.DOI.Site, Version=1.0.0.0, Culture=neutral, PublicKeyToken=44198732fb780fac</Assembly>
+      <Class>Treasury.ECM.eCase.SusDeb.DOI.Site.SusDebRootWeb.EventReceivers.eCaseListER.eCaseListER</Class>
+      <SequenceNumber>10000</SequenceNumber>
+    </Receiver>
+    <Receiver>
+      <Name>eCaseListERItemAdded</Name>
+      <Type>ItemAdded</Type>
+      <Assembly>Treasury.ECM.eCase.SusDeb.DOI.Site, Version=1.0.0.0, Culture=neutral, PublicKeyToken=44198732fb780fac</Assembly>
+      <Class>Treasury.ECM.eCase.SusDeb.DOI.Site.SusDebRootWeb.EventReceivers.eCaseListER.eCaseListER</Class>
+      <SequenceNumber>10000</SequenceNumber>
+    </Receiver>
+    <Receiver>
+      <Name>eCaseListERItemUpdating</Name>
+      <Type>ItemUpdating</Type>
+      <Assembly>Treasury.ECM.eCase.SusDeb.DOI.Site, Version=1.0.0.0, Culture=neutral, PublicKeyToken=44198732fb780fac</Assembly>
+      <Class>Treasury.ECM.eCase.SusDeb.DOI.Site.SusDebRootWeb.EventReceivers.eCaseListER.eCaseListER</Class>
+      <SequenceNumber>10000</SequenceNumber>
+    </Receiver>
+    <Receiver>
+      <Name>eCaseListERItemUpdated</Name>
+      <Type>ItemUpdated</Type>
+      <Assembly>Treasury.ECM.eCase.SusDeb.DOI.Site, Version=1.0.0.0, Culture=neutral, PublicKeyToken=44198732fb780fac</Assembly>
+      <Class>Treasury.ECM.eCase.SusDeb.DOI.Site.SusDebRootWeb.EventReceivers.eCaseListER.eCaseListER</Class>
+      <SequenceNumber>10000</SequenceNumber>
+    </Receiver>
+</Receivers>
+</Elements>

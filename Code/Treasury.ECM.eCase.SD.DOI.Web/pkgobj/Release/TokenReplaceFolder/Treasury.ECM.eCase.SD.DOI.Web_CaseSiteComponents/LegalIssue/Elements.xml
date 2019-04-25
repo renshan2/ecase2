@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Issue (0x0103) -->
+  <ContentType ID="0x0103009CF1571A93D648B2A27A9B5C9D7594AB" 
+               Name="Legal Issue"
+               Group="eCases Content Types" 
+               Description="Represents an issue specific to a legal case, including the following additional fields: Shorthand, Codes, Related Links, and Related Issues." 
+               Inherits="TRUE" 
+               FeatureId="{a739371e-a68a-49f7-833b-b0e9a3ec6832}">
+    <FieldRefs>
+      <FieldRef ID="{fc1c5df0-56f7-40e4-b70c-79ac5b4255f3}" DisplayName="Shorthand" Required="FALSE" Name="Shorthand" />
+      <FieldRef ID="{b85cf751-976a-4cbb-80c8-bd7f1836bc45}" DisplayName="Codes" Required="FALSE" Name="Codes" />
+      <FieldRef ID="{fd091cb9-9516-424d-ae7b-2fde69be392b}" DisplayName="Related Links" Required="FALSE" Name="RelatedLinks" />
+      <FieldRef ID="{23f27201-bee3-471e-b2e7-b64fd8b7ca38}" DisplayName="Tags" Name="TaxKeyword" />
+      <FieldRef ID="{1390a86a-23da-45f0-8efe-ef36edadfb39}" Name="TaxKeywordTaxHTField" />
+      <FieldRef ID="{f3b0adf9-c1a2-4b02-920d-943fba4b3611}" Name="TaxCatchAll" />
+      <FieldRef ID="{8f6b6dd8-9357-4019-8172-966fcd502ed2}" Name="TaxCatchAllLabel" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

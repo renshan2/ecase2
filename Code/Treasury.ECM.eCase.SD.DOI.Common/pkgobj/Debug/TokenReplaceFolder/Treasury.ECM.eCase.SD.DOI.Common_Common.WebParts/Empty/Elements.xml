@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="Empty" List="113" Url="_catalogs/wp">
+    <File Path="Empty\Empty.webpart" Url="Treasury.ECM.eCase.SusDeb.DOI.Common_Empty.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="Custom" />
+    </File>
+  </Module>
+</Elements>

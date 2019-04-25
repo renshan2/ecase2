@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Hidden="TRUE" AlwaysForceInstall="TRUE" Description="Do not activate; nothing of value inside." Id="387aebf8-57e4-4b71-9c86-b0e354657769" Scope="Site" Title="Treasury.ECM.eCase.Extensions Web Parts">
+  <ElementManifests>
+    <ElementManifest Location="EmptyWebPart\Elements.xml" />
+    <ElementFile Location="EmptyWebPart\EmptyWebPart.webpart" />
+  </ElementManifests>
+</Feature>

@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Legal Issues" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Legal Issues" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x0103009CF1571A93D648B2A27A9B5C9D7594AB"/>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" />
+      <Field ID="{fc1c5df0-56f7-40e4-b70c-79ac5b4255f3}" Name="Shorthand" DisplayName="Shorthand" Type="Text" Required="FALSE" Group="eCases Site Columns"></Field>
+      <Field ID="{b85cf751-976a-4cbb-80c8-bd7f1836bc45}" Name="Codes" DisplayName="Codes" Type="Note" Required="FALSE" Group="eCases Site Columns"></Field>
+      <Field ID="{fd091cb9-9516-424d-ae7b-2fde69be392b}" Name="RelatedLinks" DisplayName="Related Links" Type="Note" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" Required="FALSE" Group="eCases Site Columns"></Field>
+      <Field ID="{53101f38-dd2e-458c-b245-0c236cc13d1a}" Name="AssignedTo" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="AssignedTo" Group="$Resources:core,Issue_Task_Columns;" Type="User" List="UserInfo" DisplayName="$Resources:core,Assigned_To;" />
+      <Field ID="{3F277A5C-C7AE-4bbe-9D44-0456FB548F94}" Type="Choice" Group="$Resources:core,Extended_Columns;" Name="IssueStatus" DisplayName="$Resources:core,IssueStatus;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="IssueStatus">
+        <CHOICES>
+          <CHOICE>$Resources:core,Status_Active;</CHOICE>
+          <CHOICE>$Resources:core,Status_Resolved;</CHOICE>
+          <CHOICE>$Resources:core,Status_Closed;</CHOICE>
+        </CHOICES>
+        <Default>$Resources:core,Status_Active;</Default>
+      </Field>
+      <Field ID="{a8eb573e-9e11-481a-a8c9-1104a54b2fbd}" Name="Priority" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Priority" Group="$Resources:core,Issue_Task_Columns;" Type="Choice" DisplayName="$Resources:core,Priority;">
+        <CHOICES>
+          <CHOICE>$Resources:core,Priority_High;</CHOICE>
+          <CHOICE>$Resources:core,Priority_Normal;</CHOICE>
+          <CHOICE>$Resources:core,Priority_Low;</CHOICE>
+        </CHOICES>
+        <Default>$Resources:core,Priority_Normal;</Default>
+      </Field>
+      <Field ID="{6DF9BD52-550E-4a30-BC31-A4366832A87F}" Type="Note" RichText="TRUE" Name="Comment" Group="_Hidden" DisplayName="$Resources:core,Description;" Sortable="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Comment" />
+      <Field ID="{6DF9BD52-550E-4a30-BC31-A4366832A87D}" Type="Choice" Group="_Hidden" Name="Category" DisplayName="$Resources:core,Category;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Category">
+        <CHOICES>
+          <CHOICE>$Resources:core,Category1;</CHOICE>
+          <CHOICE>$Resources:core,Category2;</CHOICE>
+          <CHOICE>$Resources:core,Category3;</CHOICE>
+        </CHOICES>
+        <Default>$Resources:core,Category2;</Default>
+      </Field>
+      <Field ID="{6DF9BD52-550E-4a30-BC31-A4366832A87E}" Type="Note" RichText="TRUE" AppendOnly="TRUE" Name="V3Comments" DisplayName="$Resources:core,AppendOnlyComments;" Sortable="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="V3Comments" Group="$Resources:core,Base_Columns;" />
+      <Field ID="{cd21b4c2-6841-4f9e-a23a-738a65f99889}" Name="TaskDueDate" Group="$Resources:core,Issue_Task_Columns;" Type="DateTime" DisplayName="$Resources:core,Due_Date;" SourceID="http://schemas.microsoft.com/sharepoint/v3/fields" StaticName="TaskDueDate" Format="DateOnly" />
+      <Field ID="{03F89857-27C9-4b58-AAAB-620647DEDA9B}" Group="_Hidden" ReadOnly="TRUE" Type="Computed" Name="LinkIssueIDNoMenu" DisplayName="$Resources:core,Issue_ID;" Dir="" DisplayNameSrcField="IssueID" AuthoringInfo="$Resources:core,Linked_Item;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkIssueIDNoMenu">
+        <FieldRefs>
+          <FieldRef ID="{1d22ea11-1e32-424e-89ab-9fedbadb6ce1}" Name="ID" />
+        </FieldRefs>
+        <DisplayPattern>
+          <HTML><![CDATA[<a  href="]]></HTML>
+          <URL />
+          <HTML><![CDATA[" onclick="GoToLink(this);return false;" target="_self">]]></HTML>
+          <Column HTMLEncode="TRUE" Name="ID" />
+          <HTML><![CDATA[</a>]]></HTML>
+        </DisplayPattern>
+      </Field>
+      <Field Type="TaxonomyFieldTypeMulti" DisplayName="Tags" StaticName="TaxKeyword" Name="TaxKeyword" ID="{23f27201-bee3-471e-b2e7-b64fd8b7ca38}" ShowInViewForms="TRUE" Mult="TRUE" ShowInEditForm="TRUE" ShowInNewForm="TRUE" DefaultListField="TRUE" Required="FALSE" Hidden="FALSE" ShowField="Term$Resources:core,Language;" Version="3" Sortable="FALSE" Group="$Resources:osrvcore,field_KeywordsGroupName" Description="$Resources:osrvcore,field_KeywordsFieldDesc" >
+        <Customization>
+          <ArrayOfProperty>
+            <Property>
+              <Name>SspId</Name>
+              <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">ba863631-94a8-48b0-9951-2a2b755f60bc</Value>
+            </Property>
+            <Property>
+              <Name>GroupId</Name>
+            </Property>
+            <Property>
+              <Name>TermSetId</Name>
+              <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+            </Property>
+            <Property>
+              <Name>AnchorId</Name>
+              <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+            </Property>
+            <Property>
+              <Name>UserCreated</Name>
+              <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>Open</Name>
+              <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+            </Property>
+            <Property>
+              <Name>TextField</Name>
+              <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{1390a86a-23da-45f0-8efe-ef36edadfb39}</Value>
+            </Property>
+            <Property>
+              <Name>IsPathRendered</Name>
+              <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>IsKeyword</Name>
+              <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+            </Property>
+            <Property>
+              <Name>TargetTemplate</Name>
+            </Property>
+            <Property>
+              <Name>CreateValuesInEditForm</Name>
+              <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>FilterAssemblyStrongName</Name>
+            </Property>
+            <Property>
+              <Name>FilterClassName</Name>
+            </Property>
+            <Property>
+              <Name>FilterMethodName</Name>
+            </Property>
+            <Property>
+              <Name>FilterJavascriptProperty</Name>
+            </Property>
+          </ArrayOfProperty>
+        </Customization>
+      </Field>
+      <Field Type="Note" DisplayName="TaxKeywordTaxHTField" StaticName="TaxKeywordTaxHTField" Name="TaxKeywordTaxHTField" ID="{1390a86a-23da-45f0-8efe-ef36edadfb39}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" SourceID="{621202aa-da29-4d7c-bdbc-4b8408c67a7e}" />
+      <Field Type="LookupMulti" DisplayName="Taxonomy Catch All Column" StaticName="TaxCatchAll" Name="TaxCatchAll" ID="{f3b0adf9-c1a2-4b02-920d-943fba4b3611}" ShowInViewForms="FALSE" List="{5e4bbb79-f8b7-449a-8d09-057dce69d9d3}" WebId="621202aa-da29-4d7c-bdbc-4b8408c67a7e" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" ShowField="CatchAllData" SourceID="{621202aa-da29-4d7c-bdbc-4b8408c67a7e}" Mult="TRUE" Sortable="FALSE" AllowDeletion="TRUE" Sealed="TRUE" Version="2" />
+      <Field Type="LookupMulti" DisplayName="Taxonomy Catch All Column1" StaticName="TaxCatchAllLabel" Name="TaxCatchAllLabel" ID="{8f6b6dd8-9357-4019-8172-966fcd502ed2}" ShowInViewForms="FALSE" List="{5e4bbb79-f8b7-449a-8d09-057dce69d9d3}" WebId="621202aa-da29-4d7c-bdbc-4b8408c67a7e" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" ShowField="CatchAllDataLabel" FieldRef="{F3B0ADF9-C1A2-4b02-920D-943FBA4B3611}" SourceID="{621202aa-da29-4d7c-bdbc-4b8408c67a7e}" ReadOnly="TRUE" Mult="TRUE" Sortable="FALSE" AllowDeletion="TRUE" Sealed="TRUE" Version="2" />
+
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="Attachments"></FieldRef>
+          <FieldRef Name="LinkTitle"></FieldRef>
+          <FieldRef Name="Shorthand" />
+          <FieldRef Name="Codes" />
+          <FieldRef Name="RelatedLinks" />
+          <FieldRef Name="AssignedTo" />
+          <FieldRef Name="IssueStatus" />
+          <FieldRef Name="Priority" />
+          <FieldRef Name="Comment" />
+          <FieldRef Name="Category" />
+          <FieldRef Name="V3Comments" />
+          <FieldRef Name="TaskDueDate" />
+          <FieldRef Name="LinkIssueIDNoMenu" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="2" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="FALSE" TabularView="FALSE" MobileView="TRUE" MobileDefaultView="FALSE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitle" />
+          <FieldRef Name="AssignedTo" />
+          <FieldRef Name="IssueStatus" />
+          <FieldRef Name="Priority" />
+          <FieldRef Name="Category" />
+          <FieldRef Name="TaskDueDate" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+          <ParameterBinding Name="Today" Location="CAMLVariable" DefaultValue="CurrentDate"/>
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

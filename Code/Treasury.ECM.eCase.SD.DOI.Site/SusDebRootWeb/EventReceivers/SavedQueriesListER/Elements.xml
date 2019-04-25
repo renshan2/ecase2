@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Receivers ListUrl="Lists/Saved Queries" Scope="Web">
+      <Receiver>
+        <Name>SavedQueriesListERItemAdded</Name>
+        <Type>ItemAdded</Type>
+        <Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+        <Class>Treasury.ECM.eCase.SusDeb.DOI.Site.eCaseRootWeb.EventReceivers.SavedQueriesListER.SavedQueriesListER</Class>
+        <SequenceNumber>10000</SequenceNumber>
+      </Receiver>
+      <Receiver>
+        <Name>SavedQueriesListERItemUpdated</Name>
+        <Type>ItemUpdated</Type>
+        <Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+        <Class>Treasury.ECM.eCase.SusDeb.DOI.Site.eCaseRootWeb.EventReceivers.SavedQueriesListER.SavedQueriesListER</Class>
+        <SequenceNumber>10000</SequenceNumber>
+      </Receiver>
+  </Receivers>
+</Elements>

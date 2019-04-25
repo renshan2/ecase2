@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="c707b40d-e492-4700-8daa-e1f455b5b13a" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="Treasury.ECM.eCase.SusDeb.DOI.Extensions.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="Treasury.ECM.eCase.SusDeb.DOI.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=584243307f3f2107" Namespace="Treasury.ECM.eCase.SusDeb.DOI.Extensions.WebParts.EmptyWebPart" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="Treasury.ECM.eCase.SD.DOI.Extensions_Extensions.WebParts\Feature.xml" />
+  </FeatureManifests>
+</Solution>

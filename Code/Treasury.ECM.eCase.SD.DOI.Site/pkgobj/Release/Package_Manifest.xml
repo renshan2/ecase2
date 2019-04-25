@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="64d70b06-9b38-453e-a73c-de40d953138c" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="Treasury.ECM.eCase.SusDeb.DOI.Site.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="Treasury.ECM.eCase.SusDeb.DOI.Site, Version=1.0.0.0, Culture=neutral, PublicKeyToken=44198732fb780fac" Namespace="Treasury.ECM.eCase.SusDeb.DOI.Site.WebParts.UserSavedSearchesWebPart" TypeName="*" />
+        <SafeControl Assembly="Treasury.ECM.eCase.SusDeb.DOI.Site, Version=1.0.0.0, Culture=neutral, PublicKeyToken=44198732fb780fac" Namespace="Treasury.ECM.eCase.SusDeb.DOI.Site.WebParts.MgrDashboardDueDates" TypeName="*" />
+        <SafeControl Assembly="Treasury.ECM.eCase.SusDeb.DOI.Site, Version=1.0.0.0, Culture=neutral, PublicKeyToken=44198732fb780fac" Namespace="Treasury.ECM.eCase.SusDeb.DOI.Site.WebParts.EmptyWebPart" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="SiteTemplates\SusDebRootWeb\Xml\onet.xml" />
+    <TemplateFile Location="1033\xml\webtemp_SusDebRootSiteDefinition.xml" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="Treasury.ECM.eCase.SD.DOI.Site_SiteComponents\Feature.xml" />
+    <FeatureManifest Location="Treasury.ECM.eCase.SD.DOI.Site_RootWebComponents\Feature.xml" />
+    <FeatureManifest Location="Treasury.ECM.eCase.SD.DOI.Site_Site.WebParts\Feature.xml" />
+  </FeatureManifests>
+</Solution>

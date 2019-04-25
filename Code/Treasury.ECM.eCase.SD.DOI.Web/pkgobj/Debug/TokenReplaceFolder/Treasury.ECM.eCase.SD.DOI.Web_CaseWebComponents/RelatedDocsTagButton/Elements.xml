@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+  Id="BatchTagCustomRibbonButton"
+  RegistrationId="0x01010038AD692CEEA64466A3DE01EF1A74C7F9"
+  RegistrationType="ContentType"
+  Location="CommandUI.Ribbon"
+  Sequence="5"
+  Title="Batch Tag Documents">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Documents.TagsAndNotes.Controls._children">
+          <Button
+          Id="Ribbon.Documents.New.BatchTagButton"
+          Alt="Batch Tag"
+          Sequence="5"
+          Command="Batch_Tag_Button"
+          Image16by16="../Style%20Library/images/batch_tag_16.png"
+          Image32by32="../Style%20Library/images/batch_tag_32.png"
+          LabelText="Batch Tag"
+          TemplateAlias="o1" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+          Command="Batch_Tag_Button"
+          EnabledScript="javascript:SP.ListOperation.Selection.getSelectedItems().length > 0;"
+          CommandAction="javascript:
+            function batchTagCallback(dialogResult, returnValue)
+            {
+              if(dialogResult === SP.UI.DialogResult.OK)
+              {
+                SP.UI.Notify.addNotification('Tags added!');
+              }
+              else if(dialogResult === SP.UI.DialogResult.cancel)
+              {
+                SP.UI.Notify.addNotification('User action cancelled!');
+              }
+              
+              SP.UI.ModalDialog.RefreshPage(SP.UI.DialogResult.OK);
+            }
+            
+            var ctx = SP.ClientContext.get_current();
+            var items = SP.ListOperation.Selection.getSelectedItems(ctx);
+            var myItems = '';
+            var d;
+            
+            for (d in items)
+            {
+              myItems += '|' + items[d].id;
+            }
+          
+            var options = {
+              url: '{SiteUrl}/_layouts/eCaseWeb/BatchTagging.aspx?items=' + myItems + '&amp;source=' + SP.ListOperation.Selection.getSelectedList() + '&amp;sourceurl=\'{SiteUrl}\'',
+              width: 900,
+              height: 700,
+              title: 'eCase - Document Batch Tagging',
+              showClose: true,
+              allowMaximize: false,
+              dialogReturnValueCallback: batchTagCallback };
+              
+            SP.UI.ModalDialog.showModalDialog(options);" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+
+
+</Elements>
+

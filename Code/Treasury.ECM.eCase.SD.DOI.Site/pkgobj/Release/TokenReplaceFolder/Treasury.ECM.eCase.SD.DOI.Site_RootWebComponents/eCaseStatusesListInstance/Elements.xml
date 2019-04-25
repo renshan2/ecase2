@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="eCase Statuses" OnQuickLaunch="FALSE" TemplateType="10001" FeatureId="06c207a3-d79a-44eb-9013-d2fee5376cfc" Url="Lists/eCaseStatuses" Description="List of eCase statuses.">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">01 Intake</Field>
+          <Field Name="LockSite">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">02 Investigation</Field>
+          <Field Name="LockSite">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">03 Referral</Field>
+          <Field Name="LockSite">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">04 Coordination</Field>
+          <Field Name="LockSite">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">04.1 Transfer to Another Agency</Field>
+          <Field Name="LockSite">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">05 Action</Field>
+          <Field Name="LockSite">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">05.1 Notice of Cause</Field>
+          <Field Name="LockSite">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">05.2 Notice of Suspension</Field>
+          <Field Name="LockSite">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">05.2.1 In Camera</Field>
+          <Field Name="LockSite">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">05.2.2 Presentation of Responsibility</Field>
+          <Field Name="LockSite">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">05.2.3 Notice of Suspension and In Camera</Field>
+          <Field Name="LockSite">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">05.3 Suspension Hearing</Field>
+          <Field Name="LockSite">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">05.4 Proposed Debarment</Field>
+          <Field Name="LockSite">0</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">05.4.1 In Camera</Field>
+          <Field Name="LockSite">1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">05.4.2 Presentation of Responsibility</Field>
+          <Field Name="LockSite">1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">05.4.3 Notice of Suspension and In Camera</Field>
+          <Field Name="LockSite">1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">05.5 Debarment Hearing</Field>
+          <Field Name="LockSite">1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">05.6 Debarment</Field>
+          <Field Name="LockSite">0</Field>
+        </Row>        
+        <Row>
+          <Field Name="Title">06 Closed</Field>
+          <Field Name="LockSite">1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">07 Administrative Agreement</Field>
+          <Field Name="LockSite">1</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">08 Court</Field>
+          <Field Name="LockSite">1</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

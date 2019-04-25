@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="eCasesMasterPages" Path="eCasesMasterPages\" Url="Style Library/MasterPages">
+    <File Name="eCase_main.master"
+          Url="eCase_main.master"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+</Module>
+</Elements> 

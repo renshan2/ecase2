@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+      ScriptSrc="~sitecollection/Style Library/Scripts/jquery-1.8.2.js"
+      Location="ScriptLink"
+      Sequence="1004"
+      >
+  </CustomAction>
+  <CustomAction
+  Id="DocumentIdApplyRibbonButton"
+  RegistrationId="0x0101"
+  RegistrationType="ContentType"
+  Location="CommandUI.Ribbon"
+  Sequence="1005"
+  Title="Apply Doc IDs">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Documents.Manage.Controls._children">
+          <Button
+          Id="Ribbon.Documents.Manage.DocumentIdApplyButton"
+          Alt="Apply Document IDs"
+          Sequence="1005"
+          Command="Document_Id_Apply_Button"
+          Image16by16="../Style%20Library/images/move_docs_16.png"
+          Image32by32="../Style%20Library/images/move_docs_32.png"
+          LabelText="Apply Doc IDs"
+          TemplateAlias="o1" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+          Command="Document_Id_Apply_Button"
+          EnabledScript="javascript:SP.ListOperation.Selection.getSelectedItems().length > 0;"
+          CommandAction="javascript:
+          
+            var currentSite;
+            var currentWeb;
+            var ctx = SP.ClientContext.get_current();
+          
+            function documentIdApplyCallback(dialogResult, returnValue)
+            {
+              if(dialogResult === SP.UI.DialogResult.OK)
+              {
+                SP.UI.Notify.addNotification('Documents IDs applied!');
+              }
+              else if(dialogResult === SP.UI.DialogResult.cancel)
+              {
+                SP.UI.Notify.addNotification('User action cancelled!');
+              }
+              //TODO: Handle failure
+              SP.UI.ModalDialog.RefreshPage(SP.UI.DialogResult.OK);
+            }
+         
+            function SendDocuments(siteId, webId, listId, items) {
+              var serviceUrl = currentSite.get_url() + '/_layouts/eCaseWeb/DocumentIdApply.aspx/SendDocuments';
+              var data = '{\'siteId\':\'' + siteId + '\', \'webId\':\'' + webId + '\', \'listId\':\'' + listId + '\', \'items\':' + JSON.stringify(items) + '}'; 
+
+                $(document).ready(function () {
+                    $.ajax({
+                        type: 'POST',
+                        url: serviceUrl,
+                        contentType: 'application/json; charset=utf-8',
+                        data: data,
+                        dataType: 'json',
+                        success: SendDocumentsSuccessful,
+                        error: SendDocumentsFailed
+                    });
+                });
+            }
+            function SendDocumentsSuccessful(result) {
+                SP.UI.Notify.addNotification(result.d);
+                SP.Utilities.HttpUtility.appendSourceAndNavigateTo(currentSite.get_url() + '/_layouts/eCaseWeb/DocumentIdApply.aspx');
+            }
+            function SendDocumentsFailed(result) {
+                SP.UI.Notify.addNotification(result.status + ' ' + result.statusText);
+                alert(result.responseText);
+            }
+            
+          function csomLoadSuccessful(sender, args) {
+              var currentSiteId = currentSite.get_id();
+              var currentWebId = currentWeb.get_id();
+          
+              SendDocuments(currentSiteId, currentWebId, SP.ListOperation.Selection.getSelectedList(), myItems);
+          /*
+              var options = {
+                url: '{SiteUrl}/_layouts/eCaseWeb/DocumentIdApply.aspx',
+                width: 900,
+                height: 700,
+                title: 'eCase - Document ID Apply',
+                showClose: true,
+                allowMaximize: false,
+                dialogReturnValueCallback: documentIdApplyCallback };
+              
+              SP.UI.ModalDialog.showModalDialog(options);
+              */
+          }
+          
+          function csomLoadUnsuccessful(sender, args) {
+            alert('failed due to : ' + args.get_message() + '\n at location: \n' + args.get_stackTrace());
+          }
+               
+            var myItems = new Array();
+          
+            var items = SP.ListOperation.Selection.getSelectedItems(ctx);
+
+            for (var i=0; i&lt;items.length;i++)
+            {
+              myItems[i] = { Id : items[i].id}
+            }
+          
+            //var d;
+            
+            //for (d in items)
+            //{
+            //  myItems += ',' + items[d].id;
+            //}
+            
+          currentSite = ctx.get_site();
+          currentWeb = ctx.get_web();
+          ctx.load(currentSite);
+          ctx.load(currentWeb);
+      
+          function myCallback() {
+            alert('success!');
+          }
+          
+          
+          ctx.executeQueryAsync(Function.createDelegate(this, csomLoadSuccessful),Function.createDelegate(this, myCallback));
+
+          
+      
+          " />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>
+

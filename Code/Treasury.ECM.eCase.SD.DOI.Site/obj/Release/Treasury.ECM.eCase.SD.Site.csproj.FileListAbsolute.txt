@@ -1,0 +1,15 @@
+C:\Projects\AIS.Federal.Treasury.eCase_SandD\Treasury.eCase_SandD\Treasury.ECM.eCase.SD.Site\bin\Release\Treasury.ECM.eCase.SusDeb.Site.dll
+C:\Projects\AIS.Federal.Treasury.eCase_SandD\Treasury.eCase_SandD\Treasury.ECM.eCase.SD.Site\bin\Release\Treasury.ECM.eCase.SusDeb.Site.pdb
+C:\Projects\AIS.Federal.Treasury.eCase_SandD\Treasury.eCase_SandD\Treasury.ECM.eCase.SD.Site\obj\Release\Treasury.ECM.eCase.SD.Site.csprojResolveAssemblyReference.cache
+C:\Projects\AIS.Federal.Treasury.eCase_SandD\Treasury.eCase_SandD\Treasury.ECM.eCase.SD.Site\obj\Release\Treasury.ECM.eCase.SusDeb.Site.dll
+C:\Projects\AIS.Federal.Treasury.eCase_SandD\Treasury.eCase_SandD\Treasury.ECM.eCase.SD.Site\obj\Release\Treasury.ECM.eCase.SusDeb.Site.pdb
+F:\SusDeb\SusDeb_Deployment_2013-12-06\Code\Treasury.ECM.eCase.SD.Site\bin\Release\Treasury.ECM.eCase.SusDeb.Site.dll
+F:\SusDeb\SusDeb_Deployment_2013-12-06\Code\Treasury.ECM.eCase.SD.Site\bin\Release\Treasury.ECM.eCase.SusDeb.Site.pdb
+F:\SusDeb\SusDeb_Deployment_2013-12-06\Code\Treasury.ECM.eCase.SD.Site\obj\Release\ResolveAssemblyReference.cache
+F:\SusDeb\SusDeb_Deployment_2013-12-06\Code\Treasury.ECM.eCase.SD.Site\obj\Release\Treasury.ECM.eCase.SusDeb.Site.dll
+F:\SusDeb\SusDeb_Deployment_2013-12-06\Code\Treasury.ECM.eCase.SD.Site\obj\Release\Treasury.ECM.eCase.SusDeb.Site.pdb
+F:\SusDeb\SusDeb_2014-11-04\Code\Treasury.ECM.eCase.SD.Site\bin\Release\Treasury.ECM.eCase.SusDeb.Site.dll
+F:\SusDeb\SusDeb_2014-11-04\Code\Treasury.ECM.eCase.SD.Site\bin\Release\Treasury.ECM.eCase.SusDeb.Site.pdb
+F:\SusDeb\SusDeb_2014-11-04\Code\Treasury.ECM.eCase.SD.Site\obj\Release\ResolveAssemblyReference.cache
+F:\SusDeb\SusDeb_2014-11-04\Code\Treasury.ECM.eCase.SD.Site\obj\Release\Treasury.ECM.eCase.SusDeb.Site.dll
+F:\SusDeb\SusDeb_2014-11-04\Code\Treasury.ECM.eCase.SD.Site\obj\Release\Treasury.ECM.eCase.SusDeb.Site.pdb

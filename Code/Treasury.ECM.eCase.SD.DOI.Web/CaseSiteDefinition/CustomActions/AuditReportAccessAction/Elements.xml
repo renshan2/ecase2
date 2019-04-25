@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="AuditReport_SiteAction"
+              Sequence="1000"
+              Rights="ManagePermissions"
+              Location="Microsoft.SharePoint.StandardMenu"
+              GroupId="SiteActions"
+              Title="eCase Audit Report"
+                >
+    <UrlAction Url="~site/_layouts/ecaseweb/AuditReport.aspx"/>
+  </CustomAction>
+  <CustomActionGroup Id="eCase_SiteSettings"
+              Sequence="1000"
+              Location="Microsoft.SharePoint.SiteSettings"
+              Title="eCase Settings"
+                >
+  </CustomActionGroup>
+  <CustomAction Id="eCase_SiteSettings_AuditReport"
+              Sequence="1000"
+              Rights="ManagePermissions"
+              Location="Microsoft.SharePoint.SiteSettings"
+              GroupId="eCase_SiteSettings"
+              Title="eCase Audit Report"
+                >
+    <UrlAction Url="~site/_layouts/ecaseweb/AuditReport.aspx"/>
+  </CustomAction>
+</Elements>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="13ea1dcb-cc6f-4909-9f07-6955e6ed384c" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="Treasury.ECM.eCase.SusDeb.DOI.Web.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="Treasury.ECM.eCase.SusDeb.DOI.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1dad96f5b8a688f6" Namespace="Treasury.ECM.eCase.SusDeb.DOI.Web.WebParts.EmptyWebPart" TypeName="*" />
+        <SafeControl Assembly="Treasury.ECM.eCase.SusDeb.DOI.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1dad96f5b8a688f6" Namespace="Treasury.ECM.eCase.SusDeb.DOI.Web.WebParts.EmptyWebPart" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="SiteTemplates\SusDebCaseSiteDefinition\Xml\onet.xml" />
+    <TemplateFile Location="1033\xml\webtemp_CaseSiteDefinition.xml" />
+    <TemplateFile Location="SiteTemplates\CaseSiteDefinition\Elements.xml" />
+    <TemplateFile Location="Layouts\eCaseWeb\AuditReport.aspx" />
+    <TemplateFile Location="Layouts\eCaseWeb\BatchCopyMove.aspx" />
+    <TemplateFile Location="Layouts\eCaseWeb\BatchTagging.aspx" />
+    <TemplateFile Location="Layouts\eCaseWeb\BatchMoving.aspx" />
+    <TemplateFile Location="Layouts\eCaseWeb\BatchCopying.aspx" />
+    <TemplateFile Location="Layouts\eCaseWeb\DocumentIdApply.aspx" />
+    <TemplateFile Location="Layouts\eCaseWeb\ExportToCSV.aspx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="Treasury.ECM.eCase.SD.DOI.Web_CaseSiteComponents\Feature.xml" />
+    <FeatureManifest Location="Treasury.ECM.eCase.SD.DOI.Web_CaseWebComponents\Feature.xml" />
+    <FeatureManifest Location="Treasury.ECM.eCase.SD.DOI.Web_Web.WebParts\Feature.xml" />
+  </FeatureManifests>
+</Solution>

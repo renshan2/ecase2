@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field ID="{b502558e-3743-4520-b392-1c03845ffcb7}" 
+         Name="SetItemID" 
+         DisplayName="Set Item ID" 
+         Type="Integer" 
+         Required="FALSE" 
+         Group="eCases Site Columns" 
+         ReadOnly="TRUE" 
+         ShowInDisplayForm="TRUE" />
+</Elements>

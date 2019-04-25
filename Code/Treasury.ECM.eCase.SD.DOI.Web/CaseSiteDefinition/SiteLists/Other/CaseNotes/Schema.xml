@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Treasury.ECM.eCase.SusDeb.DOI.Web - CaseNotes" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Treasury.ECM.eCase.SusDeb.DOI.Web-CaseNotes" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x01003D80581A549C4DF09D566E9312339054" Name="Case Note" Group="eCases Content Types" Description="Represents a case note, including the following additional fields: LegalIssue." Inherits="TRUE" FeatureId="{a739371e-a68a-49f7-833b-b0e9a3ec6832}">
+        <FieldRefs>
+          <FieldRef ID="{2C207BFD-722E-4566-B161-2EB089775FE0}" DisplayName="Case Note" Required="TRUE" Name="CaseNote" />
+          <FieldRef ID="{3a35c226-686d-4ce4-9aca-ccae7aba56e7}" DisplayName="Legal Issue" Required="FALSE" Name="LegalIssue" />
+          <FieldRef ID="{7f0562cd-8d58-4b00-b517-f48a669e8929}" DisplayName="Visible" Required="FALSE" Name="Visible" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{3a35c226-686d-4ce4-9aca-ccae7aba56e7}" Name="RelatedIssues" DisplayName="Related Issues" Type="Lookup" Mult="TRUE" List="Lists/LegalIssues" ShowField="Title" Required="FALSE" Group="eCases Site Columns">
+      </Field>
+      <Field Type="Note" ID="{2c207bfd-722e-4566-b161-2eb089775fe0}" Name="CaseNote" RichText="TRUE" DisplayName="Case Note" Sortable="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="CaseNote">
+      </Field>
+      <Field Name="Visible" ID="{7f0562cd-8d58-4b00-b517-f48a669e8929}" DisplayName="Visible" Type="Boolean" Required="FALSE" Description="Show this note?">
+        <Default>1</Default>
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="CaseNote">
+          </FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="CaseNote"></FieldRef>
+          <FieldRef Name="RelatedIssues"></FieldRef>
+          <FieldRef Name="Created"></FieldRef>
+          <FieldRef Name="Author" TextOnly="TRUE"></FieldRef>          
+          <FieldRef Name="Visible"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="10" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="FALSE">6</RowLimit>
+        <ViewFields>
+          <FieldRef Name="CaseNote"></FieldRef>
+          <FieldRef Name="Editor" TextOnly="TRUE"></FieldRef>
+          <FieldRef Name="Modified" TextOnly="TRUE"></FieldRef>
+        </ViewFields>
+        <Query>
+          <Where>
+            <Eq>
+              <FieldRef Name="Visible"></FieldRef>
+              <Value Type="Integer">1</Value>
+            </Eq>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

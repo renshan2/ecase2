@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Additional information about this element can be found here: http://clintoncherry.wordpress.com/2007/05/24/modifying-the-sharepoint-search-control/-->
+  <Control
+      Id="SmallSearchInputBox"
+      Sequence="20"
+      ControlClass="Microsoft.SharePoint.Portal.WebControls.SearchBoxEx" 
+      ControlAssembly="Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+    <Property Name="GoImageUrl">/_layouts/images/gosearch15.png</Property>
+    <Property Name="GoImageUrlRTL">/_layouts/images/gosearchrtl15.png</Property>
+    <Property Name="GoImageActiveUrl">/_layouts/images/gosearchhover15.png</Property>
+    <Property Name="GoImageActiveUrlRTL">/_layouts/images/gosearchrtlhover15.png</Property>
+    <Property Name="FrameType">None</Property>
+    <Property Name="UseSiteDropDownMode">true</Property>
+    <Property Name="QueryPromptString">Use fql: for additional features</Property>
+    <Property Name="UseSiteDefaults">true</Property>
+  </Control>
+</Elements>

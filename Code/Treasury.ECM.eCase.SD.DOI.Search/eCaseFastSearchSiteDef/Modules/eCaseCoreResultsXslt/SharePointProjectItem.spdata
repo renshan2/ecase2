@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="eCaseCoreResultsXslt\" Type="ElementManifest" />
+    <ProjectItemFile Source="ecrDefault.xslt" Target="eCaseCoreResultsXslt\" Type="ElementFile" />
+    <ProjectItemFile Source="ecrRawXml.xslt" Target="eCaseCoreResultsXslt\" Type="ElementFile" />
+    <ProjectItemFile Source="ecrDocDate.xslt" Target="eCaseCoreResultsXslt\" Type="ElementFile" />
+    <ProjectItemFile Source="ecrDocOrig.xslt" Target="eCaseCoreResultsXslt\" Type="ElementFile" />
+    <ProjectItemFile Source="ecrAssignedTo.xslt" Target="eCaseCoreResultsXslt\" Type="ElementFile" />
+    <ProjectItemFile Source="ecrRelLglIssue.xslt" Target="eCaseCoreResultsXslt\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

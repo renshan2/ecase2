@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field Type="Note" 
+         ID="{2C207BFD-722E-4566-B161-2EB089775FE0}" 
+         Name="CaseNote" 
+         RichText="TRUE" 
+         DisplayName="Case Note" 
+         Sortable="FALSE" 
+         SourceID="http://schemas.microsoft.com/sharepoint/v3" 
+         StaticName="CaseNote">
+  </Field>
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x01003D80581A549C4DF09D566E9312339054" 
+               Name="Case Note"
+               Group="eCases Content Types" 
+               Description="Represents a case note, including the following additional fields: LegalIssue." 
+               Inherits="TRUE" 
+               FeatureId="{a739371e-a68a-49f7-833b-b0e9a3ec6832}">
+    <FieldRefs>
+      <FieldRef ID="{2C207BFD-722E-4566-B161-2EB089775FE0}" DisplayName="Case Note" Required="TRUE" Name="CaseNote" />
+      <FieldRef ID="{3a35c226-686d-4ce4-9aca-ccae7aba56e7}" DisplayName="Legal Issue" Required="FALSE" Name="LegalIssue" />
+    </FieldRefs>
+  </ContentType>
+  
+</Elements>

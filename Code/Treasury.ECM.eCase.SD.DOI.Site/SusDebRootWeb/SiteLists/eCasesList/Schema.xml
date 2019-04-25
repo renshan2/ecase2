@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="eCases Master List" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Cases" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="FALSE">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x01004892F4C3DF0941E89EFB5B5E5615F4B7" Name="eCase" Group="eCases Content Types" Description="Represents an IRS case, providing top level information about the case" Inherits="TRUE" Version="1" Overwrite="TRUE">
+        <FieldRefs>
+          <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{028a6924-b06e-4ec6-8e37-c33928ed02ce}" Name="UniqueCaseID" />
+          <FieldRef ID="{f585eaed-888d-427d-8763-3e6c11550685}" Name="CaseStatusLookup" />
+          <FieldRef ID="{cd21b4c2-6841-4f9e-a23a-738a65f99889}" Name="TaskDueDate" Format="DateOnly" ReadOnly="TRUE" />
+          <FieldRef ID="{53C0A28A-3AE0-42FD-99BF-52EE69BCEBF8}" Name="NextDueDateUrl" ReadOnly="TRUE" />
+          <FieldRef ID="{53101f38-dd2e-458c-b245-0c236cc13d1a}" Name="AssignedTo" />
+          <FieldRef ID="{6898cec8-06c6-4437-9390-bd36911d3bd9}" Name="BureauIG" />
+          <FieldRef ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Description" />
+          <FieldRef ID="{734612f0-972f-4ff2-971f-83d9e68df310}" Name="CaseUrl" ShowInEditForm="FALSE" ShowInNewForm="FALSE" />
+          <FieldRef ID="{7a623d46-1cc1-4246-bcab-d67b709efab5}" Name="AllPriorMaterialsSubmitted" />
+          <FieldRef ID="{1b7343de-face-4778-b6bb-3985015a61a7}" Name="DateAllPriorMaterialsExpected" />
+          <FieldRef ID="{ddfaa9ae-fde5-4613-ab20-35f404e95f42}" Name="OpeningActionDate" />
+          <FieldRef ID="{721909bd-805c-4d00-a8a5-e411e8eeddf2}" Name="OpeningActionCompleted" />
+          <FieldRef ID="{c3745950-7478-41b5-a91d-ab508af78bce}" Name="PrimaryInitiatingDocumentAttached" />
+          <FieldRef ID="{9788163b-575f-423f-a23a-bbe838167563}" Name="CaseOpeningDate" />
+          <FieldRef ID="{2d2d7954-5862-4b11-8361-d1eb5f6b7bf8}" Name="CaseStep" />
+          <FieldRef ID="{8a039e72-a04e-419e-a8e6-c105f5ab3e63}" Name="ReferralDate" />
+          <FieldRef ID="{b228229b-a379-47ef-ac4e-49e7ec5aaefb}" Name="RespondentFirstName" />
+          <FieldRef ID="{1de719de-bedd-45e3-9412-35079c486975}" Name="RespondentMiddleName" />
+          <FieldRef ID="{f86b88d6-bcc0-4e50-9c43-7bcc6fbd338b}" Name="RespondentLastName" />
+          <FieldRef ID="{27f9e530-dbd4-4f05-af75-37bbc12674f1}" Name="RespondentEmail" />
+          <FieldRef ID="{87d492ca-e25a-4634-ae63-a1b412adc33a}" Name="RespondentPhone" />
+          <FieldRef ID="{89e3d9dc-9cc1-41df-841a-fd3e058a26ba}" Name="RespondentAddress1" />
+          <FieldRef ID="{27991776-fa30-4a04-9d9a-90cab984c54d}" Name="RespondentAddress2" />
+          <FieldRef ID="{a4581388-2e3c-4e3d-94f7-442c19e99ad2}" Name="RespondentCity" />
+          <FieldRef ID="{d4125b6c-7870-4cbd-98e6-3fdaadfa89fb}" Name="RespondentState" />
+          <FieldRef ID="{0a28a035-d83b-43f3-90c5-1a7b45bc32ff}" Name="RespondentZIPCode" />
+          <FieldRef ID="{b0a85b6f-1e85-4f51-9645-2e435c0d22cd}" Name="CompanyName" />
+          <FieldRef ID="{a9e6e90e-531b-479c-a2a7-7198956ef23c}" Name="DUNS" />
+          <FieldRef ID="{a2633b89-c542-4bab-b73a-289b09084c40}" Name="CAGE" />
+          <FieldRef ID="{7406432c-9873-40af-b720-a9b107dbe560}" Name="TaxID" />
+          <FieldRef ID="{b82db3a9-6ca1-4216-8a86-fc8960f3aa77}" Name="CompanyPhone" />
+          <FieldRef ID="{a916ee23-e0e2-4ebb-82ac-9623706fdb8d}" Name="CompanyAddress1" />
+          <FieldRef ID="{c156a6aa-6918-4fd3-827c-2bdb614d9806}" Name="CompanyAddress2" />
+          <FieldRef ID="{d7dec459-eca9-4dd0-9ca2-d4fc9d902255}" Name="CompanyCity" />
+          <FieldRef ID="{52034628-a942-4a17-8d28-d49e347e8433}" Name="CompanyState" />
+          <FieldRef ID="{9838cb04-2dc1-4f0b-96b5-7a819839392c}" Name="CompanyZIPCode" />
+          <FieldRef ID="{23f27201-bee3-471e-b2e7-b64fd8b7ca38}" DisplayName="Keyword(s)" Required="FALSE" Description="$Resources:osrvcore,field_KeywordsFieldDesc" Hidden="FALSE" Name="TaxKeyword" Sealed="TRUE" Sortable="FALSE" />
+          <FieldRef ID="{1390a86a-23da-45f0-8efe-ef36edadfb39}" DisplayName="TaxKeywordTaxHTField" Required="FALSE" Hidden="TRUE" Name="TaxKeywordTaxHTField" />
+          <FieldRef ID="{f3b0adf9-c1a2-4b02-920d-943fba4b3611}" DisplayName="Taxonomy Catch All Column" Required="FALSE" Hidden="TRUE" Name="TaxCatchAll" Sealed="TRUE" Sortable="FALSE" />
+          <FieldRef ID="{8f6b6dd8-9357-4019-8172-966fcd502ed2}" DisplayName="Taxonomy Catch All Column1" Required="FALSE" Hidden="TRUE" Name="TaxCatchAllLabel" ReadOnly="TRUE" Sealed="TRUE" Sortable="FALSE" />
+          <FieldRef ID="{cd9377c3-0196-4bb1-b48b-72d3519eca4c}" Name="Keywords" />
+          <FieldRef ID="{834ce072-ff34-416f-85ac-fa9ad7f49162}" Name="Affiliates" />
+          <FieldRef ID="{b98adc82-a6f5-4ca1-8f31-d81af178b1fb}" Name="KnownAssociates" />
+          <FieldRef ID="{a96c37e7-844e-4898-a302-ae84aef3e8fd}" Name="IntakeSource" />
+          <FieldRef ID="{ab53d13a-362e-4694-8678-a860023bf2fc}" Name="TaxDebt" />
+          <FieldRef ID="{13df84f4-8b1f-4523-9850-c0b8d4fd1538}" Name="LawIssue" />
+        </FieldRefs>
+      </ContentType>
+      <ContentType ID="0x01008c4847ac86ec46e19937425057b9c00f" Name="ListFieldsContentType" Hidden="TRUE">
+        <FieldRefs>
+          <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{028a6924-b06e-4ec6-8e37-c33928ed02ce}" Name="UniqueCaseID" />
+          <FieldRef ID="{cd21b4c2-6841-4f9e-a23a-738a65f99889}" Name="TaskDueDate" />
+          <FieldRef ID="{53C0A28A-3AE0-42FD-99BF-52EE69BCEBF8}" Name="NextDueDateUrl" />
+          <FieldRef ID="{53101f38-dd2e-458c-b245-0c236cc13d1a}" Name="AssignedTo" />
+          <FieldRef ID="{6898cec8-06c6-4437-9390-bd36911d3bd9}" Name="BureauIG" />
+          <FieldRef ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Description" />
+          <FieldRef ID="{f585eaed-888d-427d-8763-3e6c11550685}" Name="CaseStatusLookup" />
+          <FieldRef ID="{734612f0-972f-4ff2-971f-83d9e68df310}" Name="CaseUrl" />
+          <FieldRef ID="{23f27201-bee3-471e-b2e7-b64fd8b7ca38}" Name="TaxKeyword" />
+          <FieldRef ID="{1390a86a-23da-45f0-8efe-ef36edadfb39}" Name="TaxKeywordTaxHTField" />
+          <FieldRef ID="{f3b0adf9-c1a2-4b02-920d-943fba4b3611}" Name="TaxCatchAll" />
+          <FieldRef ID="{8f6b6dd8-9357-4019-8172-966fcd502ed2}" Name="TaxCatchAllLabel" />
+          <FieldRef ID="{834ce072-ff34-416f-85ac-fa9ad7f49162}" Name="Affiliates" />
+          <FieldRef ID="{c3745950-7478-41b5-a91d-ab508af78bce}" Name="PrimaryInitiatingDocumentAttached" />
+          <FieldRef ID="{9788163b-575f-423f-a23a-bbe838167563}" Name="CaseOpeningDate" />
+          <FieldRef ID="{a96c37e7-844e-4898-a302-ae84aef3e8fd}" Name="IntakeSource" />
+          <FieldRef ID="{b98adc82-a6f5-4ca1-8f31-d81af178b1fb}" Name="KnownAssociates" />
+          <FieldRef ID="{ab53d13a-362e-4694-8678-a860023bf2fc}" Name="TaxDebt" />
+          <FieldRef ID="{2d2d7954-5862-4b11-8361-d1eb5f6b7bf8}" Name="CaseStep" />
+          <FieldRef ID="{8a039e72-a04e-419e-a8e6-c105f5ab3e63}" Name="ReferralDate" />
+          <FieldRef ID="{b228229b-a379-47ef-ac4e-49e7ec5aaefb}" Name="RespondentFirstName" />
+          <FieldRef ID="{1de719de-bedd-45e3-9412-35079c486975}" Name="RespondentMiddleName" />
+          <FieldRef ID="{f86b88d6-bcc0-4e50-9c43-7bcc6fbd338b}" Name="RespondentLastName" />
+          <FieldRef ID="{27f9e530-dbd4-4f05-af75-37bbc12674f1}" Name="RespondentEmail" />
+          <FieldRef ID="{87d492ca-e25a-4634-ae63-a1b412adc33a}" Name="RespondentPhone" />
+          <FieldRef ID="{89e3d9dc-9cc1-41df-841a-fd3e058a26ba}" Name="RespondentAddress1" />
+          <FieldRef ID="{27991776-fa30-4a04-9d9a-90cab984c54d}" Name="RespondentAddress2" />
+          <FieldRef ID="{a4581388-2e3c-4e3d-94f7-442c19e99ad2}" Name="RespondentCity" />
+          <FieldRef ID="{d4125b6c-7870-4cbd-98e6-3fdaadfa89fb}" Name="RespondentState" />
+          <FieldRef ID="{0a28a035-d83b-43f3-90c5-1a7b45bc32ff}" Name="RespondentZIPCode" />
+          <FieldRef ID="{b0a85b6f-1e85-4f51-9645-2e435c0d22cd}" Name="CompanyName" />
+          <FieldRef ID="{a9e6e90e-531b-479c-a2a7-7198956ef23c}" Name="DUNS" />
+          <FieldRef ID="{a2633b89-c542-4bab-b73a-289b09084c40}" Name="CAGE" />
+          <FieldRef ID="{7406432c-9873-40af-b720-a9b107dbe560}" Name="TaxID" />
+          <FieldRef ID="{b82db3a9-6ca1-4216-8a86-fc8960f3aa77}" Name="CompanyPhone" />
+          <FieldRef ID="{a916ee23-e0e2-4ebb-82ac-9623706fdb8d}" Name="CompanyAddress1" />
+          <FieldRef ID="{c156a6aa-6918-4fd3-827c-2bdb614d9806}" Name="CompanyAddress2" />
+          <FieldRef ID="{d7dec459-eca9-4dd0-9ca2-d4fc9d902255}" Name="CompanyCity" />
+          <FieldRef ID="{52034628-a942-4a17-8d28-d49e347e8433}" Name="CompanyState" />
+          <FieldRef ID="{9838cb04-2dc1-4f0b-96b5-7a819839392c}" Name="CompanyZIPCode" />
+          <FieldRef ID="{13df84f4-8b1f-4523-9850-c0b8d4fd1538}" Name="LawIssue" />
+          <FieldRef ID="{cd9377c3-0196-4bb1-b48b-72d3519eca4c}" Name="Keywords" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" Hidden="TRUE" />
+      <Field ID="{028a6924-b06e-4ec6-8e37-c33928ed02ce}" Name="UniqueCaseID" DisplayName="Unique ID" Type="Text" Required="FALSE" Group="eCases Site Columns" Indexed="TRUE" EnforceUniqueValues="TRUE" ColName="nvarchar3" StaticName="UniqueCaseID" SourceID="{938C5FBE-AFCC-4117-B8A8-CDE2361A79F8}" MaxLength="255" Version="2" RowOrdinal="0" ReadOnly="TRUE">
+        <Validation Message="Field contains one of the following illegal characters: , &quot; % # &amp; * / \ : &lt; &gt; ?">=AND(ISERR(FIND(",",UniqueCaseID)),ISERR(FIND("%",UniqueCaseID)),ISERR(FIND("#",UniqueCaseID)),ISERR(FIND("&amp;",UniqueCaseID)),ISERR(FIND("""",UniqueCaseID)),ISERR(FIND("*",UniqueCaseID)),ISERR(FIND("/",UniqueCaseID)),ISERR(FIND(":",UniqueCaseID)),ISERR(FIND("&lt;",UniqueCaseID)),ISERR(FIND("&gt;",UniqueCaseID)),ISERR(FIND("?",UniqueCaseID)),ISERR(FIND("\",UniqueCaseID)))</Validation>
+      </Field>
+      <Field ID="{cd21b4c2-6841-4f9e-a23a-738a65f99889}" Name="TaskDueDate" Group="$Resources:core,Issue_Task_Columns;" Type="DateTime" DisplayName="$Resources:core,Due_Date;" SourceID="http://schemas.microsoft.com/sharepoint/v3/fields" StaticName="TaskDueDate" Format="DateOnly" Required="FALSE" />
+      <Field ID="{53C0A28A-3AE0-42FD-99BF-52EE69BCEBF8}" Name="NextDueDateUrl" DisplayName="Due Date Url" Type="URL" Group="eCases Site Columns" Required="FALSE" />
+      <Field ID="{53101f38-dd2e-458c-b245-0c236cc13d1a}" Name="AssignedTo" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="AssignedTo" Group="$Resources:core,Issue_Task_Columns;" Type="User" List="UserInfo" DisplayName="Assigned Bureau IG Investigator" Required="TRUE" />
+      <Field ID="{6898cec8-06c6-4437-9390-bd36911d3bd9}" Name="BureauIG" DisplayName="Bureau IG" Type="Choice" Required="TRUE" Group="eCases Site Columns">
+        <CHOICES>
+          <CHOICE>OIG</CHOICE>
+          <CHOICE>SIGTARP</CHOICE>
+          <CHOICE>TIGTA</CHOICE>
+        </CHOICES>
+      </Field>
+      <Field ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Type="Note" Name="Description" ShowInNewForm="TRUE" ShowInFileDlg="FALSE" DisplayName="Description" Sealed="TRUE" Sortable="FALSE" Description="Description of the Case" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Description" ColName="ntext2" />
+      <Field ID="{f585eaed-888d-427d-8763-3e6c11550685}" Name="CaseStatusLookup" DisplayName="Case Status" Type="Lookup" Required="TRUE" Group="eCases Site Columns" List="Lists/eCaseStatuses" ShowField="Title" />
+      <Field ID="{734612f0-972f-4ff2-971f-83d9e68df310}" Name="CaseUrl" DisplayName="Case Url" Type="URL" Group="eCases Site Columns" />
+      <Field Type="TaxonomyFieldTypeMulti" DisplayName="Keyword(s)" StaticName="TaxKeyword" Name="TaxKeyword" ID="{23f27201-bee3-471e-b2e7-b64fd8b7ca38}" ShowInViewForms="TRUE" Mult="TRUE" ShowInEditForm="TRUE" ShowInNewForm="TRUE" DefaultListField="TRUE" Required="FALSE" Hidden="FALSE" ShowField="Term$Resources:core,Language;" Version="3" Sortable="FALSE" Group="$Resources:osrvcore,field_KeywordsGroupName" Description="$Resources:osrvcore,field_KeywordsFieldDesc">
+        <Customization>
+          <ArrayOfProperty>
+            <Property>
+              <Name>SspId</Name>
+              <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">ba863631-94a8-48b0-9951-2a2b755f60bc</Value>
+            </Property>
+            <Property>
+              <Name>GroupId</Name>
+            </Property>
+            <Property>
+              <Name>TermSetId</Name>
+              <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+            </Property>
+            <Property>
+              <Name>AnchorId</Name>
+              <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+            </Property>
+            <Property>
+              <Name>UserCreated</Name>
+              <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>Open</Name>
+              <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+            </Property>
+            <Property>
+              <Name>TextField</Name>
+              <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{1390a86a-23da-45f0-8efe-ef36edadfb39}</Value>
+            </Property>
+            <Property>
+              <Name>IsPathRendered</Name>
+              <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>IsKeyword</Name>
+              <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
+            </Property>
+            <Property>
+              <Name>TargetTemplate</Name>
+            </Property>
+            <Property>
+              <Name>CreateValuesInEditForm</Name>
+              <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>FilterAssemblyStrongName</Name>
+            </Property>
+            <Property>
+              <Name>FilterClassName</Name>
+            </Property>
+            <Property>
+              <Name>FilterMethodName</Name>
+            </Property>
+            <Property>
+              <Name>FilterJavascriptProperty</Name>
+            </Property>
+          </ArrayOfProperty>
+        </Customization>
+      </Field>
+      <Field Type="Note" DisplayName="TaxKeywordTaxHTField" StaticName="TaxKeywordTaxHTField" Name="TaxKeywordTaxHTField" ID="{1390a86a-23da-45f0-8efe-ef36edadfb39}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" SourceID="{621202aa-da29-4d7c-bdbc-4b8408c67a7e}" Mult="TRUE" />
+      <Field Type="LookupMulti" DisplayName="Taxonomy Catch All Column" StaticName="TaxCatchAll" Name="TaxCatchAll" ID="{f3b0adf9-c1a2-4b02-920d-943fba4b3611}" ShowInViewForms="FALSE" List="{5e4bbb79-f8b7-449a-8d09-057dce69d9d3}" WebId="621202aa-da29-4d7c-bdbc-4b8408c67a7e" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" ShowField="CatchAllData" SourceID="{621202aa-da29-4d7c-bdbc-4b8408c67a7e}" Mult="TRUE" Sortable="FALSE" AllowDeletion="TRUE" Sealed="TRUE" Version="2" />
+      <Field Type="LookupMulti" DisplayName="Taxonomy Catch All Column1" StaticName="TaxCatchAllLabel" Name="TaxCatchAllLabel" ID="{8f6b6dd8-9357-4019-8172-966fcd502ed2}" ShowInViewForms="FALSE" List="{5e4bbb79-f8b7-449a-8d09-057dce69d9d3}" WebId="621202aa-da29-4d7c-bdbc-4b8408c67a7e" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" ShowField="CatchAllDataLabel" FieldRef="{F3B0ADF9-C1A2-4b02-920D-943FBA4B3611}" SourceID="{621202aa-da29-4d7c-bdbc-4b8408c67a7e}" ReadOnly="TRUE" Mult="TRUE" Sortable="FALSE" AllowDeletion="TRUE" Sealed="TRUE" Version="2" />
+      <Field Name="Affiliates" ID="{834ce072-ff34-416f-85ac-fa9ad7f49162}" DisplayName="Affiliates" Type="Text" />
+      <Field Name="PrimaryInitiatingDocumentAttached" ID="{c3745950-7478-41b5-a91d-ab508af78bce}" DisplayName="Primary Initiating Document Attached" Type="Boolean" />
+      <Field Name="CaseOpeningDate" ID="{9788163b-575f-423f-a23a-bbe838167563}" DisplayName="Case Opening Date" Type="DateTime" Format="DateOnly" Required="TRUE">
+        <Default>[today]</Default>
+      </Field>
+      <Field Name="IntakeSource" ID="{a96c37e7-844e-4898-a302-ae84aef3e8fd}" DisplayName="Intake Source" Type="Choice" Required="TRUE">
+        <Default>Manual</Default>
+        <CHOICES>
+          <CHOICE>Web</CHOICE>
+          <CHOICE>Manual</CHOICE>
+        </CHOICES>
+      </Field>
+      <Field Name="KnownAssociates" ID="{b98adc82-a6f5-4ca1-8f31-d81af178b1fb}" DisplayName="Known Associates" Type="Text" />
+      <Field Name="TaxDebt" ID="{ab53d13a-362e-4694-8678-a860023bf2fc}" DisplayName="Tax Debt" Type="Choice" Required="TRUE">
+        <CHOICES>
+          <CHOICE>Non-tax non-federal debt</CHOICE>
+          <CHOICE>Non-tax federal debt</CHOICE>
+          <CHOICE>Tax</CHOICE>
+        </CHOICES>
+      </Field>
+      <Field Name="CaseStep" ID="{2d2d7954-5862-4b11-8361-d1eb5f6b7bf8}" DisplayName="Case Step" Type="Choice" Required="TRUE">
+        <CHOICES>
+          <CHOICE>Collect All Case Materials</CHOICE>
+          <CHOICE>Inter-Agency Coordination</CHOICE>
+          <CHOICE>Review of Referral</CHOICE>
+          <CHOICE>Recommendation to GLER</CHOICE>
+          <CHOICE>DOJ Clearance</CHOICE>
+        </CHOICES>
+      </Field>
+      <Field Name="ReferralDate" ID="{8a039e72-a04e-419e-a8e6-c105f5ab3e63}" DisplayName="Referral Date" Type="DateTime" Format="DateOnly" />
+      <Field Name="RespondentFirstName" ID="{b228229b-a379-47ef-ac4e-49e7ec5aaefb}" DisplayName="Respondent First Name" Type="Text" Required="TRUE" />
+      <Field Name="RespondentMiddleName" ID="{1de719de-bedd-45e3-9412-35079c486975}" DisplayName="Respondent Middle Name" Type="Text" />
+      <Field Name="RespondentLastName" ID="{f86b88d6-bcc0-4e50-9c43-7bcc6fbd338b}" DisplayName="Respondent Last Name" Type="Text" Required="TRUE" />
+      <Field Name="RespondentEmail" ID="{27f9e530-dbd4-4f05-af75-37bbc12674f1}" DisplayName="Respondent Email" Type="Text" />
+      <Field Name="RespondentPhone" ID="{87d492ca-e25a-4634-ae63-a1b412adc33a}" DisplayName="Respondent Phone" Type="Text" />
+      <Field Name="RespondentAddress1" ID="{89e3d9dc-9cc1-41df-841a-fd3e058a26ba}" DisplayName="Respondent Address 1" Type="Text" />
+      <Field Name="RespondentAddress2" ID="{27991776-fa30-4a04-9d9a-90cab984c54d}" DisplayName="Respondent Address 2" Type="Text" />
+      <Field Name="RespondentCity" ID="{a4581388-2e3c-4e3d-94f7-442c19e99ad2}" DisplayName="Respondent City" Type="Text" />
+      <Field Name="RespondentState" ID="{d4125b6c-7870-4cbd-98e6-3fdaadfa89fb}" DisplayName="Respondent State" Type="Choice">
+        <CHOICES>
+          <CHOICE>Alabama</CHOICE>
+          <CHOICE>Alaska</CHOICE>
+          <CHOICE>American Samoa</CHOICE>
+          <CHOICE>Arizona</CHOICE>
+          <CHOICE>Arkansas</CHOICE>
+          <CHOICE>California</CHOICE>
+          <CHOICE>Colorado</CHOICE>
+          <CHOICE>Connecticut</CHOICE>
+          <CHOICE>Delaware</CHOICE>
+          <CHOICE>District of Columbia</CHOICE>
+          <CHOICE>Florida</CHOICE>
+          <CHOICE>Georgia</CHOICE>
+          <CHOICE>Guam</CHOICE>
+          <CHOICE>Hawaii</CHOICE>
+          <CHOICE>Idaho</CHOICE>
+          <CHOICE>Illinois</CHOICE>
+          <CHOICE>Indiana</CHOICE>
+          <CHOICE>Iowa</CHOICE>
+          <CHOICE>Kansas</CHOICE>
+          <CHOICE>Kentucky</CHOICE>
+          <CHOICE>Louisiana</CHOICE>
+          <CHOICE>Maine</CHOICE>
+          <CHOICE>Maryland</CHOICE>
+          <CHOICE>Massachusetts</CHOICE>
+          <CHOICE>Michigan</CHOICE>
+          <CHOICE>Minnesota</CHOICE>
+          <CHOICE>Mississippi</CHOICE>
+          <CHOICE>Missouri</CHOICE>
+          <CHOICE>Montana</CHOICE>
+          <CHOICE>Nebraska</CHOICE>
+          <CHOICE>Nevada</CHOICE>
+          <CHOICE>New Hampshire</CHOICE>
+          <CHOICE>New Jersey</CHOICE>
+          <CHOICE>New Mexico</CHOICE>
+          <CHOICE>New York</CHOICE>
+          <CHOICE>North Carolina</CHOICE>
+          <CHOICE>North Dakota</CHOICE>
+          <CHOICE>Northern Marianas Islands</CHOICE>
+          <CHOICE>Ohio</CHOICE>
+          <CHOICE>Oklahoma</CHOICE>
+          <CHOICE>Oregon</CHOICE>
+          <CHOICE>Pennsylvania</CHOICE>
+          <CHOICE>Puerto Rico</CHOICE>
+          <CHOICE>Rhode Island</CHOICE>
+          <CHOICE>South Carolina</CHOICE>
+          <CHOICE>South Dakota</CHOICE>
+          <CHOICE>Tennessee</CHOICE>
+          <CHOICE>Texas</CHOICE>
+          <CHOICE>Utah</CHOICE>
+          <CHOICE>Vermont</CHOICE>
+          <CHOICE>Virginia</CHOICE>
+          <CHOICE>Virgin Islands</CHOICE>
+          <CHOICE>Washington</CHOICE>
+          <CHOICE>West Virginia</CHOICE>
+          <CHOICE>Wisconsin</CHOICE>
+          <CHOICE>Wyoming</CHOICE>
+        </CHOICES>
+      </Field>
+      <Field Name="RespondentZIPCode" ID="{0a28a035-d83b-43f3-90c5-1a7b45bc32ff}" DisplayName="Respondent ZIP Code" Type="Text" />
+      <Field Name="CompanyName" ID="{b0a85b6f-1e85-4f51-9645-2e435c0d22cd}" DisplayName="Company Name" Type="Text" />
+      <Field Name="DUNS" ID="{a9e6e90e-531b-479c-a2a7-7198956ef23c}" DisplayName="DUNS" Type="Text" />
+      <Field Name="CAGE" ID="{a2633b89-c542-4bab-b73a-289b09084c40}" DisplayName="CAGE" Type="Text" />
+      <Field Name="TaxID" ID="{7406432c-9873-40af-b720-a9b107dbe560}" DisplayName="Tax ID" Type="Text" />
+      <Field Name="CompanyPhone" ID="{b82db3a9-6ca1-4216-8a86-fc8960f3aa77}" DisplayName="Company Phone" Type="Text" />
+      <Field Name="CompanyAddress1" ID="{a916ee23-e0e2-4ebb-82ac-9623706fdb8d}" DisplayName="Company Address 1" Type="Text" />
+      <Field Name="CompanyAddress2" ID="{c156a6aa-6918-4fd3-827c-2bdb614d9806}" DisplayName="Company Address 2" Type="Text" />
+      <Field Name="CompanyCity" ID="{d7dec459-eca9-4dd0-9ca2-d4fc9d902255}" DisplayName="Company City" Type="Text" />
+      <Field Name="CompanyState" ID="{52034628-a942-4a17-8d28-d49e347e8433}" DisplayName="Company State" Type="Choice">
+        <CHOICES>
+          <CHOICE>Alabama</CHOICE>
+          <CHOICE>Alaska</CHOICE>
+          <CHOICE>American Samoa</CHOICE>
+          <CHOICE>Arizona</CHOICE>
+          <CHOICE>Arkansas</CHOICE>
+          <CHOICE>California</CHOICE>
+          <CHOICE>Colorado</CHOICE>
+          <CHOICE>Connecticut</CHOICE>
+          <CHOICE>Delaware</CHOICE>
+          <CHOICE>District of Columbia</CHOICE>
+          <CHOICE>Florida</CHOICE>
+          <CHOICE>Georgia</CHOICE>
+          <CHOICE>Guam</CHOICE>
+          <CHOICE>Hawaii</CHOICE>
+          <CHOICE>Idaho</CHOICE>
+          <CHOICE>Illinois</CHOICE>
+          <CHOICE>Indiana</CHOICE>
+          <CHOICE>Iowa</CHOICE>
+          <CHOICE>Kansas</CHOICE>
+          <CHOICE>Kentucky</CHOICE>
+          <CHOICE>Louisiana</CHOICE>
+          <CHOICE>Maine</CHOICE>
+          <CHOICE>Maryland</CHOICE>
+          <CHOICE>Massachusetts</CHOICE>
+          <CHOICE>Michigan</CHOICE>
+          <CHOICE>Minnesota</CHOICE>
+          <CHOICE>Mississippi</CHOICE>
+          <CHOICE>Missouri</CHOICE>
+          <CHOICE>Montana</CHOICE>
+          <CHOICE>Nebraska</CHOICE>
+          <CHOICE>Nevada</CHOICE>
+          <CHOICE>New Hampshire</CHOICE>
+          <CHOICE>New Jersey</CHOICE>
+          <CHOICE>New Mexico</CHOICE>
+          <CHOICE>New York</CHOICE>
+          <CHOICE>North Carolina</CHOICE>
+          <CHOICE>North Dakota</CHOICE>
+          <CHOICE>Northern Marianas Islands</CHOICE>
+          <CHOICE>Ohio</CHOICE>
+          <CHOICE>Oklahoma</CHOICE>
+          <CHOICE>Oregon</CHOICE>
+          <CHOICE>Pennsylvania</CHOICE>
+          <CHOICE>Puerto Rico</CHOICE>
+          <CHOICE>Rhode Island</CHOICE>
+          <CHOICE>South Carolina</CHOICE>
+          <CHOICE>South Dakota</CHOICE>
+          <CHOICE>Tennessee</CHOICE>
+          <CHOICE>Texas</CHOICE>
+          <CHOICE>Utah</CHOICE>
+          <CHOICE>Vermont</CHOICE>
+          <CHOICE>Virginia</CHOICE>
+          <CHOICE>Virgin Islands</CHOICE>
+          <CHOICE>Washington</CHOICE>
+          <CHOICE>West Virginia</CHOICE>
+          <CHOICE>Wisconsin</CHOICE>
+          <CHOICE>Wyoming</CHOICE>
+        </CHOICES>
+      </Field>
+      <Field Name="CompanyZIPCode" ID="{9838cb04-2dc1-4f0b-96b5-7a819839392c}" DisplayName="Company ZIP Code" Type="Text" />
+      <Field Name="LawIssue" ID="{13df84f4-8b1f-4523-9850-c0b8d4fd1538}" DisplayName="Law Issue" Type="Text" />
+      <Field Name="Keywords" ID="{cd9377c3-0196-4bb1-b48b-72d3519eca4c}" DisplayName="Keywords" Type="Text" />
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="UniqueCaseID" />
+          <FieldRef Name="NextDueDateUrl" />
+          <FieldRef Name="AssignedTo" />
+          <FieldRef Name="Description" />
+          <FieldRef Name="CaseStatusLookup" />
+          <FieldRef Name="CaseUrl" />
+          <FieldRef Name="Affiliates" />
+          <FieldRef Name="PrimaryInitiatingDocumentAttached" />
+          <FieldRef Name="CaseOpeningDate" />
+          <FieldRef Name="KnownAssociates" />
+          <FieldRef Name="TaxDebt" />
+          <FieldRef Name="CaseStep" />
+          <FieldRef Name="ReferralDate" />
+          <FieldRef Name="RespondentFirstName" />
+          <FieldRef Name="RespondentMiddleName" />
+          <FieldRef Name="RespondentLastName" />
+          <FieldRef Name="RespondentEmail" />
+          <FieldRef Name="RespondentPhone" />
+          <FieldRef Name="RespondentAddress1" />
+          <FieldRef Name="RespondentAddress2" />
+          <FieldRef Name="RespondentCity" />
+          <FieldRef Name="RespondentState" />
+          <FieldRef Name="RespondentZIPCode" />
+          <FieldRef Name="CompanyName" />
+          <FieldRef Name="DUNS" />
+          <FieldRef Name="CAGE" />
+          <FieldRef Name="TaxID" />
+          <FieldRef Name="CompanyPhone" />
+          <FieldRef Name="CompanyAddress1" />
+          <FieldRef Name="CompanyAddress2" />
+          <FieldRef Name="CompanyCity" />
+          <FieldRef Name="CompanyState" />
+          <FieldRef Name="CompanyZIPCode" />
+          <FieldRef Name="LawIssue" />
+          <FieldRef Name="Keywords" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="2" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="FALSE" MobileView="TRUE" MobileDefaultView="FALSE" TabularView="FALSE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <!--<FieldRef Name="LinkTitle" />-->
+          <FieldRef Name="CaseStatusLookup" />
+          <!--<FieldRef Name="NextDueDateUrl" />-->
+          <FieldRef Name="UniqueCaseID" />
+          <FieldRef Name="CaseUrl" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="3" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="FALSE" MobileView="TRUE" MobileDefaultView="FALSE" TabularView="FALSE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="CaseStatusLookup" />
+          <!--<FieldRef Name="LinkTitle" />
+          <FieldRef Name="NextDueDateUrl" />-->
+          <FieldRef Name="UniqueCaseID" />
+          <FieldRef Name="CaseUrl" />
+          <FieldRef Name="AssignedTo" />
+        </ViewFields>
+        <!--<Query>
+          <Where>
+            <Eq>
+              <FieldRef Name="AssignedToSupervisor" />
+              <Value Type="Integer">
+                <UserID />
+              </Value>
+            </Eq>
+          </Where>
+        </Query>-->
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <Query />
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <!--<Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />-->
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="features\$SharePoint.Feature.DeploymentPath$\eCasesList\CaseNewForm.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

@@ -1,0 +1,5 @@
+C:\Projects\AIS.Federal.Treasury.eCase_SandD\Treasury.eCase_SandD\Treasury.ECM.eCase.SD.Web\bin\Debug\Treasury.ECM.eCase.SusDeb.Web.dll
+C:\Projects\AIS.Federal.Treasury.eCase_SandD\Treasury.eCase_SandD\Treasury.ECM.eCase.SD.Web\bin\Debug\Treasury.ECM.eCase.SusDeb.Web.pdb
+C:\Projects\AIS.Federal.Treasury.eCase_SandD\Treasury.eCase_SandD\Treasury.ECM.eCase.SD.Web\obj\Debug\Treasury.ECM.eCase.SusDeb.Web.dll
+C:\Projects\AIS.Federal.Treasury.eCase_SandD\Treasury.eCase_SandD\Treasury.ECM.eCase.SD.Web\obj\Debug\Treasury.ECM.eCase.SusDeb.Web.pdb
+C:\Projects\AIS.Federal.Treasury.eCase_SandD\Treasury.eCase_SandD\Treasury.ECM.eCase.SD.Web\obj\Debug\Treasury.ECM.eCase.SD.Web.csprojResolveAssemblyReference.cache

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Templates xmlns:ows="Microsoft SharePoint">
+  <Template Name="SusDebRootSiteDefinition" ID="32283">
+    <Configuration ID="0"
+                   Title="SusDeb Site Collection"
+                   Hidden="TRUE"
+                   ImageUrl="/_layouts/images/CPVW.gif"
+                   Description="Creates a SusDebs site collection which contains child SusDeb Sites."
+                   DisplayCategory="Treasury"
+                   ProvisionAssembly="Treasury.ECM.eCase.SusDeb.DOI.Site, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=44198732fb780fac"
+                   ProvisionClass="Treasury.ECM.eCase.SusDeb.DOI.Site.SusDebRootWeb.eCaseSiteProvisioningProvider"
+                   ProvisionData=""
+                   />
+  </Template>
+  <Template Name="SusDebRootWeb" ID="32282">
+    <Configuration ID="0" 
+                   Title="Hidden SusDeb Site Collection" 
+                   Hidden="TRUE" 
+                   ImageUrl="/_layouts/images/CPVW.gif" 
+                   Description="This template is applied through the ProvisioningProvider."
+                   />
+  </Template>
+</Templates>

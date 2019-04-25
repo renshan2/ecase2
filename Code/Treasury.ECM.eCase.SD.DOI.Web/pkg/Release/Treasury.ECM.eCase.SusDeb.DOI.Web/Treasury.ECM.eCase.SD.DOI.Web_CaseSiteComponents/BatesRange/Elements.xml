@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{65b9fe93-74ee-4843-824a-fcfa666212ac}"
+       Name="BatesRange"
+       DisplayName="Bates Range"
+       Type="Text"
+       Required="FALSE"
+       Group="eCases Site Columns"
+        >
+  </Field>
+</Elements>

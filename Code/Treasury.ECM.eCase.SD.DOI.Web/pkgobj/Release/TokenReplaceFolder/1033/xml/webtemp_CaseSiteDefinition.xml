@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Templates xmlns:ows="Microsoft SharePoint">
+  <Template Name="SusDebCaseSiteDefinition" ID="32284">
+    <Configuration ID="0" Title="SusDeb Site" Hidden="TRUE" ImageUrl="/_layouts/images/CPVW.gif" Description="Creates a SusDeb site for storing case related data." DisplayCategory="Treasury">
+    </Configuration>
+  </Template>
+</Templates>

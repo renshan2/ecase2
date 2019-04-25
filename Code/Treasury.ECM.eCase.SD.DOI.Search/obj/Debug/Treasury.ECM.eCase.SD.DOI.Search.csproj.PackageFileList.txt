@@ -1,0 +1,1 @@
+bin\Debug\Treasury.ECM.eCase.SusDeb.DOI.Search.wsp

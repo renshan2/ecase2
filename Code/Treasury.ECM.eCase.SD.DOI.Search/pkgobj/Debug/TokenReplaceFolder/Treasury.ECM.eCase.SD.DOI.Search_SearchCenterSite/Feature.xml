@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Hidden="TRUE" AlwaysForceInstall="TRUE" Id="e0976430-4f28-4663-bf1d-5310264558f9" Scope="Site" Title="eCase FAST Search Center Site Components">
+  <ElementManifests>
+    <ElementManifest Location="eCaseCoreResultsWebPart\Elements.xml" />
+    <ElementFile Location="eCaseCoreResultsWebPart\eCaseCoreResults.webpart" />
+    <ElementManifest Location="Tabs\Elements.xml" />
+    <ElementFile Location="Tabs\Schema.xml" />
+    <ElementFile Location="Tabs\allitems.aspx" />
+    <ElementManifest Location="eCaseSmallSearchCtrl\Elements.xml" />
+    <ElementManifest Location="eCaseSearchMasterPages\Elements.xml" />
+    <ElementFile Location="eCaseSearchMasterPages\eCase_minimal.master" />
+    <ElementManifest Location="SaveSearchCriteriaWebPart\Elements.xml" />
+    <ElementFile Location="SaveSearchCriteriaWebPart\SaveSearchCriteriaWebPart.webpart" />
+    <ElementManifest Location="SaveSearchResultsWebPart\Elements.xml" />
+    <ElementFile Location="SaveSearchResultsWebPart\SaveSearchResultsWebPart.webpart" />
+  </ElementManifests>
+</Feature>

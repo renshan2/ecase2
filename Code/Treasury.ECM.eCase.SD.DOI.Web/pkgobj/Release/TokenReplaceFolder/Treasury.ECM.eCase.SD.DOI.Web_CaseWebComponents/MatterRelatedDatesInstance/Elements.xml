@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Matter Related Dates" OnQuickLaunch="TRUE" TemplateType="10007" 
+                FeatureId="a739371e-a68a-49f7-833b-b0e9a3ec6832" Url="Lists/MatterRelatedDates" 
+                Description="Events specific to legal matters for a Case" VersioningEnabled="TRUE"></ListInstance>
+</Elements>

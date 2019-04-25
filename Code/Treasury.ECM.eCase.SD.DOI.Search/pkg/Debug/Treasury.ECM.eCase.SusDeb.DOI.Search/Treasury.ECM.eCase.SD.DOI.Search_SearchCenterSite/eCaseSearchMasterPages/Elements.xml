@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="eCaseSearchMasterPages" Path ="eCaseSearchMasterPages\" Url="_catalogs/masterpage" >
+<File Path="eCase_minimal.master" Type="GhostableInLibrary" Url="eCase_minimal.master" />
+</Module>
+</Elements>

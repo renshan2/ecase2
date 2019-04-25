@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="eCasesFonts" Path="eCasesFonts\" Url="Style Library/Font">    
+    <File Path="fontawesome-webfont.eot" Url="fontawesome-webfont.eot" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="fontawesome-webfont.svg" Url="fontawesome-webfont.svg" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="fontawesome-webfont.ttf" Url="fontawesome-webfont.ttf" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="fontawesome-webfont.woff" Url="fontawesome-webfont.woff" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+  </Module>
+</Elements>

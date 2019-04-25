@@ -1,0 +1,47 @@
+NOTE TO DEV TEAM:
+See SusDeb Deployment Instructions.docx for Initial Deployment Instructions.
+These instructions may need to be adjusted when more than SharePoint artifacts must be deployed.
+END NOTE TO DEV TEAM
+
+BEGIN INSTRUCTIONS 
+The list of WSPs managed by this deployment:
+•	Treasury.ECM.eCase.SusDeb.DOI.Common.wsp
+•	Treasury.ECM.eCase.SusDeb.DOI.Extensions.wsp
+•	Treasury.ECM.eCase.SusDeb.DOI.Logging.wsp
+•	Treasury.ECM.eCase.SusDeb.DOI.Search.wsp
+•	Treasury.ECM.eCase.SusDeb.DOI.Site.wsp
+•	Treasury.ECM.eCase.SusDeb.DOI.Web.wsp
+
+The list of PowerShell solutions used by this deployment:
+eCasesRetraction.ps1
+eCasesDeployment.ps1
+SolutionManagement.ps1
+
+The list of Urls for each Treasury environment:
+(Int) - https://apps.intecm.gov/ecase/susdeb
+(Test) - https://apps.testecm.gov/ecase/susdeb
+(Prod) - https://apps.treasuryecm.gov/ecase/susdeb
+
+Solutions and PowerShell scripts should be located in the same directory.
+
+Step 1:
+-- Execute eCasesRetraction.ps1.  This script will retract all WSPs in the folder in which it is run.  
+To execute this comand, the PowerShell Command will be as follows:
+	In INT:
+	.\eCasesRetraction.ps1 -webApp "https://apps.intecm.gov/ecase/susdeb"
+	In TEST:
+	.\eCasesRetraction.ps1 -webApp "https://apps.testecm.gov/ecase/susdeb"
+	In PROD:
+	.\eCasesRetraction.ps1 -webApp "https://apps.treasuryecm.gov/ecase/susdeb"
+
+-- Execute eCasesDeployment.ps1.  This script will add and deploy all WSPs in the folder in which it is run.
+To execute this comand, the PowerShell Command will be as follows:
+	In INT:
+	.\eCasesDeployment.ps1 -webApp "https://apps.intecm.gov/ecase/susdeb"
+	In TEST:
+	.\eCasesDeployment.ps1 -webApp "https://apps.testecm.gov/ecase/susdeb"
+	In PROD:
+	.\eCasesDeployment.ps1 -webApp "https://apps.treasuryecm.gov/ecase/susdeb"
+
+-- Verify WSPs successfully deployed by navigating to Manage Farm Solutions in Central Admin
+

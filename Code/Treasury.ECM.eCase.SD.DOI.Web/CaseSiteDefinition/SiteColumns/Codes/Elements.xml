@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{b85cf751-976a-4cbb-80c8-bd7f1836bc45}"
+       Name="Codes"
+       DisplayName="Codes"
+       Type="Note"
+       Required="FALSE"
+       Group="eCases Site Columns">
+  </Field>
+</Elements>

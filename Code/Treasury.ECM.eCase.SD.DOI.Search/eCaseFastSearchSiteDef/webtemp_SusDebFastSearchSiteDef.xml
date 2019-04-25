@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Templates xmlns:ows="Microsoft SharePoint">
+  <Template Name="SusDebFastSearchSiteDef" ID="32285">
+    <Configuration ID="0" Title="SusDeb FAST Search Center" Hidden="TRUE" ImageUrl="/_layouts/images/CPVW.gif" 
+                   Description="FAST Search Center customized for SusDeb" DisplayCategory="Treasury">
+    </Configuration>
+  </Template>
+</Templates>

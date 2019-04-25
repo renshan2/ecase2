@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="eCasesImages" Path="eCasesImages\" Url="Style Library/Images">
+    <File Name="add-button-bg-long.png"
+          Url="add-button-bg-long.png"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="add-button-bg-short.png"
+          Url="add-button-bg-short.png"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="button-bg-long.png"
+          Url="button-bg-long.png"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="button-bg-short.png"
+          Url="button-bg-short.png"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="search-button-bg-long.png"
+          Url="search-button-bg-long.png"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="rounded-tab-left.gif"
+          Url="rounded-tab-left.gif"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="rounded-tab-right.gif"
+          Url="rounded-tab-right.gif"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="user.gif"
+          Url="user.gif"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="tag_icon.jpg"
+          Url="tag_icon.jpg"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="batch_tag_16.png"
+          Url="batch_tag_16.png"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="batch_tag_32.png"
+          Url="batch_tag_32.png"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="move_docs_32.png"
+          Url="move_docs_32.png"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="move_docs_16.png"
+          Url="move_docs_16.png"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="ecase-logo.png"
+          Url="ecase-logo.png"
+          Type="GhostableInLibrary"
+          IgnoreIfAlreadyExists="TRUE" />
+    <File Name="ui-bg_flat_0_aaaaaa_40x100.png" Url="ui-bg_flat_0_aaaaaa_40x100.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Name="ui-bg_flat_75_ffffff_40x100.png" Url="ui-bg_flat_75_ffffff_40x100.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Name="ui-bg_glass_55_fbf9ee_1x400.png" Url="ui-bg_glass_55_fbf9ee_1x400.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Name="ui-bg_glass_65_ffffff_1x400.png" Url="ui-bg_glass_65_ffffff_1x400.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Name="ui-bg_glass_75_dadada_1x400.png" Url="ui-bg_glass_75_dadada_1x400.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Name="ui-bg_glass_75_e6e6e6_1x400.png" Url="ui-bg_glass_75_e6e6e6_1x400.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Name="ui-bg_glass_95_fef1ec_1x400.png" Url="ui-bg_glass_95_fef1ec_1x400.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Name="ui-bg_highlight-soft_75_cccccc_1x100.png" Url="ui-bg_highlight-soft_75_cccccc_1x100.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Name="ui-icons_2e83ff_256x240.png" Url="ui-icons_2e83ff_256x240.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Name="ui-icons_222222_256x240.png" Url="ui-icons_222222_256x240.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Name="ui-icons_454545_256x240.png" Url="ui-icons_454545_256x240.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Name="ui-icons_888888_256x240.png" Url="ui-icons_888888_256x240.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Name="ui-icons_cd0a0a_256x240.png" Url="ui-icons_cd0a0a_256x240.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="gradient-light-green-50.gif" Url="gradient-light-green-50.gif" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="gradient-light-green-100.gif" Url="gradient-light-green-100.gif" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="title-banner.gif" Url="title-banner.gif" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="top-nav-bg.gif" Url="top-nav-bg.gif" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="icon-bg.png" Url="icon-bg.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="ui-bg_glass_75_d0e5f5_1x400.png" Url="ui-bg_glass_75_d0e5f5_1x400.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="ui-bg_glass_85_dfeffc_1x400.png" Url="ui-bg_glass_85_dfeffc_1x400.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="gradient-light-blue-100.gif" Url="gradient-light-blue-100.gif" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="watermark-bottom-left.png" Url="watermark-bottom-left.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="note-bg.png" Url="note-bg.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="note-bg.jpg" Url="note-bg.jpg" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="export_to_csv_32.png" Url="export_to_csv_32.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="export_to_csv_16.png" Url="export_to_csv_16.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="step.gif" Url="step.gif" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+</Module>
+</Elements>

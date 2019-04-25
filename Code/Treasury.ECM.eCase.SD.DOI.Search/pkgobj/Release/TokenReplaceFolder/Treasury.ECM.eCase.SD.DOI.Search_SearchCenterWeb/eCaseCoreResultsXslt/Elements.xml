@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="eCaseCoreResultsXslt" Path="eCaseCoreResultsXslt\" Url="Pages/Xslt">
+    <File Name="ecrRawXml.xslt" Url="ecrRawXml.xslt" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Raw Xml" Type="string"/>
+    </File>
+    <File Name="ecrDefault.xslt" Url="ecrDefault.xslt" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Default" Type="string"/>
+    </File>
+    <File Name="ecrDocDate.xslt" Url="ecrDocDate.xslt" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Document Date" Type="string"/>
+    </File>
+    <File Name="ecrDocOrig.xslt" Url="ecrDocOrig.xslt" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Originator" Type="string"/>
+    </File>
+    <File Name="ecrAssignedTo.xslt" Url="ecrAssignedTo.xslt" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Assigned To" Type="string"/>
+    </File>
+    <File Name="ecrRelLglIssue.xslt" Url="ecrRelLglIssue.xslt" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Legal Issue" Type="string"/>
+    </File>
+  </Module>
+</Elements>

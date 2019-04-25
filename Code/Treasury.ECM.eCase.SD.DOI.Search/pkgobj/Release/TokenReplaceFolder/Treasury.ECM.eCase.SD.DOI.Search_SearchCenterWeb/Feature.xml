@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Hidden="TRUE" AlwaysForceInstall="TRUE" Id="ab48517d-74a5-431a-b871-e51ec0b398cf" Scope="Web" Title="Treasury.ECM.eCase FAST Search Center Web Components">
+  <ElementManifests>
+    <ElementManifest Location="eCaseSrchCtrPages\Elements.xml" />
+    <ElementFile Location="eCaseSrchCtrPages\advanced.aspx" />
+    <ElementFile Location="eCaseSrchCtrPages\default.aspx" />
+    <ElementFile Location="eCaseSrchCtrPages\people.aspx" />
+    <ElementFile Location="eCaseSrchCtrPages\peopleresults.aspx" />
+    <ElementFile Location="eCaseSrchCtrPages\results.aspx" />
+    <ElementManifest Location="SearchCopyButton\Elements.xml" />
+    <ElementManifest Location="eCaseCoreResultsXslt\Elements.xml" />
+    <ElementFile Location="eCaseCoreResultsXslt\ecrDefault.xslt" />
+    <ElementFile Location="eCaseCoreResultsXslt\ecrRawXml.xslt" />
+    <ElementFile Location="eCaseCoreResultsXslt\ecrDocDate.xslt" />
+    <ElementFile Location="eCaseCoreResultsXslt\ecrDocOrig.xslt" />
+    <ElementFile Location="eCaseCoreResultsXslt\ecrAssignedTo.xslt" />
+    <ElementFile Location="eCaseCoreResultsXslt\ecrRelLglIssue.xslt" />
+    <ElementManifest Location="SearchMetadataButton\Elements.xml" />
+    <ElementManifest Location="SearchSaveResultsButton\Elements.xml" />
+  </ElementManifests>
+</Feature>

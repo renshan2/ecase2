@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="eCasesFonts\" Type="ElementManifest" />
+    <ProjectItemFile Source="fontawesome-webfont.eot" Target="eCasesFonts\" Type="ElementFile" />
+    <ProjectItemFile Source="fontawesome-webfont.svg" Target="eCasesFonts\" Type="ElementFile" />
+    <ProjectItemFile Source="fontawesome-webfont.ttf" Target="eCasesFonts\" Type="ElementFile" />
+    <ProjectItemFile Source="fontawesome-webfont.woff" Target="eCasesFonts\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

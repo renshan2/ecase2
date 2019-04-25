@@ -1,0 +1,16 @@
+C:\Projects\AIS.Federal.Treasury.eCase_SandD\Treasury.eCase_SandD\Treasury.ECM.eCase.SD.Logging\bin\Release\Treasury.ECM.eCase.SusDeb.Logging.dll
+C:\Projects\AIS.Federal.Treasury.eCase_SandD\Treasury.eCase_SandD\Treasury.ECM.eCase.SD.Logging\bin\Release\Treasury.ECM.eCase.SusDeb.Logging.pdb
+C:\Projects\AIS.Federal.Treasury.eCase_SandD\Treasury.eCase_SandD\Treasury.ECM.eCase.SD.Logging\obj\Release\Treasury.ECM.eCase.SusDeb.Logging.dll
+C:\Projects\AIS.Federal.Treasury.eCase_SandD\Treasury.eCase_SandD\Treasury.ECM.eCase.SD.Logging\obj\Release\Treasury.ECM.eCase.SusDeb.Logging.pdb
+F:\SusDeb\SusDeb_Deployment_2013-12-06\Code\Treasury.ECM.eCase.SD.Logging\bin\Release\Treasury.ECM.eCase.SusDeb.Logging.dll
+F:\SusDeb\SusDeb_Deployment_2013-12-06\Code\Treasury.ECM.eCase.SD.Logging\bin\Release\Treasury.ECM.eCase.SusDeb.Logging.pdb
+F:\SusDeb\SusDeb_Deployment_2013-12-06\Code\Treasury.ECM.eCase.SD.Logging\bin\Release\Microsoft.Sharepoint.Sandbox.dll
+F:\SusDeb\SusDeb_Deployment_2013-12-06\Code\Treasury.ECM.eCase.SD.Logging\obj\Release\ResolveAssemblyReference.cache
+F:\SusDeb\SusDeb_Deployment_2013-12-06\Code\Treasury.ECM.eCase.SD.Logging\obj\Release\Treasury.ECM.eCase.SusDeb.Logging.dll
+F:\SusDeb\SusDeb_Deployment_2013-12-06\Code\Treasury.ECM.eCase.SD.Logging\obj\Release\Treasury.ECM.eCase.SusDeb.Logging.pdb
+F:\SusDeb\SusDeb_2014-11-04\Code\Treasury.ECM.eCase.SD.Logging\bin\Release\Treasury.ECM.eCase.SusDeb.Logging.dll
+F:\SusDeb\SusDeb_2014-11-04\Code\Treasury.ECM.eCase.SD.Logging\bin\Release\Treasury.ECM.eCase.SusDeb.Logging.pdb
+F:\SusDeb\SusDeb_2014-11-04\Code\Treasury.ECM.eCase.SD.Logging\bin\Release\Microsoft.Sharepoint.Sandbox.dll
+F:\SusDeb\SusDeb_2014-11-04\Code\Treasury.ECM.eCase.SD.Logging\obj\Release\ResolveAssemblyReference.cache
+F:\SusDeb\SusDeb_2014-11-04\Code\Treasury.ECM.eCase.SD.Logging\obj\Release\Treasury.ECM.eCase.SusDeb.Logging.dll
+F:\SusDeb\SusDeb_2014-11-04\Code\Treasury.ECM.eCase.SD.Logging\obj\Release\Treasury.ECM.eCase.SusDeb.Logging.pdb

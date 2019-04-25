@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="eCasesScripts\" Type="ElementManifest" />
+    <ProjectItemFile Source="jquery.cookie.js" Target="eCasesScripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-ui.js" Target="eCasesScripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.8.2.js" Target="eCasesScripts\" Type="ElementFile" />
+    <ProjectItemFile Source="fullcalendar.min.js" Target="eCasesScripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.SPServices-0.7.2.min.js" Target="eCasesScripts\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.dotdotdot.min.js" Target="eCasesScripts\" Type="ElementFile" />
+    <ProjectItemFile Source="highcharts.js" Target="eCasesScripts\" Type="ElementFile" />
+    <ProjectItemFile Source="eCaseWebHomePageScripts.js" Target="eCasesScripts\" Type="ElementFile" />
+    <ProjectItemFile Source="eCaseRootWebHomePageScripts.js" Target="eCasesScripts\" Type="ElementFile" />
+    <ProjectItemFile Source="dashboardcontent.js" Target="eCasesScripts\" Type="ElementFile" />
+    <ProjectItemFile Source="dashboardcontent2.js" Target="eCasesScripts\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="643dff77-18af-4a77-82ce-84a1386472e6" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="Treasury.ECM.eCase.SusDeb.DOI.Logging.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="Treasury.ECM.eCase.SusDeb.DOI.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b6ff5446616dccf9" Namespace="Treasury.ECM.eCase.SusDeb.DOI.Logging.WebParts.EmptyWebPart" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <FeatureManifests>
+    <FeatureManifest Location="Treasury.ECM.eCase.SD.DOI.Logging_LoggingConfigurator\Feature.xml" />
+    <FeatureManifest Location="Treasury.ECM.eCase.SD.DOI.Logging_Logging.WebParts\Feature.xml" />
+  </FeatureManifests>
+</Solution>

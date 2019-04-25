@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Discussion" OnQuickLaunch="TRUE" TemplateType="108" 
+                FeatureId="00bfea71-6a49-43fa-b535-d15c05500108" Url="Lists/DiscussionBoard" 
+                Description="Discussion board for recording comments and notes about the legal case" VersioningEnabled="TRUE"></ListInstance>
+</Elements>

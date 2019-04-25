@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Treasury.ECM.eCase.SusDeb.DOI.Site.WebParts.UserSavedSearchesWebPart.UserSavedSearchesWebPart, Treasury.ECM.eCase.SusDeb.DOI.Site, Version=1.0.0.0, Culture=neutral, PublicKeyToken=44198732fb780fac" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Saved Searches</property>
+        <property name="Description" type="string">List of user-specific search criteria.</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Do not change the value of the Name attribute below. If it does not match the folder name of the List project item, an error will occur when the project is run. -->
+    <ListTemplate
+        Name="MatterRelatedDates"
+        Type="10007"
+        BaseType="0"
+        OnQuickLaunch="TRUE"
+        FolderCreation="FALSE"
+        SecurityBits="11"
+        Sequence="340"
+        DisplayName="MatterRelatedDates"
+        Description="My List Definition"
+        Image="/_layouts/images/itevent.png"/>
+  <Receivers ListTemplateId="10007">
+    <Receiver>
+      <Name>TaxonomyItemSynchronousAddedEventReceiver</Name>
+      <Type>ItemAdding</Type>
+      <Assembly>Microsoft.SharePoint.Taxonomy, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+      <Class>Microsoft.SharePoint.Taxonomy.TaxonomyItemEventReceiver</Class>
+      <SequenceNumber>10000</SequenceNumber>
+    </Receiver>
+    <Receiver>
+      <Name>TaxonomyItemUpdatingEventReceiver</Name>
+      <Type>ItemUpdating</Type>
+      <Assembly>Microsoft.SharePoint.Taxonomy, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+      <Class>Microsoft.SharePoint.Taxonomy.TaxonomyItemEventReceiver</Class>
+      <SequenceNumber>10000</SequenceNumber>
+    </Receiver>
+  </Receivers>
+</Elements>

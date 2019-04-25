@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+       Id="jQuery.Script"
+       Location="ScriptLink"
+       ScriptSrc ="eCaseSearch/jquery-1.8.2.js"
+       Sequence="100">
+  </CustomAction>
+  <CustomAction
+  Id="SearchSaveResultsCustomRibbonButton"
+  Location="CommandUI.Ribbon"
+  Sequence="3"
+  Title="Saved Search Results">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.WikiPageTab.Manage.Controls._children">
+          <Button
+          Id="Ribbon.WikiPageTab.New.SearchSaveResultsButton"
+          Alt="Search Save Results"
+          Sequence="3"
+          Command="Search_Save_Results_Button"
+          Image16by16="../_layouts/eCaseSearch/move_docs_16.png"
+          Image32by32="../_layouts/eCaseSearch/move_docs_32.png"
+          LabelText="Saved Search Results"
+          TemplateAlias="o1" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+          Command="Search_Save_Results_Button"
+        CommandAction="javascript:
+        function SearchSaveResultsCallback(dialogResult, returnValue) {
+            if (dialogResult === SP.UI.DialogResult.OK) {
+                SP.UI.Notify.addNotification('Search Results Saved!');
+            }
+            else if (dialogResult === SP.UI.DialogResult.cancel) {
+                SP.UI.Notify.addNotification('User action cancelled!');
+            }
+            SP.UI.ModalDialog.RefreshPage(SP.UI.DialogResult.OK);
+        }
+
+        function GetQueryStringParams(sParam) {
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&amp;');
+            for (var i = 0; i &lt; sURLVariables.length; i++) 
+            {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) 
+                {
+                    return sParameterName[1];
+                }
+            }
+        }
+        
+        var searchQueryText = GetQueryStringParams('k');
+        
+        if (searchQueryText &amp;&amp; searchQueryText.length > 0) {
+            var options = {
+                url: '{SiteUrl}/_layouts/eCaseSearch/SaveSearchResults.aspx?query=' + searchQueryText + '&amp;sourceurl=\'{SiteUrl}\'',
+                width: 900,
+                height: 700,
+                title: 'eCase - Saved Search Results',
+                showClose: true,
+                allowMaximize: false,
+                dialogReturnValueCallback: SearchSaveResultsCallback
+            };
+            //alert(options.url);
+            SP.UI.ModalDialog.showModalDialog(options);
+        }
+        else {
+            alert('No search query was provided.');
+        }" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>
+

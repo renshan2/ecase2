@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="eCasesImages\" Type="ElementManifest" />
+    <ProjectItemFile Source="add-button-bg-long.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="add-button-bg-short.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="button-bg-long.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="search-button-bg-long.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="button-bg-short.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="rounded-tab-left.gif" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="rounded-tab-right.gif" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="user.gif" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="tag_icon.jpg" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="batch_tag_16.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="batch_tag_32.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_flat_0_aaaaaa_40x100.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_flat_75_ffffff_40x100.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_glass_55_fbf9ee_1x400.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_glass_65_ffffff_1x400.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_glass_75_dadada_1x400.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_glass_75_e6e6e6_1x400.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_glass_95_fef1ec_1x400.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_highlight-soft_75_cccccc_1x100.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-icons_2e83ff_256x240.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-icons_222222_256x240.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-icons_454545_256x240.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-icons_888888_256x240.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-icons_cd0a0a_256x240.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="move_docs_32.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="move_docs_16.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="ecase-logo.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="gradient-light-green-50.gif" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="gradient-light-green-100.gif" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="title-banner.gif" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="top-nav-bg.gif" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="icon-bg.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_glass_75_d0e5f5_1x400.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_glass_85_dfeffc_1x400.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="gradient-light-blue-100.gif" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="watermark-bottom-left.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="note-bg.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="note-bg.jpg" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="export_to_csv_32.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="export_to_csv_16.png" Target="eCasesImages\" Type="ElementFile" />
+    <ProjectItemFile Source="step.gif" Target="eCasesImages\" Type="ElementFile" />
+  </Files>
+</ProjectItem>
