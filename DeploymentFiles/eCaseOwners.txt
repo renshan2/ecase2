@@ -1,2 +1,0 @@
-treasury\tstspadmin
-treasury\shanre
