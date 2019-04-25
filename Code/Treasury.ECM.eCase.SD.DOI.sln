@@ -1,5 +1,5 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
+Microsoft Visual Studio Solution File, Format Version 15.00
 # Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Treasury.ECM.eCase.SD.DOI.Site", "Treasury.ECM.eCase.SD.DOI.Site\Treasury.ECM.eCase.SD.DOI.Site.csproj", "{B53ABF07-7F30-40C6-8329-66D098B28D86}"
 	ProjectSection(ProjectDependencies) = postProject
